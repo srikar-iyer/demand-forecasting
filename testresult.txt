@@ -1,0 +1,858 @@
+# Retail Product Order Quantity Prediction Test Results
+
+## Model Performance Metrics
+- Root Mean Squared Error (RMSE): 2.87
+- Mean Absolute Error (MAE): 1.23
+- R² Score: 0.3603
+
+## Top Factors Influencing Predictions
+1. Price: 0.2533
+2. Sales_Avg_30: 0.0973
+3. Product_Frozen Pizza: 0.0638
+4. Sales_Avg_14: 0.0618
+5. Promotion: 0.0591
+6. Month_Cos: 0.0578
+7. Sales_Avg_7: 0.0502
+8. Day_Sin: 0.0476
+9. Lead_Time: 0.0381
+10. Sales_Lag_14: 0.0380
+
+## Test Scenarios Results
+
+### Ice
+- Baseline:
+  - Price: $3.79
+  - Promotion: No
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 10 units
+  - Recommended Order: 11 units
+- Price Reduction:
+  - Price: $3.03
+  - Promotion: Yes
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 8 units
+  - Recommended Order: 9 units
+- Holiday:
+  - Price: $3.79
+  - Promotion: No
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 10 units
+  - Recommended Order: 11 units
+- Bad Weather:
+  - Price: $3.79
+  - Promotion: No
+  - Holiday: No
+  - Weather: Storm
+  - Predicted Sales: 15 units
+  - Recommended Order: 16 units
+- Holiday + Promotion:
+  - Price: $3.03
+  - Promotion: Yes
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 8 units
+  - Recommended Order: 9 units
+
+### Frozen Snacks
+- Baseline:
+  - Price: $6.23
+  - Promotion: No
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Price Reduction:
+  - Price: $4.98
+  - Promotion: Yes
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+- Holiday:
+  - Price: $6.23
+  - Promotion: No
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Bad Weather:
+  - Price: $6.23
+  - Promotion: No
+  - Holiday: No
+  - Weather: Storm
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Holiday + Promotion:
+  - Price: $4.98
+  - Promotion: Yes
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+
+### Frozen Potatoes
+- Baseline:
+  - Price: $5.23
+  - Promotion: No
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+- Price Reduction:
+  - Price: $4.18
+  - Promotion: Yes
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 3 units
+  - Recommended Order: 4 units
+- Holiday:
+  - Price: $5.23
+  - Promotion: No
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+- Bad Weather:
+  - Price: $5.23
+  - Promotion: No
+  - Holiday: No
+  - Weather: Storm
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+- Holiday + Promotion:
+  - Price: $4.18
+  - Promotion: Yes
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 3 units
+  - Recommended Order: 4 units
+
+### Frozen Meals
+- Baseline:
+  - Price: $4.03
+  - Promotion: No
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Price Reduction:
+  - Price: $3.22
+  - Promotion: Yes
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+- Holiday:
+  - Price: $4.03
+  - Promotion: No
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Bad Weather:
+  - Price: $4.03
+  - Promotion: No
+  - Holiday: No
+  - Weather: Storm
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Holiday + Promotion:
+  - Price: $3.22
+  - Promotion: Yes
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+
+### Frozen Vegetarian
+- Baseline:
+  - Price: $5.37
+  - Promotion: No
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Price Reduction:
+  - Price: $4.30
+  - Promotion: Yes
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+- Holiday:
+  - Price: $5.37
+  - Promotion: No
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Bad Weather:
+  - Price: $5.37
+  - Promotion: No
+  - Holiday: No
+  - Weather: Storm
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Holiday + Promotion:
+  - Price: $4.30
+  - Promotion: Yes
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+
+### Frozen Vegetables
+- Baseline:
+  - Price: $2.38
+  - Promotion: No
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+- Price Reduction:
+  - Price: $1.90
+  - Promotion: Yes
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+- Holiday:
+  - Price: $2.38
+  - Promotion: No
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+- Bad Weather:
+  - Price: $2.38
+  - Promotion: No
+  - Holiday: No
+  - Weather: Storm
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+- Holiday + Promotion:
+  - Price: $1.90
+  - Promotion: Yes
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 3 units
+  - Recommended Order: 4 units
+
+### Frozen Breakfast
+- Baseline:
+  - Price: $4.31
+  - Promotion: No
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+- Price Reduction:
+  - Price: $3.45
+  - Promotion: Yes
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+- Holiday:
+  - Price: $4.31
+  - Promotion: No
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+- Bad Weather:
+  - Price: $4.31
+  - Promotion: No
+  - Holiday: No
+  - Weather: Storm
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+- Holiday + Promotion:
+  - Price: $3.45
+  - Promotion: Yes
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+
+### Frozen Bread
+- Baseline:
+  - Price: $4.48
+  - Promotion: No
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Price Reduction:
+  - Price: $3.58
+  - Promotion: Yes
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 4 units
+  - Recommended Order: 5 units
+- Holiday:
+  - Price: $4.48
+  - Promotion: No
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Bad Weather:
+  - Price: $4.48
+  - Promotion: No
+  - Holiday: No
+  - Weather: Storm
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Holiday + Promotion:
+  - Price: $3.58
+  - Promotion: Yes
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 4 units
+  - Recommended Order: 5 units
+
+### Frozen Dessert
+- Baseline:
+  - Price: $4.80
+  - Promotion: No
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Price Reduction:
+  - Price: $3.84
+  - Promotion: Yes
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+- Holiday:
+  - Price: $4.80
+  - Promotion: No
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Bad Weather:
+  - Price: $4.80
+  - Promotion: No
+  - Holiday: No
+  - Weather: Storm
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Holiday + Promotion:
+  - Price: $3.84
+  - Promotion: Yes
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+
+### Frozen Ice Cream
+- Baseline:
+  - Price: $4.39
+  - Promotion: No
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Price Reduction:
+  - Price: $3.51
+  - Promotion: Yes
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+- Holiday:
+  - Price: $4.39
+  - Promotion: No
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Bad Weather:
+  - Price: $4.39
+  - Promotion: No
+  - Holiday: No
+  - Weather: Storm
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Holiday + Promotion:
+  - Price: $3.51
+  - Promotion: Yes
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 3 units
+  - Recommended Order: 4 units
+
+### Frozen Novelties
+- Baseline:
+  - Price: $5.90
+  - Promotion: No
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Price Reduction:
+  - Price: $4.72
+  - Promotion: Yes
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+- Holiday:
+  - Price: $5.90
+  - Promotion: No
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Bad Weather:
+  - Price: $5.90
+  - Promotion: No
+  - Holiday: No
+  - Weather: Storm
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Holiday + Promotion:
+  - Price: $4.72
+  - Promotion: Yes
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+
+### Frozen Pasta
+- Baseline:
+  - Price: $5.37
+  - Promotion: No
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Price Reduction:
+  - Price: $4.30
+  - Promotion: Yes
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 3 units
+  - Recommended Order: 4 units
+- Holiday:
+  - Price: $5.37
+  - Promotion: No
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Bad Weather:
+  - Price: $5.37
+  - Promotion: No
+  - Holiday: No
+  - Weather: Storm
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Holiday + Promotion:
+  - Price: $4.30
+  - Promotion: Yes
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 3 units
+  - Recommended Order: 4 units
+
+### MMS Default Major Category
+- Baseline:
+  - Price: $5.11
+  - Promotion: No
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Price Reduction:
+  - Price: $4.09
+  - Promotion: Yes
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Holiday:
+  - Price: $5.11
+  - Promotion: No
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Bad Weather:
+  - Price: $5.11
+  - Promotion: No
+  - Holiday: No
+  - Weather: Storm
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Holiday + Promotion:
+  - Price: $4.09
+  - Promotion: Yes
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+
+### Frozen Juice
+- Baseline:
+  - Price: $2.76
+  - Promotion: No
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Price Reduction:
+  - Price: $2.21
+  - Promotion: Yes
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+- Holiday:
+  - Price: $2.76
+  - Promotion: No
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Bad Weather:
+  - Price: $2.76
+  - Promotion: No
+  - Holiday: No
+  - Weather: Storm
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Holiday + Promotion:
+  - Price: $2.21
+  - Promotion: Yes
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 3 units
+  - Recommended Order: 4 units
+
+### Frozen Pizza
+- Baseline:
+  - Price: $5.84
+  - Promotion: No
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Price Reduction:
+  - Price: $4.68
+  - Promotion: Yes
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 4 units
+  - Recommended Order: 5 units
+- Holiday:
+  - Price: $5.84
+  - Promotion: No
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Bad Weather:
+  - Price: $5.84
+  - Promotion: No
+  - Holiday: No
+  - Weather: Storm
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Holiday + Promotion:
+  - Price: $4.68
+  - Promotion: Yes
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 4 units
+  - Recommended Order: 5 units
+
+### Refrigerated Bread/Potatoes/Pasta
+- Baseline:
+  - Price: $3.09
+  - Promotion: No
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+- Price Reduction:
+  - Price: $2.47
+  - Promotion: Yes
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+- Holiday:
+  - Price: $3.09
+  - Promotion: No
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+- Bad Weather:
+  - Price: $3.09
+  - Promotion: No
+  - Holiday: No
+  - Weather: Storm
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+- Holiday + Promotion:
+  - Price: $2.47
+  - Promotion: Yes
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+
+### Frozen Fruit
+- Baseline:
+  - Price: $5.82
+  - Promotion: No
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Price Reduction:
+  - Price: $4.65
+  - Promotion: Yes
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+- Holiday:
+  - Price: $5.82
+  - Promotion: No
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Bad Weather:
+  - Price: $5.82
+  - Promotion: No
+  - Holiday: No
+  - Weather: Storm
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Holiday + Promotion:
+  - Price: $4.65
+  - Promotion: Yes
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+
+### No Description
+- Baseline:
+  - Price: $4.80
+  - Promotion: No
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Price Reduction:
+  - Price: $3.84
+  - Promotion: Yes
+  - Holiday: No
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+- Holiday:
+  - Price: $4.80
+  - Promotion: No
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Bad Weather:
+  - Price: $4.80
+  - Promotion: No
+  - Holiday: No
+  - Weather: Storm
+  - Predicted Sales: 1 units
+  - Recommended Order: 2 units
+- Holiday + Promotion:
+  - Price: $3.84
+  - Promotion: Yes
+  - Holiday: Yes
+  - Weather: Normal
+  - Predicted Sales: 2 units
+  - Recommended Order: 3 units
+
+## 30-Day Demand Forecast (Top 5 Products)
+
+### Ice
+| Date | Predicted Demand |
+|------|-----------------|
+| 2024-07-25 | 10 |
+| 2024-07-26 | 12 |
+| 2024-07-27 | 11 |
+| 2024-07-28 | 11 |
+| 2024-07-29 | 10 |
+| 2024-07-30 | 9 |
+| 2024-07-31 | 9 |
+| 2024-08-01 | 10 |
+| 2024-08-02 | 12 |
+| 2024-08-03 | 11 |
+| 2024-08-04 | 10 |
+| 2024-08-05 | 10 |
+| 2024-08-06 | 9 |
+| 2024-08-07 | 9 |
+| 2024-08-08 | 10 |
+| 2024-08-09 | 12 |
+| 2024-08-10 | 11 |
+| 2024-08-11 | 10 |
+| 2024-08-12 | 10 |
+| 2024-08-13 | 9 |
+| 2024-08-14 | 9 |
+| 2024-08-15 | 10 |
+| 2024-08-16 | 12 |
+| 2024-08-17 | 11 |
+| 2024-08-18 | 10 |
+| 2024-08-19 | 10 |
+| 2024-08-20 | 9 |
+| 2024-08-21 | 9 |
+| 2024-08-22 | 10 |
+| 2024-08-23 | 12 |
+
+### Frozen Snacks
+| Date | Predicted Demand |
+|------|-----------------|
+| 2024-07-25 | 1 |
+| 2024-07-26 | 1 |
+| 2024-07-27 | 1 |
+| 2024-07-28 | 1 |
+| 2024-07-29 | 1 |
+| 2024-07-30 | 1 |
+| 2024-07-31 | 1 |
+| 2024-08-01 | 1 |
+| 2024-08-02 | 1 |
+| 2024-08-03 | 1 |
+| 2024-08-04 | 1 |
+| 2024-08-05 | 1 |
+| 2024-08-06 | 1 |
+| 2024-08-07 | 1 |
+| 2024-08-08 | 1 |
+| 2024-08-09 | 1 |
+| 2024-08-10 | 1 |
+| 2024-08-11 | 1 |
+| 2024-08-12 | 1 |
+| 2024-08-13 | 1 |
+| 2024-08-14 | 1 |
+| 2024-08-15 | 1 |
+| 2024-08-16 | 1 |
+| 2024-08-17 | 1 |
+| 2024-08-18 | 1 |
+| 2024-08-19 | 1 |
+| 2024-08-20 | 1 |
+| 2024-08-21 | 1 |
+| 2024-08-22 | 1 |
+| 2024-08-23 | 1 |
+
+### Frozen Potatoes
+| Date | Predicted Demand |
+|------|-----------------|
+| 2024-07-25 | 2 |
+| 2024-07-26 | 2 |
+| 2024-07-27 | 2 |
+| 2024-07-28 | 2 |
+| 2024-07-29 | 2 |
+| 2024-07-30 | 2 |
+| 2024-07-31 | 2 |
+| 2024-08-01 | 2 |
+| 2024-08-02 | 2 |
+| 2024-08-03 | 2 |
+| 2024-08-04 | 2 |
+| 2024-08-05 | 2 |
+| 2024-08-06 | 2 |
+| 2024-08-07 | 2 |
+| 2024-08-08 | 2 |
+| 2024-08-09 | 2 |
+| 2024-08-10 | 2 |
+| 2024-08-11 | 2 |
+| 2024-08-12 | 2 |
+| 2024-08-13 | 2 |
+| 2024-08-14 | 2 |
+| 2024-08-15 | 2 |
+| 2024-08-16 | 2 |
+| 2024-08-17 | 2 |
+| 2024-08-18 | 2 |
+| 2024-08-19 | 2 |
+| 2024-08-20 | 2 |
+| 2024-08-21 | 2 |
+| 2024-08-22 | 2 |
+| 2024-08-23 | 2 |
+
+### Frozen Meals
+| Date | Predicted Demand |
+|------|-----------------|
+| 2024-07-25 | 1 |
+| 2024-07-26 | 1 |
+| 2024-07-27 | 1 |
+| 2024-07-28 | 1 |
+| 2024-07-29 | 1 |
+| 2024-07-30 | 1 |
+| 2024-07-31 | 1 |
+| 2024-08-01 | 1 |
+| 2024-08-02 | 1 |
+| 2024-08-03 | 1 |
+| 2024-08-04 | 1 |
+| 2024-08-05 | 1 |
+| 2024-08-06 | 1 |
+| 2024-08-07 | 1 |
+| 2024-08-08 | 1 |
+| 2024-08-09 | 1 |
+| 2024-08-10 | 1 |
+| 2024-08-11 | 1 |
+| 2024-08-12 | 1 |
+| 2024-08-13 | 1 |
+| 2024-08-14 | 1 |
+| 2024-08-15 | 1 |
+| 2024-08-16 | 1 |
+| 2024-08-17 | 1 |
+| 2024-08-18 | 1 |
+| 2024-08-19 | 1 |
+| 2024-08-20 | 1 |
+| 2024-08-21 | 1 |
+| 2024-08-22 | 1 |
+| 2024-08-23 | 1 |
+
+### Frozen Vegetarian
+| Date | Predicted Demand |
+|------|-----------------|
+| 2024-07-25 | 1 |
+| 2024-07-26 | 1 |
+| 2024-07-27 | 1 |
+| 2024-07-28 | 1 |
+| 2024-07-29 | 1 |
+| 2024-07-30 | 1 |
+| 2024-07-31 | 1 |
+| 2024-08-01 | 1 |
+| 2024-08-02 | 1 |
+| 2024-08-03 | 1 |
+| 2024-08-04 | 1 |
+| 2024-08-05 | 1 |
+| 2024-08-06 | 1 |
+| 2024-08-07 | 1 |
+| 2024-08-08 | 1 |
+| 2024-08-09 | 1 |
+| 2024-08-10 | 1 |
+| 2024-08-11 | 1 |
+| 2024-08-12 | 1 |
+| 2024-08-13 | 1 |
+| 2024-08-14 | 1 |
+| 2024-08-15 | 1 |
+| 2024-08-16 | 1 |
+| 2024-08-17 | 1 |
+| 2024-08-18 | 1 |
+| 2024-08-19 | 1 |
+| 2024-08-20 | 1 |
+| 2024-08-21 | 1 |
+| 2024-08-22 | 1 |
+| 2024-08-23 | 1 |

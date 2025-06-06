@@ -1,0 +1,8 @@
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+gradio
+fastapi==0.108.0  # Add this
+pydantic==2.5.2   # Add this
