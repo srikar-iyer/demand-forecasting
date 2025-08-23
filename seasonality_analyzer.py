@@ -15,7 +15,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("testing/seasonality.log"),
+        logging.FileHandler("seasonality.log"),
         logging.StreamHandler()
     ]
 )
@@ -24,14 +24,14 @@ logger = logging.getLogger(__name__)
 class ItemSeasonalityAnalyzer:
     """Class for analyzing and visualizing item-specific seasonality patterns"""
     
-    def __init__(self, data_dir: str = "../data"):
+    def __init__(self, data_dir: str = "data"):
         """Initialize the analyzer with data directory path"""
         self.data_dir = data_dir
         self.sales_data = None
         self.purchase_data = None
         
         # Create output directory
-        os.makedirs("testing/output", exist_ok=True)
+        os.makedirs("output", exist_ok=True)
         
         try:
             self._load_data()
@@ -211,9 +211,9 @@ class ItemSeasonalityAnalyzer:
                 # Save the figure if output file is provided
                 if output_file:
                     try:
-                        fig.write_html(f"testing/output/{output_file}.html")
-                        fig.write_image(f"testing/output/{output_file}.png")
-                        logger.info(f"Figure saved to testing/output/{output_file}.html and .png")
+                        fig.write_html(f"output/{output_file}.html")
+                        fig.write_image(f"output/{output_file}.png")
+                        logger.info(f"Figure saved to output/{output_file}.html and .png")
                     except Exception as e:
                         logger.error(f"Error saving figure: {str(e)}")
                 
@@ -319,9 +319,9 @@ class ItemSeasonalityAnalyzer:
                     # Save the figure if output file is provided
                     if output_file:
                         try:
-                            fig.write_html(f"testing/output/{output_file}.html")
-                            fig.write_image(f"testing/output/{output_file}.png")
-                            logger.info(f"Figure saved to testing/output/{output_file}.html and .png")
+                            fig.write_html(f"output/{output_file}.html")
+                            fig.write_image(f"output/{output_file}.png")
+                            logger.info(f"Figure saved to output/{output_file}.html and .png")
                         except Exception as e:
                             logger.error(f"Error saving figure: {str(e)}")
                     

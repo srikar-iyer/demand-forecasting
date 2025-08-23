@@ -1,0 +1,33 @@
+================================================================================
+DEMAND FORECASTING MODEL PERFORMANCE REPORT
+================================================================================
+
+Evaluation Date: 2025-08-23T15:47:05.566597
+Items Tested: 5
+Store Filter: None
+
+AGGREGATE PERFORMANCE METRICS
+----------------------------------------
+MAE: Mean=1.02, Median=0.63, Std=1.11
+RMSE: Mean=1.38, Median=0.79, Std=1.69
+MAPE: Mean=67.36, Median=71.11, Std=16.84
+SMAPE: Mean=169.11, Median=163.85, Std=18.13
+BIAS: Mean=-0.51, Median=-0.11, Std=1.26
+DIRECTIONAL ACCURACY: Mean=32.78, Median=30.77, Std=18.83
+FORECAST ACCURACY PCT: Mean=29.37, Median=28.65, Std=18.80
+
+FORECAST ACCURACY DISTRIBUTION
+Excellent (≥90%): 0 items
+Good (70-90%): 1 items
+Fair (50-70%): 4 items
+Poor (<50%): 25 items
+
+TOP PERFORMING ITEMS
+------------------------------
+1. BELLATORIA ULT PEPPERONI PIZZA (104.0_3913116852.0): 45.7% accuracy
+2. BELLATORIA SAUS ITALIA PIZZA (104.0_3913116891.0): 31.7% accuracy
+3. BELLATORIA ULT SUPREME PIZZA (104.0_3913116853.0): 30.6% accuracy
+4. BELLATORIA GAR CHKN ALFR PIZZA (104.0_3913116856.0): 30.2% accuracy
+5. BELLATORIA BBQ CHK PIZZA (104.0_3913116850.0): 8.6% accuracy
+
+================================================================================

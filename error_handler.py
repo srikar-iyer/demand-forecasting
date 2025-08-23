@@ -13,7 +13,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("testing/error_handling.log"),
+        logging.FileHandler("error_handling.log"),
         logging.StreamHandler()
     ]
 )
@@ -217,10 +217,10 @@ class ErrorHandler:
             # Save the figure if output file is provided
             if output_file:
                 try:
-                    os.makedirs("testing/output", exist_ok=True)
-                    fig.write_html(f"testing/output/error_{output_file}.html")
-                    fig.write_image(f"testing/output/error_{output_file}.png")
-                    logger.info(f"Error figure saved to testing/output/error_{output_file}.html and .png")
+                    os.makedirs("output", exist_ok=True)
+                    fig.write_html(f"output/error_{output_file}.html")
+                    fig.write_image(f"output/error_{output_file}.png")
+                    logger.info(f"Error figure saved to output/error_{output_file}.html and .png")
                 except Exception as e:
                     logger.error(f"Error saving error figure: {str(e)}")
             
@@ -298,7 +298,7 @@ class ErrorHandler:
             return os.path.join(base_path, safe_name)
         except Exception as e:
             logger.error(f"Error creating safe file path: {str(e)}")
-            return os.path.join("testing/output", "error_output.html")
+            return os.path.join("output", "error_output.html")
 
 class ErrorHandlingDemo:
     """Demo class to show how to use the error handlers"""

@@ -14,7 +14,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("testing/model_comparison.log"),
+        logging.FileHandler("model_comparison.log"),
         logging.StreamHandler()
     ]
 )
@@ -23,19 +23,17 @@ logger = logging.getLogger(__name__)
 class ModelComparator:
     """Class for comparing different forecast models"""
     
-    def __init__(self, data_dir: str = "../data"):
+    def __init__(self, data_dir: str = "data"):
         """Initialize the comparator with data directory path"""
         self.data_dir = data_dir
         self.sales_data = None
-        self.rf_forecasts = None
-        self.pytorch_forecasts = None
-        self.arima_forecasts = None
+        # No forecast models in current implementation
         
         # Initialize seasonality analyzer
         self.seasonality_analyzer = ItemSeasonalityAnalyzer(data_dir=data_dir)
         
         # Create output directory
-        os.makedirs("testing/output", exist_ok=True)
+        os.makedirs("output", exist_ok=True)
         
         try:
             self._load_data()
@@ -54,27 +52,8 @@ class ModelComparator:
             if 'Proc_date' in self.sales_data.columns:
                 self.sales_data['Proc_date'] = pd.to_datetime(self.sales_data['Proc_date'])
             
-            # Load model forecasts if they exist
-            try:
-                self.rf_forecasts = pd.read_csv(os.path.join(self.data_dir, "processed/rf_forecasts.csv"))
-                self.rf_forecasts['Date'] = pd.to_datetime(self.rf_forecasts['Date'])
-                logger.info(f"Loaded RF forecasts with {len(self.rf_forecasts)} entries")
-            except FileNotFoundError:
-                logger.warning("RF forecasts file not found")
-                
-            try:
-                self.pytorch_forecasts = pd.read_csv(os.path.join(self.data_dir, "processed/pytorch_forecasts.csv"))
-                self.pytorch_forecasts['Date'] = pd.to_datetime(self.pytorch_forecasts['Date'])
-                logger.info(f"Loaded PyTorch forecasts with {len(self.pytorch_forecasts)} entries")
-            except FileNotFoundError:
-                logger.warning("PyTorch forecasts file not found")
-                
-            try:
-                self.arima_forecasts = pd.read_csv(os.path.join(self.data_dir, "processed/arima_forecasts.csv"))
-                self.arima_forecasts['Date'] = pd.to_datetime(self.arima_forecasts['Date'])
-                logger.info(f"Loaded ARIMA forecasts with {len(self.arima_forecasts)} entries")
-            except FileNotFoundError:
-                logger.warning("ARIMA forecasts file not found")
+            # No forecast models in current implementation
+            logger.info("Using only raw data, no forecast models implemented")
             
         except Exception as e:
             logger.error(f"Error in _load_data: {str(e)}")
@@ -92,280 +71,187 @@ class ModelComparator:
             logger.error(f"Error in get_item_list: {str(e)}")
             return []
     
-    def get_model_forecasts(
+    def get_sales_data(
         self, 
         store_id: str, 
         item_id: str, 
         start_date: Optional[datetime] = None,
         end_date: Optional[datetime] = None
-    ) -> Dict[str, pd.DataFrame]:
+    ) -> pd.DataFrame:
         """
-        Get forecasts from all models for a specific item within date range
+        Get sales data for a specific item within date range
         
         Args:
             store_id: Store identifier
             item_id: Item identifier
-            start_date: Start date for filtering forecasts
-            end_date: End date for filtering forecasts
+            start_date: Start date for filtering data
+            end_date: End date for filtering data
             
         Returns:
-            Dictionary with model name as key and forecast DataFrame as value
+            DataFrame with sales data
         """
         try:
-            results = {}
+            # Filter data for the specific store and item
+            item_sales = self.sales_data[
+                (self.sales_data['store_id'] == store_id) & 
+                (self.sales_data['item'] == item_id)
+            ].copy()
             
-            # Filter RF forecasts
-            if self.rf_forecasts is not None:
-                rf_item = self.rf_forecasts[
-                    (self.rf_forecasts['Store_Id'] == store_id) & 
-                    (self.rf_forecasts['Item'] == item_id)
-                ].copy()
-                
-                if not rf_item.empty:
-                    if start_date:
-                        rf_item = rf_item[rf_item['Date'] >= start_date]
-                    if end_date:
-                        rf_item = rf_item[rf_item['Date'] <= end_date]
-                    
-                    if not rf_item.empty:
-                        results['RF'] = rf_item
+            # Apply date filters
+            if start_date and not pd.isna(start_date):
+                item_sales = item_sales[item_sales['Proc_date'] >= start_date]
+            if end_date and not pd.isna(end_date):
+                item_sales = item_sales[item_sales['Proc_date'] <= end_date]
             
-            # Filter PyTorch forecasts
-            if self.pytorch_forecasts is not None:
-                pytorch_item = self.pytorch_forecasts[
-                    (self.pytorch_forecasts['Store_Id'] == store_id) & 
-                    (self.pytorch_forecasts['Item'] == item_id)
-                ].copy()
-                
-                if not pytorch_item.empty:
-                    if start_date:
-                        pytorch_item = pytorch_item[pytorch_item['Date'] >= start_date]
-                    if end_date:
-                        pytorch_item = pytorch_item[pytorch_item['Date'] <= end_date]
-                    
-                    if not pytorch_item.empty:
-                        results['PyTorch'] = pytorch_item
-            
-            # Filter ARIMA forecasts
-            if self.arima_forecasts is not None:
-                arima_item = self.arima_forecasts[
-                    (self.arima_forecasts['Store_Id'] == store_id) & 
-                    (self.arima_forecasts['Item'] == item_id)
-                ].copy()
-                
-                if not arima_item.empty:
-                    if start_date:
-                        arima_item = arima_item[arima_item['Date'] >= start_date]
-                    if end_date:
-                        arima_item = arima_item[arima_item['Date'] <= end_date]
-                    
-                    if not arima_item.empty:
-                        results['ARIMA'] = arima_item
-            
-            return results
+            # Aggregate by date
+            if not item_sales.empty:
+                daily_sales = item_sales.groupby('Proc_date')['Total_units'].sum().reset_index()
+                return daily_sales
+            else:
+                return pd.DataFrame(columns=['Proc_date', 'Total_units'])
             
         except Exception as e:
-            logger.error(f"Error in get_model_forecasts: {str(e)}")
-            return {}
+            logger.error(f"Error in get_sales_data: {str(e)}")
+            return pd.DataFrame(columns=['Proc_date', 'Total_units'])
 
-    def create_forecast_comparison(
+    def create_sales_analysis(
         self,
         store_id: str,
         item_id: str,
-        period: str = "2_weeks",  # "2_weeks" or "2_months"
-        with_confidence_intervals: bool = True,
+        period: str = "all",  # "1_month", "3_months", "6_months", "all"
         with_seasonality: bool = True,
         output_file: Optional[str] = None
     ) -> go.Figure:
         """
-        Create comparison visualization of model forecasts for a specific item
+        Create visualization of sales data with seasonality indicators
         
         Args:
             store_id: Store identifier
             item_id: Item identifier
-            period: Period for forecast visualization ('2_weeks' or '2_months')
-            with_confidence_intervals: Whether to show confidence intervals
-            with_seasonality: Whether to apply item-specific seasonality adjustments
+            period: Period for visualization ('1_month', '3_months', '6_months', 'all')
+            with_seasonality: Whether to show seasonality indicators
             output_file: If provided, save the figure to this file
             
         Returns:
             Plotly figure object
         """
         try:
-            # Determine forecast dates based on the period
+            # Determine date range based on the period
             today = datetime.now()
-            start_date = today - timedelta(days=30)  # include some history
             
-            if period == "2_weeks":
-                end_date = today + timedelta(days=14)
-                title_period = "2 Weeks"
-            else:  # "2_months"
-                end_date = today + timedelta(days=60)
-                title_period = "2 Months"
+            if period == "1_month":
+                start_date = today - timedelta(days=30)
+                title_period = "1 Month"
+            elif period == "3_months":
+                start_date = today - timedelta(days=90)
+                title_period = "3 Months"
+            elif period == "6_months":
+                start_date = today - timedelta(days=180)
+                title_period = "6 Months"
+            else:  # "all"
+                start_date = None
+                title_period = "All Time"
             
-            # Get forecasts from all models
-            model_forecasts = self.get_model_forecasts(
+            # Get sales data
+            daily_sales = self.get_sales_data(
                 store_id, 
                 item_id, 
-                start_date=start_date,
-                end_date=end_date
+                start_date=start_date
             )
             
-            # Check if we have any forecast data
-            if not model_forecasts:
-                logger.warning(f"No forecast data found for store {store_id}, item {item_id}")
+            # Check if we have any sales data
+            if daily_sales.empty:
+                logger.warning(f"No sales data found for store {store_id}, item {item_id}")
                 return None
             
             # Get item description
-            item_desc = ""
-            for model_name, forecast_df in model_forecasts.items():
-                if 'Product' in forecast_df.columns:
-                    item_desc = forecast_df['Product'].iloc[0]
-                    break
-            
-            if not item_desc:
-                # Try to get from sales data
-                item_sales = self.sales_data[
-                    (self.sales_data['store_id'] == store_id) & 
-                    (self.sales_data['item'] == item_id)
-                ]
-                if not item_sales.empty:
-                    item_desc = item_sales['Item_Description'].iloc[0]
-                else:
-                    item_desc = f"Item {item_id}"
-            
-            # Apply seasonality adjustments if requested
-            if with_seasonality:
-                for model_name, forecast_df in model_forecasts.items():
-                    try:
-                        adjusted_df = self.seasonality_analyzer.apply_seasonal_adjustment(
-                            store_id,
-                            item_id,
-                            forecast_df,
-                            date_column='Date',
-                            forecast_column='Forecast'
-                        )
-                        model_forecasts[model_name] = adjusted_df
-                    except Exception as e:
-                        logger.error(f"Error applying seasonality adjustment for {model_name}: {str(e)}")
+            item_sales = self.sales_data[
+                (self.sales_data['store_id'] == store_id) & 
+                (self.sales_data['item'] == item_id)
+            ]
+            item_desc = item_sales['Item_Description'].iloc[0] if not item_sales.empty else f"Item {item_id}"
             
             # Create figure
             fig = go.Figure()
             
-            # Add historical sales data
-            item_sales = self.sales_data[
-                (self.sales_data['store_id'] == store_id) & 
-                (self.sales_data['item'] == item_id)
-            ].copy()
+            # Add sales trace
+            fig.add_trace(go.Scatter(
+                x=daily_sales['Proc_date'],
+                y=daily_sales['Total_units'],
+                mode='lines+markers',
+                name='Sales',
+                line=dict(color='blue', width=2),
+                marker=dict(size=6),
+                hovertemplate='%{x|%Y-%m-%d}<br>Units: %{y}<extra>Sales</extra>'
+            ))
             
-            if not item_sales.empty:
-                # Filter to relevant date range
-                recent_sales = item_sales[item_sales['Proc_date'] >= start_date]
-                
-                if not recent_sales.empty:
-                    # Aggregate by date
-                    daily_sales = recent_sales.groupby('Proc_date')['Total_units'].sum().reset_index()
-                    
-                    # Add historical sales trace
-                    fig.add_trace(go.Scatter(
-                        x=daily_sales['Proc_date'],
-                        y=daily_sales['Total_units'],
-                        mode='lines+markers',
-                        name='Historical Sales',
-                        line=dict(color='black', width=3),
-                        marker=dict(size=6),
-                        hovertemplate='%{x|%Y-%m-%d}<br>Units: %{y}<extra>Historical</extra>'
-                    ))
-            
-            # Define colors and styles for each model
-            model_styles = {
-                'RF': {
-                    'color': 'blue',
-                    'dash': 'solid',
-                    'width': 2.5,
-                    'ci_color': 'rgba(0, 0, 255, 0.1)'
-                },
-                'PyTorch': {
-                    'color': 'green',
-                    'dash': 'solid',
-                    'width': 2.5,
-                    'ci_color': 'rgba(0, 255, 0, 0.1)'
-                },
-                'ARIMA': {
-                    'color': 'red',
-                    'dash': 'solid',
-                    'width': 2.5,
-                    'ci_color': 'rgba(255, 0, 0, 0.1)'
-                }
-            }
-            
-            # Add model forecast traces
-            for model_name, forecast_df in model_forecasts.items():
-                style = model_styles.get(model_name, {
-                    'color': 'purple',
-                    'dash': 'solid',
-                    'width': 2.5,
-                    'ci_color': 'rgba(128, 0, 128, 0.1)'
-                })
-                
-                # Determine which forecast column to use
-                forecast_column = 'Seasonally_Adjusted' if with_seasonality and 'Seasonally_Adjusted' in forecast_df.columns else 'Forecast'
-                
-                # Add forecast trace
+            # Add moving averages
+            if len(daily_sales) >= 7:
+                # 7-day moving average
+                daily_sales['MA7'] = daily_sales['Total_units'].rolling(window=7).mean()
                 fig.add_trace(go.Scatter(
-                    x=forecast_df['Date'],
-                    y=forecast_df[forecast_column],
+                    x=daily_sales['Proc_date'],
+                    y=daily_sales['MA7'],
                     mode='lines',
-                    name=f"{model_name} {forecast_column.replace('_', ' ')}",
-                    line=dict(
-                        color=style['color'],
-                        dash=style['dash'],
-                        width=style['width']
-                    ),
-                    hovertemplate='%{x|%Y-%m-%d}<br>Forecast: %{y:.1f}<extra>' + model_name + '</extra>'
+                    name='7-Day MA',
+                    line=dict(color='red', width=2, dash='dot'),
+                    hovertemplate='%{x|%Y-%m-%d}<br>7-Day MA: %{y:.1f}<extra>MA7</extra>'
                 ))
-                
-                # Add confidence intervals if requested
-                if with_confidence_intervals and 'Lower_Bound' in forecast_df.columns and 'Upper_Bound' in forecast_df.columns:
-                    lb_column = 'Lower_Bound'
-                    ub_column = 'Upper_Bound'
-                    
-                    # If using seasonally adjusted forecasts, apply the same adjustment to bounds
-                    if with_seasonality and 'Seasonally_Adjusted' in forecast_df.columns:
-                        # Calculate the adjustment factor for each row
-                        adjustment = forecast_df['Seasonally_Adjusted'] - forecast_df['Forecast']
-                        forecast_df['Adjusted_Lower_Bound'] = forecast_df['Lower_Bound'] + adjustment
-                        forecast_df['Adjusted_Upper_Bound'] = forecast_df['Upper_Bound'] + adjustment
-                        lb_column = 'Adjusted_Lower_Bound'
-                        ub_column = 'Adjusted_Upper_Bound'
-                    
-                    fig.add_trace(go.Scatter(
-                        x=forecast_df['Date'].tolist() + forecast_df['Date'].tolist()[::-1],
-                        y=forecast_df[ub_column].tolist() + forecast_df[lb_column].tolist()[::-1],
-                        fill='toself',
-                        fillcolor=style['ci_color'],
-                        line=dict(color='rgba(255,255,255,0)'),
-                        name=f"{model_name} CI",
-                        showlegend=False,
-                        hoverinfo='skip'
-                    ))
             
-            # Add vertical line for today
-            fig.add_vline(
-                x=today, 
-                line_width=2, 
-                line_dash="dash", 
-                line_color="black",
-                annotation_text="Today",
-                annotation_position="top right"
-            )
+            if len(daily_sales) >= 30:
+                # 30-day moving average
+                daily_sales['MA30'] = daily_sales['Total_units'].rolling(window=30).mean()
+                fig.add_trace(go.Scatter(
+                    x=daily_sales['Proc_date'],
+                    y=daily_sales['MA30'],
+                    mode='lines',
+                    name='30-Day MA',
+                    line=dict(color='green', width=2, dash='dot'),
+                    hovertemplate='%{x|%Y-%m-%d}<br>30-Day MA: %{y:.1f}<extra>MA30</extra>'
+                ))
+            
+            # Add seasonality indicators if requested
+            if with_seasonality:
+                seasonality_info = self.seasonality_analyzer.detect_seasonality(store_id, item_id)
+                if seasonality_info.get('has_seasonality', False):
+                    seasonality_period = seasonality_info.get('best_period')
+                    
+                    if seasonality_period:
+                        # Start from the earliest date in the data
+                        min_date = daily_sales['Proc_date'].min()
+                        max_date = daily_sales['Proc_date'].max()
+                        
+                        # Add vertical lines at seasonal intervals
+                        current_date = min_date
+                        while current_date <= max_date:
+                            fig.add_vline(
+                                x=current_date, 
+                                line_width=1, 
+                                line_dash="dot", 
+                                line_color="rgba(0, 0, 255, 0.3)"
+                            )
+                            current_date = current_date + timedelta(days=seasonality_period)
+                        
+                        # Add an annotation explaining the seasonal pattern
+                        fig.add_annotation(
+                            x=0.02,
+                            y=0.98,
+                            xref="paper",
+                            yref="paper",
+                            text=f"Seasonality detected: {seasonality_period}-day cycle",
+                            showarrow=False,
+                            bgcolor="rgba(255, 255, 255, 0.8)",
+                            bordercolor="rgba(0, 0, 255, 0.3)",
+                            borderwidth=1,
+                            borderpad=4
+                        )
             
             # Update layout
-            seasonality_note = " (with Item-Specific Seasonality)" if with_seasonality else ""
+            seasonality_note = " (with Seasonality Indicators)" if with_seasonality else ""
             fig.update_layout(
-                title=f"{item_desc} (Store {store_id}) - Model Comparison for Next {title_period}{seasonality_note}",
+                title=f"{item_desc} (Store {store_id}) - Sales Analysis for {title_period}{seasonality_note}",
                 xaxis_title="Date",
-                yaxis_title="Units",
+                yaxis_title="Units Sold",
                 legend=dict(
                     orientation="h",
                     yanchor="bottom",
@@ -380,27 +266,27 @@ class ModelComparator:
             # Save the figure if output file is provided
             if output_file:
                 try:
-                    fig.write_html(f"testing/output/{output_file}.html")
-                    fig.write_image(f"testing/output/{output_file}.png")
-                    logger.info(f"Figure saved to testing/output/{output_file}.html and .png")
+                    fig.write_html(f"output/{output_file}.html")
+                    fig.write_image(f"output/{output_file}.png")
+                    logger.info(f"Figure saved to output/{output_file}.html and .png")
                 except Exception as e:
                     logger.error(f"Error saving figure: {str(e)}")
             
             return fig
             
         except Exception as e:
-            logger.error(f"Error in create_forecast_comparison: {str(e)}")
+            logger.error(f"Error in create_sales_analysis: {str(e)}")
             return None
     
-    def create_forecast_error_analysis(
+    def create_inventory_analysis(
         self,
         store_id: str,
         item_id: str,
         lookback_days: int = 30,
         output_file: Optional[str] = None
-    ) -> Dict:
+    ) -> go.Figure:
         """
-        Analyze forecast errors for each model based on past predictions
+        Create visualization of inventory levels and stock-outs
         
         Args:
             store_id: Store identifier
@@ -409,163 +295,123 @@ class ModelComparator:
             output_file: If provided, save the figure to this file
             
         Returns:
-            Dictionary with error metrics for each model
+            Plotly figure object
         """
         try:
-            # Get historical sales data
-            item_sales = self.sales_data[
-                (self.sales_data['store_id'] == store_id) & 
-                (self.sales_data['item'] == item_id)
-            ].copy()
-            
-            if item_sales.empty:
-                logger.warning(f"No historical sales data found for store {store_id}, item {item_id}")
-                return {}
-            
-            # Aggregate sales by date
-            daily_sales = item_sales.groupby('Proc_date')['Total_units'].sum().reset_index()
-            daily_sales.rename(columns={'Proc_date': 'Date'}, inplace=True)
-            
-            # Define lookback period
+            # Load stock data if not already loaded
+            stock_data = None
+            try:
+                stock_data = pd.read_csv(os.path.join(self.data_dir, "FrozenPizzaStock.csv"))
+            except Exception as e:
+                logger.warning(f"Stock data not available: {str(e)}")
+                
+            # Get sales data
             end_date = datetime.now()
             start_date = end_date - timedelta(days=lookback_days)
             
-            # Filter historical sales to lookback period
-            historical_sales = daily_sales[
-                (daily_sales['Date'] >= start_date) &
-                (daily_sales['Date'] <= end_date)
-            ]
-            
-            if historical_sales.empty:
-                logger.warning(f"No historical sales in lookback period for store {store_id}, item {item_id}")
-                return {}
-            
-            # Get forecasts from all models for the lookback period
-            model_forecasts = self.get_model_forecasts(
+            sales_data = self.get_sales_data(
                 store_id, 
                 item_id, 
                 start_date=start_date,
                 end_date=end_date
             )
             
-            # Check if we have any forecast data
-            if not model_forecasts:
-                logger.warning(f"No forecast data found for lookback period for store {store_id}, item {item_id}")
-                return {}
+            if sales_data.empty:
+                logger.warning(f"No sales data found for store {store_id}, item {item_id}")
+                return None
             
-            # Calculate error metrics for each model
-            error_metrics = {}
+            # Get item description
+            item_desc = ""
+            item_sales = self.sales_data[
+                (self.sales_data['store_id'] == store_id) & 
+                (self.sales_data['item'] == item_id)
+            ]
+            if not item_sales.empty:
+                item_desc = item_sales['Item_Description'].iloc[0]
+            else:
+                item_desc = f"Item {item_id}"
             
-            for model_name, forecast_df in model_forecasts.items():
-                # Merge forecasts with actual sales
-                merged_data = pd.merge(
-                    historical_sales,
-                    forecast_df[['Date', 'Forecast']],
-                    on='Date',
-                    how='inner'
+            # Create figure
+            fig = make_subplots(
+                rows=1, 
+                cols=1,
+                subplot_titles=[f"Inventory Analysis for {item_desc} (Last {lookback_days} Days)"]
+            )
+            
+            # Add sales data
+            fig.add_trace(
+                go.Bar(
+                    x=sales_data['Proc_date'],
+                    y=sales_data['Total_units'],
+                    name='Units Sold',
+                    marker_color='blue',
+                    hovertemplate='%{x|%Y-%m-%d}<br>Units Sold: %{y}<extra>Sales</extra>'
                 )
-                
-                if merged_data.empty:
-                    logger.warning(f"No overlapping data for error analysis for {model_name}")
-                    continue
-                
-                # Calculate error metrics
-                merged_data['Error'] = merged_data['Total_units'] - merged_data['Forecast']
-                merged_data['AbsError'] = abs(merged_data['Error'])
-                merged_data['SquaredError'] = merged_data['Error'] ** 2
-                merged_data['PercentError'] = 100 * merged_data['Error'] / merged_data['Total_units'].replace(0, np.nan)
-                
-                metrics = {
-                    'MAE': merged_data['AbsError'].mean(),
-                    'MSE': merged_data['SquaredError'].mean(),
-                    'RMSE': np.sqrt(merged_data['SquaredError'].mean()),
-                    'MAPE': merged_data['PercentError'].abs().mean(),
-                    'Bias': merged_data['Error'].mean(),
-                    'StdDev': merged_data['Error'].std(),
-                    'DataPoints': len(merged_data)
-                }
-                
-                error_metrics[model_name] = metrics
+            )
             
-            # Create error comparison visualization
-            if error_metrics and output_file:
+            # Add stock data if available
+            if stock_data is not None:
                 try:
-                    # Prepare data for plotting
-                    models = list(error_metrics.keys())
-                    mae_values = [error_metrics[model]['MAE'] for model in models]
-                    rmse_values = [error_metrics[model]['RMSE'] for model in models]
-                    bias_values = [error_metrics[model]['Bias'] for model in models]
+                    item_stock = stock_data[
+                        (stock_data['store_id'] == store_id) & 
+                        (stock_data['item'] == item_id)
+                    ].copy()
                     
-                    # Create subplots
-                    fig = make_subplots(
-                        rows=1, 
-                        cols=3, 
-                        subplot_titles=('Mean Absolute Error', 'Root Mean Squared Error', 'Bias'),
-                        shared_yaxes=True
-                    )
-                    
-                    # Add MAE bars
-                    fig.add_trace(
-                        go.Bar(
-                            x=models,
-                            y=mae_values,
-                            name='MAE',
-                            marker_color='blue',
-                            text=[f"{val:.2f}" for val in mae_values],
-                            textposition='auto'
-                        ),
-                        row=1, col=1
-                    )
-                    
-                    # Add RMSE bars
-                    fig.add_trace(
-                        go.Bar(
-                            x=models,
-                            y=rmse_values,
-                            name='RMSE',
-                            marker_color='green',
-                            text=[f"{val:.2f}" for val in rmse_values],
-                            textposition='auto'
-                        ),
-                        row=1, col=2
-                    )
-                    
-                    # Add Bias bars
-                    fig.add_trace(
-                        go.Bar(
-                            x=models,
-                            y=bias_values,
-                            name='Bias',
-                            marker_color='red',
-                            text=[f"{val:.2f}" for val in bias_values],
-                            textposition='auto'
-                        ),
-                        row=1, col=3
-                    )
-                    
-                    # Get item description
-                    item_desc = item_sales['Item_Description'].iloc[0] if not item_sales.empty else f"Item {item_id}"
-                    
-                    # Update layout
-                    fig.update_layout(
-                        title=f"{item_desc} (Store {store_id}) - Forecast Error Analysis (Last {lookback_days} Days)",
-                        showlegend=False,
-                        height=400
-                    )
-                    
-                    # Save the figure
-                    fig.write_html(f"testing/output/{output_file}.html")
-                    fig.write_image(f"testing/output/{output_file}.png")
-                    logger.info(f"Error analysis figure saved to testing/output/{output_file}.html and .png")
-                
+                    if 'date' in item_stock.columns and 'stock_level' in item_stock.columns:
+                        # Convert date if needed
+                        if item_stock['date'].dtype != 'datetime64[ns]':
+                            item_stock['date'] = pd.to_datetime(item_stock['date'])
+                        
+                        # Filter to relevant dates
+                        item_stock = item_stock[
+                            (item_stock['date'] >= start_date) &
+                            (item_stock['date'] <= end_date)
+                        ]
+                        
+                        if not item_stock.empty:
+                            fig.add_trace(
+                                go.Scatter(
+                                    x=item_stock['date'],
+                                    y=item_stock['stock_level'],
+                                    mode='lines',
+                                    name='Stock Level',
+                                    line=dict(color='red', width=2),
+                                    hovertemplate='%{x|%Y-%m-%d}<br>Stock: %{y}<extra>Stock</extra>'
+                                )
+                            )
                 except Exception as e:
-                    logger.error(f"Error creating error analysis visualization: {str(e)}")
+                    logger.warning(f"Error processing stock data: {str(e)}")
             
-            return error_metrics
+            # Update layout
+            fig.update_layout(
+                title=f"{item_desc} (Store {store_id}) - Inventory Analysis",
+                xaxis_title="Date",
+                yaxis_title="Units",
+                legend=dict(
+                    orientation="h",
+                    yanchor="bottom",
+                    y=1.02,
+                    xanchor="right",
+                    x=1
+                ),
+                hovermode="x unified",
+                height=500
+            )
+            
+            # Save the figure if output file is provided
+            if output_file:
+                try:
+                    fig.write_html(f"output/{output_file}.html")
+                    fig.write_image(f"output/{output_file}.png")
+                    logger.info(f"Figure saved to output/{output_file}.html and .png")
+                except Exception as e:
+                    logger.error(f"Error saving figure: {str(e)}")
+            
+            return fig
             
         except Exception as e:
-            logger.error(f"Error in create_forecast_error_analysis: {str(e)}")
-            return {}
+            logger.error(f"Error in create_inventory_analysis: {str(e)}")
+            return None
 
 if __name__ == "__main__":
     try:
@@ -580,37 +426,26 @@ if __name__ == "__main__":
         for i, (store_id, item_id, desc) in enumerate(items[:5]):
             logger.info(f"Processing {i+1}/5: Store {store_id}, Item {item_id} ({desc})")
             
-            # Create 2-week forecast comparison
-            comparator.create_forecast_comparison(
+            # Create sales analysis with different periods
+            comparator.create_sales_analysis(
                 store_id,
                 item_id,
-                period="2_weeks",
-                with_confidence_intervals=True,
+                period="3_months",
                 with_seasonality=True,
-                output_file=f"comparison_2w_{store_id}_{item_id}"
+                output_file=f"sales_analysis_3m_{store_id}_{item_id}"
             )
             
-            # Create 2-month forecast comparison
-            comparator.create_forecast_comparison(
-                store_id,
-                item_id,
-                period="2_months",
-                with_confidence_intervals=True,
-                with_seasonality=True,
-                output_file=f"comparison_2m_{store_id}_{item_id}"
-            )
-            
-            # Create error analysis
-            error_metrics = comparator.create_forecast_error_analysis(
+            # Create inventory analysis
+            comparator.create_inventory_analysis(
                 store_id,
                 item_id,
                 lookback_days=30,
-                output_file=f"error_analysis_{store_id}_{item_id}"
+                output_file=f"inventory_analysis_{store_id}_{item_id}"
             )
             
-            logger.info(f"Error metrics for {desc}: {error_metrics}")
+            logger.info(f"Analysis completed for {desc}")
         
-        logger.info("Sample model comparisons completed successfully")
+        logger.info("Sample analyses completed successfully")
         
     except Exception as e:
         logger.error(f"Error in main execution: {str(e)}")

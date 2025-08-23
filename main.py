@@ -8,13 +8,14 @@ from item_data_visualizer import ItemDataVisualizer
 from seasonality_analyzer import ItemSeasonalityAnalyzer
 from model_comparator import ModelComparator
 from error_handler import ErrorHandler
+from datetime import datetime, timedelta
 
 # Set up logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("testing/main.log"),
+        logging.FileHandler("main.log"),
         logging.StreamHandler()
     ]
 )
@@ -23,12 +24,12 @@ logger = logging.getLogger(__name__)
 class VisualizationOrchestrator:
     """Orchestrates the visualization process for items"""
     
-    def __init__(self, data_dir: str = "../data"):
+    def __init__(self, data_dir: str = "data"):
         """Initialize the orchestrator with data directory path"""
         self.data_dir = data_dir
         
         # Create output directory
-        os.makedirs("testing/output", exist_ok=True)
+        os.makedirs("output", exist_ok=True)
         
         # Initialize components
         try:
@@ -48,15 +49,15 @@ class VisualizationOrchestrator:
             logger.error(f"Error getting item list: {str(e)}")
             return []
     
+    @ErrorHandler.handle_visualization_errors
     def process_item(
         self, 
         store_id: str, 
         item_id: str,
         generate_sales_viz: bool = True,
         generate_seasonality_viz: bool = True,
-        generate_short_forecast: bool = True,
-        generate_long_forecast: bool = True,
-        generate_error_analysis: bool = True
+        generate_sales_analysis: bool = True,
+        generate_inventory_analysis: bool = True
     ) -> Dict[str, Any]:
         """Process a single item to generate all visualizations"""
         results = {}
@@ -102,52 +103,45 @@ class VisualizationOrchestrator:
                     logger.error(f"Error generating seasonality visualization: {str(e)}")
                     results['seasonality_visualization'] = False
             
-            # Generate short-term forecast comparison
-            if generate_short_forecast:
+            # Generate sales analysis with time periods
+            if generate_sales_analysis:
                 try:
-                    short_forecast = self.model_comparator.create_forecast_comparison(
+                    # Generate 3-month sales analysis
+                    sales_analysis_3m = self.model_comparator.create_sales_analysis(
                         store_id,
                         item_id,
-                        period="2_weeks",
-                        with_confidence_intervals=True,
+                        period="3_months",
                         with_seasonality=True,
-                        output_file=f"forecast_2w_{store_id}_{item_id}"
+                        output_file=f"sales_analysis_3m_{store_id}_{item_id}"
                     )
-                    results['short_forecast'] = short_forecast is not None
-                except Exception as e:
-                    logger.error(f"Error generating short-term forecast: {str(e)}")
-                    results['short_forecast'] = False
-            
-            # Generate long-term forecast comparison
-            if generate_long_forecast:
-                try:
-                    long_forecast = self.model_comparator.create_forecast_comparison(
+                    results['sales_analysis_3m'] = sales_analysis_3m is not None
+                    
+                    # Generate all-time sales analysis
+                    sales_analysis_all = self.model_comparator.create_sales_analysis(
                         store_id,
                         item_id,
-                        period="2_months",
-                        with_confidence_intervals=True,
+                        period="all",
                         with_seasonality=True,
-                        output_file=f"forecast_2m_{store_id}_{item_id}"
+                        output_file=f"sales_analysis_all_{store_id}_{item_id}"
                     )
-                    results['long_forecast'] = long_forecast is not None
+                    results['sales_analysis_all'] = sales_analysis_all is not None
                 except Exception as e:
-                    logger.error(f"Error generating long-term forecast: {str(e)}")
-                    results['long_forecast'] = False
+                    logger.error(f"Error generating sales analysis: {str(e)}")
+                    results['sales_analysis'] = False
             
-            # Generate forecast error analysis
-            if generate_error_analysis:
+            # Generate inventory analysis
+            if generate_inventory_analysis:
                 try:
-                    error_metrics = self.model_comparator.create_forecast_error_analysis(
+                    inventory_analysis = self.model_comparator.create_inventory_analysis(
                         store_id,
                         item_id,
                         lookback_days=30,
-                        output_file=f"errors_{store_id}_{item_id}"
+                        output_file=f"inventory_{store_id}_{item_id}"
                     )
-                    results['error_analysis'] = bool(error_metrics)
-                    results['error_metrics'] = error_metrics
+                    results['inventory_analysis'] = inventory_analysis is not None
                 except Exception as e:
-                    logger.error(f"Error generating error analysis: {str(e)}")
-                    results['error_analysis'] = False
+                    logger.error(f"Error generating inventory analysis: {str(e)}")
+                    results['inventory_analysis'] = False
             
             logger.info(f"Completed processing for {item_desc}")
             
@@ -157,6 +151,7 @@ class VisualizationOrchestrator:
         
         return results
     
+    @ErrorHandler.handle_visualization_errors
     def process_all_items(
         self,
         limit: Optional[int] = None,
@@ -200,6 +195,7 @@ class VisualizationOrchestrator:
         
         return results
 
+    @ErrorHandler.handle_visualization_errors
     def generate_summary_report(self, results: Dict[str, Any], output_file: str = "summary_report.html") -> None:
         """Generate a summary report of all visualizations"""
         try:
@@ -208,7 +204,7 @@ class VisualizationOrchestrator:
             from plotly.subplots import make_subplots
             
             # Create output HTML file
-            with open(f"testing/output/{output_file}", "w") as f:
+            with open(f"output/{output_file}", "w") as f:
                 # Write HTML header
                 f.write("""
                 <!DOCTYPE html>
@@ -231,7 +227,7 @@ class VisualizationOrchestrator:
                     </style>
                 </head>
                 <body>
-                    <h1>Sales and Forecast Visualization Summary</h1>
+                    <h1>Sales and Visualization Summary</h1>
                 """)
                 
                 # Write summary of results
@@ -285,45 +281,34 @@ class VisualizationOrchestrator:
                         else:
                             f.write(f'<li>Seasonality Analysis: No significant seasonality detected</li>')
                     
-                    if 'short_forecast' in item_results:
-                        status = "success" if item_results['short_forecast'] else "failure"
-                        f.write(f'<li>2-Week Forecast Comparison: <span class="status-{status}">{status.upper()}</span>')
+                    if 'sales_analysis_3m' in item_results:
+                        status = "success" if item_results['sales_analysis_3m'] else "failure"
+                        f.write(f'<li>3-Month Sales Analysis: <span class="status-{status}">{status.upper()}</span>')
                         if status == "success":
-                            f.write(f' - <a href="forecast_2w_{store_id}_{item_id}.html" target="_blank">View</a>')
+                            f.write(f' - <a href="sales_analysis_3m_{store_id}_{item_id}.html" target="_blank">View</a>')
                         f.write('</li>')
                     
-                    if 'long_forecast' in item_results:
-                        status = "success" if item_results['long_forecast'] else "failure"
-                        f.write(f'<li>2-Month Forecast Comparison: <span class="status-{status}">{status.upper()}</span>')
+                    if 'sales_analysis_all' in item_results:
+                        status = "success" if item_results['sales_analysis_all'] else "failure"
+                        f.write(f'<li>All-Time Sales Analysis: <span class="status-{status}">{status.upper()}</span>')
                         if status == "success":
-                            f.write(f' - <a href="forecast_2m_{store_id}_{item_id}.html" target="_blank">View</a>')
+                            f.write(f' - <a href="sales_analysis_all_{store_id}_{item_id}.html" target="_blank">View</a>')
                         f.write('</li>')
                     
-                    if 'error_analysis' in item_results:
-                        status = "success" if item_results['error_analysis'] else "failure"
-                        f.write(f'<li>Forecast Error Analysis: <span class="status-{status}">{status.upper()}</span>')
+                    if 'inventory_analysis' in item_results:
+                        status = "success" if item_results['inventory_analysis'] else "failure"
+                        f.write(f'<li>Inventory Analysis: <span class="status-{status}">{status.upper()}</span>')
                         if status == "success":
-                            f.write(f' - <a href="errors_{store_id}_{item_id}.html" target="_blank">View</a>')
+                            f.write(f' - <a href="inventory_{store_id}_{item_id}.html" target="_blank">View</a>')
                         f.write('</li>')
                     
                     f.write("</ul>")
                     
-                    # Add error metrics table if available
-                    if item_results.get('error_metrics'):
-                        f.write("<h3>Model Error Metrics:</h3>")
-                        f.write('<table class="metrics-table">')
-                        f.write("<tr><th>Model</th><th>MAE</th><th>RMSE</th><th>MAPE</th><th>Bias</th></tr>")
-                        
-                        for model, metrics in item_results['error_metrics'].items():
-                            f.write(f"<tr>")
-                            f.write(f"<td>{model}</td>")
-                            f.write(f"<td>{metrics.get('MAE', 'N/A'):.2f}</td>")
-                            f.write(f"<td>{metrics.get('RMSE', 'N/A'):.2f}</td>")
-                            f.write(f"<td>{metrics.get('MAPE', 'N/A'):.2f}%</td>")
-                            f.write(f"<td>{metrics.get('Bias', 'N/A'):.2f}</td>")
-                            f.write(f"</tr>")
-                        
-                        f.write("</table>")
+                    # Add link to Dash app
+                    f.write(f"""
+                    <p>View interactive visualizations for this item in the 
+                    <a href="/dash/" target="_blank">Interactive Dashboard</a>.</p>
+                    """)
                     
                     # Close item section
                     f.write("</div>")
@@ -334,7 +319,7 @@ class VisualizationOrchestrator:
                 </html>
                 """)
                 
-            logger.info(f"Summary report generated at testing/output/{output_file}")
+            logger.info(f"Summary report generated at output/{output_file}")
             
         except Exception as e:
             logger.error(f"Error generating summary report: {str(e)}")
@@ -347,6 +332,7 @@ def main():
     parser.add_argument('--store', type=str, help='Filter by store ID')
     parser.add_argument('--item', type=str, help='Filter by item ID')
     parser.add_argument('--output', type=str, default='summary_report.html', help='Output summary report filename')
+    parser.add_argument('--run-app', action='store_true', help='Run the interactive dashboard after generating visualizations')
     
     args = parser.parse_args()
     
@@ -365,7 +351,14 @@ def main():
         orchestrator.generate_summary_report(results, output_file=args.output)
         
         logger.info("Visualization process completed successfully")
-        print(f"Visualizations generated successfully. See testing/output/{args.output} for summary.")
+        print(f"Visualizations generated successfully. See output/{args.output} for summary.")
+        
+        # Run the interactive dashboard if requested
+        if args.run_app:
+            print("Starting interactive dashboard...")
+            import subprocess
+            subprocess.Popen(["python", "app.py"])
+            print("Dashboard available at http://localhost:5000/")
         
     except Exception as e:
         logger.error(f"Error in main execution: {str(e)}")

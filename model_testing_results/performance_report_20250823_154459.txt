@@ -1,0 +1,17 @@
+================================================================================
+DEMAND FORECASTING MODEL PERFORMANCE REPORT
+================================================================================
+
+Evaluation Date: 2025-08-23T15:44:59.623963
+Items Tested: 5
+Store Filter: None
+
+TOP PERFORMING ITEMS
+------------------------------
+1. BELLATORIA BBQ CHK PIZZA (104.0_3913116850.0): 0.0% accuracy
+2. BELLATORIA ULT PEPPERONI PIZZA (104.0_3913116852.0): 0.0% accuracy
+3. BELLATORIA ULT SUPREME PIZZA (104.0_3913116853.0): 0.0% accuracy
+4. BELLATORIA GAR CHKN ALFR PIZZA (104.0_3913116856.0): 0.0% accuracy
+5. BELLATORIA SAUS ITALIA PIZZA (104.0_3913116891.0): 0.0% accuracy
+
+================================================================================

@@ -13,7 +13,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("testing/visualization.log"),
+        logging.FileHandler("visualization.log"),
         logging.StreamHandler()
     ]
 )
@@ -22,18 +22,16 @@ logger = logging.getLogger(__name__)
 class ItemDataVisualizer:
     """Class for visualizing sales and purchase data for individual items"""
     
-    def __init__(self, data_dir: str = "../data"):
+    def __init__(self, data_dir: str = "data"):
         """Initialize the visualizer with data directory path"""
         self.data_dir = data_dir
         self.sales_data = None
         self.purchase_data = None
         self.stock_data = None
-        self.rf_forecasts = None
-        self.pytorch_forecasts = None
-        self.arima_forecasts = None
+        # No forecast models in current implementation
         
         # Create output directory
-        os.makedirs("testing/output", exist_ok=True)
+        os.makedirs("output", exist_ok=True)
         
         try:
             self._load_data()
@@ -56,24 +54,8 @@ class ItemDataVisualizer:
             if 'Proc_date' in self.purchase_data.columns:
                 self.purchase_data['Proc_date'] = pd.to_datetime(self.purchase_data['Proc_date'])
             
-            # Load model forecasts if they exist
-            try:
-                self.rf_forecasts = pd.read_csv(os.path.join(self.data_dir, "processed/rf_forecasts.csv"))
-                self.rf_forecasts['Date'] = pd.to_datetime(self.rf_forecasts['Date'])
-            except FileNotFoundError:
-                logger.warning("RF forecasts file not found")
-                
-            try:
-                self.pytorch_forecasts = pd.read_csv(os.path.join(self.data_dir, "processed/pytorch_forecasts.csv"))
-                self.pytorch_forecasts['Date'] = pd.to_datetime(self.pytorch_forecasts['Date'])
-            except FileNotFoundError:
-                logger.warning("PyTorch forecasts file not found")
-                
-            try:
-                self.arima_forecasts = pd.read_csv(os.path.join(self.data_dir, "processed/arima_forecasts.csv"))
-                self.arima_forecasts['Date'] = pd.to_datetime(self.arima_forecasts['Date'])
-            except FileNotFoundError:
-                logger.warning("ARIMA forecasts file not found")
+            # No forecast models in current implementation
+            logger.info("Using only raw data, no forecast models implemented")
             
         except Exception as e:
             logger.error(f"Error in _load_data: {str(e)}")
@@ -205,9 +187,9 @@ class ItemDataVisualizer:
             # Save the figure if output file is provided
             if output_file:
                 try:
-                    fig.write_html(f"testing/output/{output_file}.html")
-                    fig.write_image(f"testing/output/{output_file}.png")
-                    logger.info(f"Figure saved to testing/output/{output_file}.html and .png")
+                    fig.write_html(f"output/{output_file}.html")
+                    fig.write_image(f"output/{output_file}.png")
+                    logger.info(f"Figure saved to output/{output_file}.html and .png")
                 except Exception as e:
                     logger.error(f"Error saving figure: {str(e)}")
             
@@ -290,219 +272,96 @@ class ItemDataVisualizer:
             logger.error(f"Error in detect_item_seasonality: {str(e)}")
             return {"has_seasonality": False, "error": str(e)}
 
-    def visualize_model_predictions(
+    def visualize_sales_trends(
         self,
         store_id: str,
         item_id: str,
-        forecast_period: str = "2_weeks",  # "2_weeks" or "2_months"
+        timeframe: str = "1_month",  # "1_month", "3_months", "6_months", "all"
         output_file: Optional[str] = None
     ) -> go.Figure:
         """
-        Create visualization of model predictions for a specific item
+        Create visualization of sales trends for a specific item with different timeframes
         
         Args:
             store_id: Store identifier
             item_id: Item identifier
-            forecast_period: Period for forecast visualization ('2_weeks' or '2_months')
+            timeframe: Period for visualization ('1_month', '3_months', '6_months', 'all')
             output_file: If provided, save the figure to this file
             
         Returns:
             Plotly figure object
         """
         try:
-            # Filter forecasts for the specific store and item
-            rf_item = None if self.rf_forecasts is None else self.rf_forecasts[
-                (self.rf_forecasts['Store_Id'] == store_id) & 
-                (self.rf_forecasts['Item'] == item_id)
-            ].copy()
-            
-            pytorch_item = None if self.pytorch_forecasts is None else self.pytorch_forecasts[
-                (self.pytorch_forecasts['Store_Id'] == store_id) & 
-                (self.pytorch_forecasts['Item'] == item_id)
-            ].copy()
-            
-            arima_item = None if self.arima_forecasts is None else self.arima_forecasts[
-                (self.arima_forecasts['Store_Id'] == store_id) & 
-                (self.arima_forecasts['Item'] == item_id)
-            ].copy()
-            
-            # Check if we have any forecast data
-            if (rf_item is None or rf_item.empty) and \
-               (pytorch_item is None or pytorch_item.empty) and \
-               (arima_item is None or arima_item.empty):
-                logger.warning(f"No forecast data found for store {store_id}, item {item_id}")
-                return None
-            
-            # Determine forecast dates based on the period
-            today = datetime.now()
-            if forecast_period == "2_weeks":
-                end_date = today + timedelta(days=14)
-                title_period = "2 Weeks"
-            else:  # "2_months"
-                end_date = today + timedelta(days=60)
-                title_period = "2 Months"
-            
-            # Filter forecasts for the period
-            if rf_item is not None:
-                rf_item = rf_item[rf_item['Date'] <= end_date]
-            if pytorch_item is not None:
-                pytorch_item = pytorch_item[pytorch_item['Date'] <= end_date]
-            if arima_item is not None:
-                arima_item = arima_item[arima_item['Date'] <= end_date]
-            
-            # Get item description
-            item_desc = ""
-            for forecast_df in [rf_item, pytorch_item, arima_item]:
-                if forecast_df is not None and not forecast_df.empty:
-                    if 'Product' in forecast_df.columns:
-                        item_desc = forecast_df['Product'].iloc[0]
-                        break
-            
-            if not item_desc:
-                # Try to get from sales data
-                item_sales = self.sales_data[
-                    (self.sales_data['store_id'] == store_id) & 
-                    (self.sales_data['item'] == item_id)
-                ]
-                if not item_sales.empty:
-                    item_desc = item_sales['Item_Description'].iloc[0]
-                else:
-                    item_desc = f"Item {item_id}"
-            
-            # Create figure
-            fig = make_subplots(
-                rows=1,
-                cols=1,
-                specs=[[{"secondary_y": False}]],
-                subplot_titles=[f"{item_desc} Demand Forecast - Next {title_period}"]
-            )
-            
-            # Add historical sales data
+            # Filter data for the specific store and item
             item_sales = self.sales_data[
                 (self.sales_data['store_id'] == store_id) & 
                 (self.sales_data['item'] == item_id)
             ].copy()
             
-            if not item_sales.empty:
-                # Get the last 30 days of historical data
-                cutoff_date = today - timedelta(days=30)
-                recent_sales = item_sales[item_sales['Proc_date'] >= cutoff_date]
-                
-                if not recent_sales.empty:
-                    # Aggregate by date
-                    daily_sales = recent_sales.groupby('Proc_date')['Total_units'].sum().reset_index()
-                    
-                    # Add historical sales trace
-                    fig.add_trace(
-                        go.Scatter(
-                            x=daily_sales['Proc_date'],
-                            y=daily_sales['Total_units'],
-                            mode='lines',
-                            name='Historical Sales',
-                            line=dict(color='gray', width=2, dash='dot'),
-                            hovertemplate='%{x|%Y-%m-%d}<br>Units: %{y}<extra>Historical</extra>'
-                        )
-                    )
+            if item_sales.empty:
+                logger.warning(f"No sales data found for store {store_id}, item {item_id}")
+                return None
             
-            # Add RF forecast
-            if rf_item is not None and not rf_item.empty:
-                fig.add_trace(
-                    go.Scatter(
-                        x=rf_item['Date'],
-                        y=rf_item['Forecast'],
-                        mode='lines',
-                        name='Random Forest',
-                        line=dict(color='blue', width=2),
-                        hovertemplate='%{x|%Y-%m-%d}<br>Forecast: %{y:.1f}<extra>RF</extra>'
-                    )
+            # Get item description
+            item_desc = item_sales['Item_Description'].iloc[0] if not item_sales.empty else f"Item {item_id}"
+            
+            # Determine timeframe
+            today = datetime.now()
+            if timeframe == "1_month":
+                start_date = today - timedelta(days=30)
+                title_period = "Last Month"
+            elif timeframe == "3_months":
+                start_date = today - timedelta(days=90)
+                title_period = "Last 3 Months"
+            elif timeframe == "6_months":
+                start_date = today - timedelta(days=180)
+                title_period = "Last 6 Months"
+            else:  # "all"
+                start_date = None
+                title_period = "All Time"
+            
+            # Filter by start date if specified
+            if start_date:
+                item_sales = item_sales[item_sales['Proc_date'] >= start_date]
+            
+            # Create figure
+            fig = go.Figure()
+            
+            # Aggregate by date
+            daily_sales = item_sales.groupby('Proc_date')['Total_units'].sum().reset_index()
+            
+            # Add sales trace
+            fig.add_trace(
+                go.Scatter(
+                    x=daily_sales['Proc_date'],
+                    y=daily_sales['Total_units'],
+                    mode='lines+markers',
+                    name='Sales',
+                    line=dict(color='blue', width=2),
+                    marker=dict(size=6),
+                    hovertemplate='%{x|%Y-%m-%d}<br>Units Sold: %{y}<extra></extra>'
                 )
-                
-                # Add RF confidence interval
-                if 'Lower_Bound' in rf_item.columns and 'Upper_Bound' in rf_item.columns:
-                    fig.add_trace(
-                        go.Scatter(
-                            x=rf_item['Date'].tolist() + rf_item['Date'].tolist()[::-1],
-                            y=rf_item['Upper_Bound'].tolist() + rf_item['Lower_Bound'].tolist()[::-1],
-                            fill='toself',
-                            fillcolor='rgba(0, 0, 255, 0.1)',
-                            line=dict(color='rgba(255,255,255,0)'),
-                            name='RF Confidence',
-                            showlegend=False,
-                            hoverinfo='skip'
-                        )
-                    )
-            
-            # Add PyTorch forecast
-            if pytorch_item is not None and not pytorch_item.empty:
-                fig.add_trace(
-                    go.Scatter(
-                        x=pytorch_item['Date'],
-                        y=pytorch_item['Forecast'],
-                        mode='lines',
-                        name='PyTorch',
-                        line=dict(color='green', width=2),
-                        hovertemplate='%{x|%Y-%m-%d}<br>Forecast: %{y:.1f}<extra>PyTorch</extra>'
-                    )
-                )
-                
-                # Add PyTorch confidence interval
-                if 'Lower_Bound' in pytorch_item.columns and 'Upper_Bound' in pytorch_item.columns:
-                    fig.add_trace(
-                        go.Scatter(
-                            x=pytorch_item['Date'].tolist() + pytorch_item['Date'].tolist()[::-1],
-                            y=pytorch_item['Upper_Bound'].tolist() + pytorch_item['Lower_Bound'].tolist()[::-1],
-                            fill='toself',
-                            fillcolor='rgba(0, 255, 0, 0.1)',
-                            line=dict(color='rgba(255,255,255,0)'),
-                            name='PyTorch Confidence',
-                            showlegend=False,
-                            hoverinfo='skip'
-                        )
-                    )
-            
-            # Add ARIMA forecast
-            if arima_item is not None and not arima_item.empty:
-                fig.add_trace(
-                    go.Scatter(
-                        x=arima_item['Date'],
-                        y=arima_item['Forecast'],
-                        mode='lines',
-                        name='ARIMA',
-                        line=dict(color='red', width=2),
-                        hovertemplate='%{x|%Y-%m-%d}<br>Forecast: %{y:.1f}<extra>ARIMA</extra>'
-                    )
-                )
-                
-                # Add ARIMA confidence interval
-                if 'Lower_Bound' in arima_item.columns and 'Upper_Bound' in arima_item.columns:
-                    fig.add_trace(
-                        go.Scatter(
-                            x=arima_item['Date'].tolist() + arima_item['Date'].tolist()[::-1],
-                            y=arima_item['Upper_Bound'].tolist() + arima_item['Lower_Bound'].tolist()[::-1],
-                            fill='toself',
-                            fillcolor='rgba(255, 0, 0, 0.1)',
-                            line=dict(color='rgba(255,255,255,0)'),
-                            name='ARIMA Confidence',
-                            showlegend=False,
-                            hoverinfo='skip'
-                        )
-                    )
-            
-            # Add vertical line for today
-            fig.add_vline(
-                x=today, 
-                line_width=2, 
-                line_dash="dash", 
-                line_color="black",
-                annotation_text="Today",
-                annotation_position="top right"
             )
+            
+            # Calculate moving average if enough data
+            if len(daily_sales) > 7:
+                daily_sales['MA7'] = daily_sales['Total_units'].rolling(window=7).mean()
+                fig.add_trace(
+                    go.Scatter(
+                        x=daily_sales['Proc_date'],
+                        y=daily_sales['MA7'],
+                        mode='lines',
+                        name='7-Day Moving Average',
+                        line=dict(color='red', width=2),
+                        hovertemplate='%{x|%Y-%m-%d}<br>MA7: %{y:.1f}<extra></extra>'
+                    )
+                )
             
             # Update layout
             fig.update_layout(
-                title=f"{item_desc} (Store {store_id}) - Model Predictions for Next {title_period}",
+                title=f"{item_desc} (Store {store_id}) - Sales Trend {title_period}",
                 xaxis_title="Date",
-                yaxis_title="Predicted Units",
+                yaxis_title="Units Sold",
                 legend=dict(
                     orientation="h",
                     yanchor="bottom",
@@ -517,16 +376,16 @@ class ItemDataVisualizer:
             # Save the figure if output file is provided
             if output_file:
                 try:
-                    fig.write_html(f"testing/output/{output_file}.html")
-                    fig.write_image(f"testing/output/{output_file}.png")
-                    logger.info(f"Figure saved to testing/output/{output_file}.html and .png")
+                    fig.write_html(f"output/{output_file}.html")
+                    fig.write_image(f"output/{output_file}.png")
+                    logger.info(f"Figure saved to output/{output_file}.html and .png")
                 except Exception as e:
                     logger.error(f"Error saving figure: {str(e)}")
             
             return fig
             
         except Exception as e:
-            logger.error(f"Error in visualize_model_predictions: {str(e)}")
+            logger.error(f"Error in visualize_sales_trends: {str(e)}")
             return None
 
 if __name__ == "__main__":

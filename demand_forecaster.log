@@ -1,0 +1,711 @@
+2025-08-23 14:51:44,798 - __main__ - INFO - Demand forecaster initialized successfully
+2025-08-23 14:51:44,812 - __main__ - INFO - Found 62 unique store-item combinations
+2025-08-23 14:51:44,812 - __main__ - INFO - Testing forecast for: Store 104.0, Item 3913116850.0 (BELLATORIA BBQ CHK PIZZA)
+2025-08-23 14:51:44,813 - __main__ - WARNING - No sales data found for store 104.0, item 3913116850.0
+2025-08-23 14:51:44,813 - __main__ - WARNING - No sales data available for forecasting: store 104.0, item 3913116850.0
+2025-08-23 14:51:44,813 - __main__ - ERROR - Forecast error: No sales data available
+2025-08-23 14:51:44,814 - __main__ - INFO - Demand forecaster testing completed successfully
+2025-08-23 14:52:08,333 - __main__ - INFO - Demand forecaster initialized successfully
+2025-08-23 14:52:08,347 - __main__ - INFO - Found 62 unique store-item combinations
+2025-08-23 14:52:08,347 - __main__ - INFO - Testing forecast for: Store 104.0, Item 3913116850.0 (BELLATORIA BBQ CHK PIZZA)
+2025-08-23 14:52:08,356 - __main__ - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 14:52:08,356 - __main__ - INFO - Forecast results: {'1_week': {'daily_forecast': [0.09999999999999999, 0.09999999999999999, 0.18571428571428572, 0.09999999999999999, 0.18571428571428572, 0.09999999999999999, 0.18571428571428572], 'weekly_totals': [0.9571428571428571], 'total_predicted': 0.9571428571428571, 'total_practical': 0, 'explanations': ['Forecast floored at 30% below last week average (0.1)'], 'confidence': 0.5994788854584057}, '2_week': {'daily_forecast': [0.18571428571428572, 0.18571428571428572, 0.18571428571428572, 0.09999999999999999, 0.18571428571428572, 0.18571428571428572, 0.18571428571428572, 0.18571428571428572, 0.18571428571428572, 0.18571428571428572, 0.09999999999999999, 0.18571428571428572, 0.09999999999999999, 0.18571428571428572], 'weekly_totals': [1.2142857142857142, 1.1285714285714286], 'total_predicted': 2.3428571428571425, 'total_practical': 0, 'explanations': ['Forecast capped at 30% above last week average (0.1)', 'Forecast capped at 30% above last week average (0.1)'], 'confidence': 0.5994788854584057}}
+2025-08-23 14:52:08,356 - __main__ - INFO - Demand forecaster testing completed successfully
+2025-08-23 14:53:21,472 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 14:53:21,611 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 14:53:21,611 - __main__ - INFO - Forecast visualizer initialized successfully
+2025-08-23 14:53:21,619 - __main__ - INFO - Found 62 unique store-item combinations
+2025-08-23 14:53:21,619 - __main__ - INFO - Creating forecast visualization for: Store 104.0, Item 3913116850.0 (BELLATORIA BBQ CHK PIZZA)
+2025-08-23 14:53:21,623 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 14:53:21,699 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116850.0
+2025-08-23 14:53:23,140 - __main__ - INFO - Forecast visualization saved to output/forecast_104.0_3913116850.0
+2025-08-23 14:53:23,144 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 14:53:23,151 - __main__ - INFO - Forecast comparison table:
+            Period  ...                                        Explanation
+0        Last Week  ...                   Historical average for reference
+1     Last 2 Weeks  ...                   Historical average for reference
+2       Last Month  ...                   Historical average for reference
+3          Overall  ...                   Historical average for reference
+4  Weighted Recent  ...                   Historical average for reference
+5           1 Week  ...  Forecast floored at 30% below last week averag...
+6           2 Week  ...  Forecast capped at 30% above last week average...
+
+[7 rows x 5 columns]
+2025-08-23 14:53:23,151 - __main__ - INFO - Forecast visualization testing completed successfully
+2025-08-23 14:54:51,048 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 14:54:51,189 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 14:54:51,327 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 14:54:51,327 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 14:54:51,335 - forecast_app - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 14:55:58,712 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 14:55:58,712 - __main__ - INFO - Model testing suite initialized successfully
+2025-08-23 14:55:58,713 - __main__ - INFO - Starting model performance evaluation...
+2025-08-23 14:55:58,721 - __main__ - INFO - Evaluating model performance on 5 items
+2025-08-23 14:55:58,722 - __main__ - INFO - Testing 1/5: BELLATORIA BBQ CHK PIZZA (Store 104.0, Item 3913116850.0)
+2025-08-23 14:55:58,729 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 14:55:58,730 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,732 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 14:55:58,733 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,736 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 14:55:58,736 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,739 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 14:55:58,739 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,742 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 14:55:58,742 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,745 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 14:55:58,746 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,746 - __main__ - INFO - Backtesting completed for store 104.0, item 3913116850.0
+2025-08-23 14:55:58,746 - __main__ - INFO - Testing 2/5: BELLATORIA ULT PEPPERONI PIZZA (Store 104.0, Item 3913116852.0)
+2025-08-23 14:55:58,750 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-23 14:55:58,751 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,754 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-23 14:55:58,754 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,757 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-23 14:55:58,758 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,761 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-23 14:55:58,761 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,764 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-23 14:55:58,765 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,768 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-23 14:55:58,768 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,769 - __main__ - INFO - Backtesting completed for store 104.0, item 3913116852.0
+2025-08-23 14:55:58,769 - __main__ - INFO - Testing 3/5: BELLATORIA ULT SUPREME PIZZA (Store 104.0, Item 3913116853.0)
+2025-08-23 14:55:58,774 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116853.0
+2025-08-23 14:55:58,775 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,778 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116853.0
+2025-08-23 14:55:58,779 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,782 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116853.0
+2025-08-23 14:55:58,782 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,786 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116853.0
+2025-08-23 14:55:58,786 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,789 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116853.0
+2025-08-23 14:55:58,790 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,793 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116853.0
+2025-08-23 14:55:58,794 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,794 - __main__ - INFO - Backtesting completed for store 104.0, item 3913116853.0
+2025-08-23 14:55:58,794 - __main__ - INFO - Testing 4/5: BELLATORIA GAR CHKN ALFR PIZZA (Store 104.0, Item 3913116856.0)
+2025-08-23 14:55:58,799 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 14:55:58,800 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,803 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 14:55:58,804 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,807 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 14:55:58,807 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,811 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 14:55:58,811 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,814 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 14:55:58,815 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,818 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 14:55:58,819 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,819 - __main__ - INFO - Backtesting completed for store 104.0, item 3913116856.0
+2025-08-23 14:55:58,819 - __main__ - INFO - Testing 5/5: BELLATORIA SAUS ITALIA PIZZA (Store 104.0, Item 3913116891.0)
+2025-08-23 14:55:58,824 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 14:55:58,824 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,827 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 14:55:58,828 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,831 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 14:55:58,831 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,835 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 14:55:58,835 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,838 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 14:55:58,839 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,842 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 14:55:58,843 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 14:55:58,843 - __main__ - INFO - Backtesting completed for store 104.0, item 3913116891.0
+2025-08-23 14:55:58,844 - __main__ - INFO - Performance evaluation completed. Results saved to model_testing_results/performance_evaluation_20250823_145558.json
+2025-08-23 14:55:58,844 - __main__ - INFO - Performance report saved to model_testing_results/performance_report_20250823_145558.txt
+2025-08-23 14:55:58,844 - __main__ - INFO - Model testing completed successfully
+2025-08-23 14:57:25,498 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 14:57:25,499 - __main__ - INFO - Forecast explainer initialized successfully
+2025-08-23 14:57:25,508 - __main__ - INFO - Found 62 unique store-item combinations
+2025-08-23 14:57:25,508 - __main__ - INFO - Generating explanation for: Store 104.0, Item 3913116850.0 (BELLATORIA BBQ CHK PIZZA)
+2025-08-23 14:57:25,512 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 14:57:25,587 - __main__ - INFO - Explanation visualization saved to output/explanation_104.0_3913116850.0.html
+2025-08-23 14:57:25,587 - __main__ - INFO - Forecast explanation testing completed successfully
+2025-08-23 14:57:41,292 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 14:57:41,423 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 14:57:41,555 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 14:57:41,555 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 14:57:41,562 - forecast_app - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 14:59:25,036 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 14:59:25,048 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 14:59:25,243 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 14:59:25,375 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 14:59:25,375 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 14:59:25,505 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 14:59:25,505 - forecast_explainer - INFO - Forecast explainer initialized successfully
+2025-08-23 14:59:25,930 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 14:59:26,060 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 14:59:26,188 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 14:59:26,189 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 14:59:26,196 - forecast_app - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 15:09:09,837 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 15:09:09,850 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 15:42:24,165 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 15:42:24,295 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 15:42:24,423 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 15:42:24,423 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 15:42:24,431 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 15:43:18,067 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 15:43:18,200 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 15:43:18,334 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 15:43:18,334 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 15:43:18,342 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 15:43:18,353 - dash.dash - INFO - Dash is running on http://0.0.0.0:5000/
+
+2025-08-23 15:43:19,427 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 15:43:19,564 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 15:43:19,698 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 15:43:19,699 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 15:43:19,707 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 15:44:59,614 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 15:44:59,614 - __main__ - INFO - Model testing suite initialized successfully
+2025-08-23 15:44:59,614 - __main__ - INFO - Starting model performance evaluation...
+2025-08-23 15:44:59,624 - __main__ - INFO - Evaluating model performance on 5 items
+2025-08-23 15:44:59,624 - __main__ - INFO - Testing 1/5: BELLATORIA BBQ CHK PIZZA (Store 104.0, Item 3913116850.0)
+2025-08-23 15:44:59,630 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 15:44:59,631 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,634 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 15:44:59,634 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,637 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 15:44:59,638 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,641 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 15:44:59,641 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,644 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 15:44:59,645 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,648 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 15:44:59,648 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,648 - __main__ - INFO - Backtesting completed for store 104.0, item 3913116850.0
+2025-08-23 15:44:59,648 - __main__ - INFO - Testing 2/5: BELLATORIA ULT PEPPERONI PIZZA (Store 104.0, Item 3913116852.0)
+2025-08-23 15:44:59,653 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-23 15:44:59,654 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,657 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-23 15:44:59,657 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,661 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-23 15:44:59,661 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,664 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-23 15:44:59,665 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,668 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-23 15:44:59,669 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,672 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-23 15:44:59,673 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,673 - __main__ - INFO - Backtesting completed for store 104.0, item 3913116852.0
+2025-08-23 15:44:59,673 - __main__ - INFO - Testing 3/5: BELLATORIA ULT SUPREME PIZZA (Store 104.0, Item 3913116853.0)
+2025-08-23 15:44:59,678 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116853.0
+2025-08-23 15:44:59,679 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,682 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116853.0
+2025-08-23 15:44:59,683 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,686 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116853.0
+2025-08-23 15:44:59,686 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,690 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116853.0
+2025-08-23 15:44:59,690 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,693 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116853.0
+2025-08-23 15:44:59,694 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,698 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116853.0
+2025-08-23 15:44:59,698 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,698 - __main__ - INFO - Backtesting completed for store 104.0, item 3913116853.0
+2025-08-23 15:44:59,698 - __main__ - INFO - Testing 4/5: BELLATORIA GAR CHKN ALFR PIZZA (Store 104.0, Item 3913116856.0)
+2025-08-23 15:44:59,704 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 15:44:59,704 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,708 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 15:44:59,709 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,712 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 15:44:59,712 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,716 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 15:44:59,716 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,719 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 15:44:59,720 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,724 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 15:44:59,725 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,725 - __main__ - INFO - Backtesting completed for store 104.0, item 3913116856.0
+2025-08-23 15:44:59,725 - __main__ - INFO - Testing 5/5: BELLATORIA SAUS ITALIA PIZZA (Store 104.0, Item 3913116891.0)
+2025-08-23 15:44:59,730 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 15:44:59,731 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,734 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 15:44:59,734 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,738 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 15:44:59,739 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,743 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 15:44:59,744 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,748 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 15:44:59,748 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,752 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 15:44:59,752 - __main__ - ERROR - Error calculating metrics: only integer scalar arrays can be converted to a scalar index
+2025-08-23 15:44:59,753 - __main__ - INFO - Backtesting completed for store 104.0, item 3913116891.0
+2025-08-23 15:44:59,754 - __main__ - INFO - Performance evaluation completed. Results saved to model_testing_results/performance_evaluation_20250823_154459.json
+2025-08-23 15:44:59,754 - __main__ - INFO - Performance report saved to model_testing_results/performance_report_20250823_154459.txt
+2025-08-23 15:44:59,754 - __main__ - INFO - Model testing completed successfully
+2025-08-23 15:46:41,848 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 15:46:41,848 - __main__ - INFO - Model testing suite initialized successfully
+2025-08-23 15:46:41,848 - __main__ - INFO - Starting model performance evaluation...
+2025-08-23 15:46:41,857 - __main__ - INFO - Evaluating model performance on 5 items
+2025-08-23 15:46:41,857 - __main__ - INFO - Testing 1/5: BELLATORIA BBQ CHK PIZZA (Store 104.0, Item 3913116850.0)
+2025-08-23 15:46:41,862 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 15:46:41,866 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 15:46:41,869 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 15:46:41,872 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 15:46:41,876 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 15:46:41,879 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 15:46:41,879 - __main__ - INFO - Backtesting completed for store 104.0, item 3913116850.0
+2025-08-23 15:46:41,880 - __main__ - INFO - Testing 2/5: BELLATORIA ULT PEPPERONI PIZZA (Store 104.0, Item 3913116852.0)
+2025-08-23 15:46:41,884 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-23 15:46:41,887 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-23 15:46:41,891 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-23 15:46:41,894 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-23 15:46:41,898 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-23 15:46:41,901 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-23 15:46:41,902 - __main__ - INFO - Backtesting completed for store 104.0, item 3913116852.0
+2025-08-23 15:46:41,902 - __main__ - INFO - Testing 3/5: BELLATORIA ULT SUPREME PIZZA (Store 104.0, Item 3913116853.0)
+2025-08-23 15:46:41,907 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116853.0
+2025-08-23 15:46:41,910 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116853.0
+2025-08-23 15:46:41,914 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116853.0
+2025-08-23 15:46:41,917 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116853.0
+2025-08-23 15:46:41,921 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116853.0
+2025-08-23 15:46:41,924 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116853.0
+2025-08-23 15:46:41,925 - __main__ - INFO - Backtesting completed for store 104.0, item 3913116853.0
+2025-08-23 15:46:41,925 - __main__ - INFO - Testing 4/5: BELLATORIA GAR CHKN ALFR PIZZA (Store 104.0, Item 3913116856.0)
+2025-08-23 15:46:41,930 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 15:46:41,934 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 15:46:41,938 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 15:46:41,941 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 15:46:41,945 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 15:46:41,949 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 15:46:41,950 - __main__ - INFO - Backtesting completed for store 104.0, item 3913116856.0
+2025-08-23 15:46:41,950 - __main__ - INFO - Testing 5/5: BELLATORIA SAUS ITALIA PIZZA (Store 104.0, Item 3913116891.0)
+2025-08-23 15:46:41,954 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 15:46:41,958 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 15:46:41,962 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 15:46:41,965 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 15:46:41,969 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 15:46:41,972 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 15:46:41,973 - __main__ - INFO - Backtesting completed for store 104.0, item 3913116891.0
+2025-08-23 15:46:41,977 - __main__ - INFO - Performance evaluation completed. Results saved to model_testing_results/performance_evaluation_20250823_154641.json
+2025-08-23 15:46:41,977 - __main__ - INFO - Performance report saved to model_testing_results/performance_report_20250823_154641.txt
+2025-08-23 15:46:41,977 - __main__ - INFO - Model testing completed successfully
+2025-08-23 15:47:05,556 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 15:47:05,557 - __main__ - INFO - Model testing suite initialized successfully
+2025-08-23 15:47:05,557 - __main__ - INFO - Starting model performance evaluation...
+2025-08-23 15:47:05,566 - __main__ - INFO - Evaluating model performance on 5 items
+2025-08-23 15:47:05,566 - __main__ - INFO - Testing 1/5: BELLATORIA BBQ CHK PIZZA (Store 104.0, Item 3913116850.0)
+2025-08-23 15:47:05,573 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 15:47:05,577 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 15:47:05,581 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 15:47:05,586 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 15:47:05,590 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 15:47:05,593 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 15:47:05,594 - __main__ - INFO - Backtesting completed for store 104.0, item 3913116850.0
+2025-08-23 15:47:05,594 - __main__ - INFO - Testing 2/5: BELLATORIA ULT PEPPERONI PIZZA (Store 104.0, Item 3913116852.0)
+2025-08-23 15:47:05,599 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-23 15:47:05,604 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-23 15:47:05,608 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-23 15:47:05,612 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-23 15:47:05,616 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-23 15:47:05,620 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-23 15:47:05,621 - __main__ - INFO - Backtesting completed for store 104.0, item 3913116852.0
+2025-08-23 15:47:05,622 - __main__ - INFO - Testing 3/5: BELLATORIA ULT SUPREME PIZZA (Store 104.0, Item 3913116853.0)
+2025-08-23 15:47:05,627 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116853.0
+2025-08-23 15:47:05,631 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116853.0
+2025-08-23 15:47:05,635 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116853.0
+2025-08-23 15:47:05,640 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116853.0
+2025-08-23 15:47:05,644 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116853.0
+2025-08-23 15:47:05,649 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116853.0
+2025-08-23 15:47:05,649 - __main__ - INFO - Backtesting completed for store 104.0, item 3913116853.0
+2025-08-23 15:47:05,650 - __main__ - INFO - Testing 4/5: BELLATORIA GAR CHKN ALFR PIZZA (Store 104.0, Item 3913116856.0)
+2025-08-23 15:47:05,655 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 15:47:05,659 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 15:47:05,664 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 15:47:05,668 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 15:47:05,672 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 15:47:05,677 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 15:47:05,678 - __main__ - INFO - Backtesting completed for store 104.0, item 3913116856.0
+2025-08-23 15:47:05,678 - __main__ - INFO - Testing 5/5: BELLATORIA SAUS ITALIA PIZZA (Store 104.0, Item 3913116891.0)
+2025-08-23 15:47:05,684 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 15:47:05,687 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 15:47:05,692 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 15:47:05,696 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 15:47:05,700 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 15:47:05,705 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 15:47:05,706 - __main__ - INFO - Backtesting completed for store 104.0, item 3913116891.0
+2025-08-23 15:47:05,709 - __main__ - INFO - Performance evaluation completed. Results saved to model_testing_results/performance_evaluation_20250823_154705.json
+2025-08-23 15:47:05,710 - __main__ - INFO - Performance report saved to model_testing_results/performance_report_20250823_154705.txt
+2025-08-23 15:47:05,710 - __main__ - INFO - Model testing completed successfully
+2025-08-23 15:48:28,007 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 15:48:28,140 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 15:48:28,276 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 15:48:28,276 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 15:48:28,284 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 15:48:28,296 - dash.dash - INFO - Dash is running on http://0.0.0.0:5000/
+
+2025-08-23 15:48:29,358 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 15:48:29,493 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 15:48:29,628 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 15:48:29,628 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 15:48:29,636 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 15:49:41,896 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 15:49:42,030 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 15:49:42,164 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 15:49:42,164 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 15:49:42,173 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 15:49:42,184 - dash.dash - INFO - Dash is running on http://localhost:5000/
+
+2025-08-23 15:49:43,196 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 15:49:43,328 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 15:49:43,459 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 15:49:43,459 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 15:49:43,467 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 15:50:01,895 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 15:50:01,903 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 15:50:01,994 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116856.0
+2025-08-23 15:50:36,194 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 15:50:36,198 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 15:50:36,522 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 15:50:36,526 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 15:50:36,556 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116856.0
+2025-08-23 15:55:01,985 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 15:55:02,121 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 15:55:02,253 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 15:55:02,253 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 15:55:02,261 - forecast_app - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 15:56:20,776 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 15:56:20,909 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 15:56:21,037 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 15:56:21,037 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 15:56:21,044 - forecast_app - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 15:56:26,100 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 15:56:26,235 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 15:56:26,365 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 15:56:26,367 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 15:56:26,375 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 15:56:26,385 - dash.dash - INFO - Dash is running on http://localhost:5000/
+
+2025-08-23 15:56:27,408 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 15:56:27,546 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 15:56:27,677 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 15:56:27,677 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 15:56:27,684 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 16:02:29,152 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 16:02:29,285 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 16:02:29,413 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 16:02:29,413 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 16:02:29,420 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 16:02:29,432 - dash.dash - INFO - Dash is running on http://localhost:5000/
+
+2025-08-23 16:02:30,426 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 16:02:30,567 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 16:02:30,698 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 16:02:30,698 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 16:02:30,705 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 16:02:43,053 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-23 16:02:43,058 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-23 16:02:43,144 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116852.0
+2025-08-23 16:03:49,427 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-23 16:03:49,432 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-23 16:03:49,435 - __main__ - ERROR - Error creating numerical content: could not convert string to float: 'Actual'
+2025-08-23 16:09:55,045 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 16:09:55,180 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 16:09:55,310 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 16:09:55,310 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 16:09:55,317 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 16:09:55,328 - dash.dash - INFO - Dash is running on http://localhost:5000/
+
+2025-08-23 16:09:56,411 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 16:09:56,549 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 16:09:56,680 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 16:09:56,680 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 16:09:56,688 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 16:10:11,483 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 16:10:11,487 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 16:10:11,568 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116850.0
+2025-08-23 16:10:23,516 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:10:23,522 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:10:23,551 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116856.0
+2025-08-23 16:18:17,996 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:18:18,002 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:18:18,005 - __main__ - ERROR - Error creating numerical content: could not convert string to float: 'Actual'
+2025-08-23 16:18:56,354 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 16:18:56,357 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 16:18:56,392 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116850.0
+2025-08-23 16:18:57,899 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 16:18:57,903 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 16:18:57,905 - __main__ - ERROR - Error creating numerical content: could not convert string to float: 'Actual'
+2025-08-23 16:25:13,556 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 16:25:13,689 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 16:25:13,820 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 16:25:13,820 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 16:25:13,829 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 16:25:13,841 - dash.dash - INFO - Dash is running on http://localhost:5000/
+
+2025-08-23 16:25:14,878 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 16:25:15,011 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 16:25:15,142 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 16:25:15,143 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 16:25:15,150 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 16:25:35,820 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:25:35,824 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:25:35,895 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116856.0
+2025-08-23 16:26:20,169 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4219700204.0
+2025-08-23 16:26:20,173 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4219700204.0
+2025-08-23 16:26:20,202 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 4219700204.0
+2025-08-23 16:31:07,893 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4219700204.0
+2025-08-23 16:31:07,897 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4219700204.0
+2025-08-23 16:31:08,157 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4219700204.0
+2025-08-23 16:31:08,161 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4219700204.0
+2025-08-23 16:31:08,191 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 4219700204.0
+2025-08-23 16:31:13,931 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4219700204.0
+2025-08-23 16:31:13,934 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4219700204.0
+2025-08-23 16:31:14,108 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4219700204.0
+2025-08-23 16:31:14,112 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4219700204.0
+2025-08-23 16:31:14,141 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 4219700204.0
+2025-08-23 16:35:14,725 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 16:35:14,859 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 16:35:14,993 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 16:35:14,993 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 16:35:15,000 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 16:35:15,012 - dash.dash - INFO - Dash is running on http://localhost:5000/
+
+2025-08-23 16:35:16,047 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 16:35:16,180 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 16:35:16,310 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 16:35:16,311 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 16:35:16,319 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 16:35:57,668 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:35:57,672 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:35:57,731 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116856.0
+2025-08-23 16:36:10,531 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:36:10,535 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:36:10,790 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:36:10,795 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:36:10,830 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116856.0
+2025-08-23 16:36:47,483 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:36:47,487 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:36:47,858 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:36:47,862 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:36:47,891 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116856.0
+2025-08-23 16:36:50,528 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:36:50,535 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:36:50,891 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:36:50,895 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:36:50,921 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116856.0
+2025-08-23 16:36:52,029 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:36:52,033 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:36:52,296 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:36:52,302 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:36:52,328 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116856.0
+2025-08-23 16:37:01,028 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:37:01,033 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:37:01,385 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:37:01,390 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:37:01,419 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116856.0
+2025-08-23 16:37:02,588 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:37:02,596 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:37:02,950 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:37:02,953 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:37:02,980 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116856.0
+2025-08-23 16:37:04,165 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:37:04,170 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:37:04,433 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:37:04,437 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:37:04,463 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116856.0
+2025-08-23 16:37:05,326 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:37:05,331 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:37:05,699 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:37:05,703 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:37:05,729 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116856.0
+2025-08-23 16:37:06,927 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:37:06,931 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:37:07,200 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:37:07,204 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:37:07,231 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116856.0
+2025-08-23 16:41:22,833 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 16:41:22,970 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 16:41:23,100 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 16:41:23,101 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 16:41:23,109 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 16:41:23,121 - dash.dash - INFO - Dash is running on http://localhost:5000/
+
+2025-08-23 16:41:24,157 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 16:41:24,295 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 16:41:24,434 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 16:41:24,434 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 16:41:24,442 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 16:41:33,761 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 16:41:33,766 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 16:41:33,825 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116891.0
+2025-08-23 16:41:35,964 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 16:41:35,968 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 16:42:28,487 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:42:28,492 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:42:34,366 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:42:34,370 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:42:34,399 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116856.0
+2025-08-23 16:42:43,852 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:42:43,856 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:42:45,841 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:42:45,845 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 16:42:45,873 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116856.0
+2025-08-23 16:50:43,326 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4280010800.0
+2025-08-23 16:50:43,330 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4280010800.0
+2025-08-23 16:50:43,357 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 4280010800.0
+2025-08-23 16:51:53,296 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4280010800.0
+2025-08-23 16:51:53,300 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4280010800.0
+2025-08-23 16:53:00,000 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4280010800.0
+2025-08-23 16:53:00,006 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4280010800.0
+2025-08-23 16:53:00,037 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 4280010800.0
+2025-08-23 16:53:39,057 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7192119954.0
+2025-08-23 16:53:39,064 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7192119954.0
+2025-08-23 16:53:39,096 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7192119954.0
+2025-08-23 16:53:57,442 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7192119954.0
+2025-08-23 16:53:57,446 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7192119954.0
+2025-08-23 16:56:25,661 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7192119954.0
+2025-08-23 16:56:25,668 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7192119954.0
+2025-08-23 16:56:25,704 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7192119954.0
+2025-08-23 16:57:35,849 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218056638.0
+2025-08-23 16:57:35,853 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218056638.0
+2025-08-23 16:57:35,882 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7218056638.0
+2025-08-23 16:58:18,580 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063735.0
+2025-08-23 16:58:18,584 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063735.0
+2025-08-23 16:58:18,610 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7218063735.0
+2025-08-23 16:58:33,002 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612758.0
+2025-08-23 16:58:33,006 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612758.0
+2025-08-23 16:58:33,034 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7570612758.0
+2025-08-23 17:00:05,568 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612758.0
+2025-08-23 17:00:05,572 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612758.0
+2025-08-23 17:02:08,568 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612758.0
+2025-08-23 17:02:08,572 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612758.0
+2025-08-23 17:02:08,599 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7570612758.0
+2025-08-23 17:02:49,749 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612758.0
+2025-08-23 17:02:49,757 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612758.0
+2025-08-23 17:03:23,247 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612758.0
+2025-08-23 17:03:23,252 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612758.0
+2025-08-23 17:03:23,282 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7570612758.0
+2025-08-23 17:03:24,391 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612758.0
+2025-08-23 17:03:24,395 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612758.0
+2025-08-23 17:03:29,527 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570630318.0
+2025-08-23 17:03:29,536 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570630318.0
+2025-08-23 17:03:39,618 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570630318.0
+2025-08-23 17:03:39,622 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570630318.0
+2025-08-23 17:03:39,651 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7570630318.0
+2025-08-23 17:04:16,970 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7465330890.0
+2025-08-23 17:04:16,974 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7465330890.0
+2025-08-23 17:04:17,002 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7465330890.0
+2025-08-23 17:04:52,557 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7465330890.0
+2025-08-23 17:04:52,561 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7465330890.0
+2025-08-23 17:04:57,816 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7465330890.0
+2025-08-23 17:04:57,820 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7465330890.0
+2025-08-23 17:04:57,849 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7465330890.0
+2025-08-23 17:05:58,561 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7465330890.0
+2025-08-23 17:05:58,565 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7465330890.0
+2025-08-23 17:06:03,429 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612758.0
+2025-08-23 17:06:03,433 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612758.0
+2025-08-23 17:06:32,692 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612758.0
+2025-08-23 17:06:32,698 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612758.0
+2025-08-23 17:06:32,732 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7570612758.0
+2025-08-23 17:06:42,655 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612758.0
+2025-08-23 17:06:42,660 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612758.0
+2025-08-23 17:06:48,702 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570630848.0
+2025-08-23 17:06:48,707 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570630848.0
+2025-08-23 17:06:53,450 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570630848.0
+2025-08-23 17:06:53,453 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570630848.0
+2025-08-23 17:06:53,482 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7570630848.0
+2025-08-23 17:07:43,435 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 17:07:43,439 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 17:07:43,466 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116891.0
+2025-08-23 17:07:48,152 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 17:07:48,156 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 17:10:05,290 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 17:10:05,294 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-23 17:10:05,321 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116891.0
+2025-08-23 17:10:16,475 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4280011600.0
+2025-08-23 17:10:16,480 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4280011600.0
+2025-08-23 17:10:16,509 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 4280011600.0
+2025-08-23 17:11:58,468 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4280011600.0
+2025-08-23 17:11:58,472 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4280011600.0
+2025-08-23 17:12:09,138 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218056638.0
+2025-08-23 17:12:09,141 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218056638.0
+2025-08-23 17:12:13,916 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218056638.0
+2025-08-23 17:12:13,919 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218056638.0
+2025-08-23 17:12:13,952 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7218056638.0
+2025-08-23 17:12:51,146 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218056638.0
+2025-08-23 17:12:51,151 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218056638.0
+2025-08-23 17:13:09,855 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218056638.0
+2025-08-23 17:13:09,859 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218056638.0
+2025-08-23 17:13:09,887 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7218056638.0
+2025-08-23 17:13:29,935 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063245.0
+2025-08-23 17:13:29,940 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063245.0
+2025-08-23 17:13:29,966 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7218063245.0
+2025-08-23 17:13:52,347 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063471.0
+2025-08-23 17:13:52,351 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063471.0
+2025-08-23 17:13:52,379 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7218063471.0
+2025-08-23 17:14:03,404 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218073367.0
+2025-08-23 17:14:03,409 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218073367.0
+2025-08-23 17:14:03,439 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7218073367.0
+2025-08-23 17:25:20,335 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218073367.0
+2025-08-23 17:25:20,343 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218073367.0
+2025-08-23 17:25:43,191 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218073367.0
+2025-08-23 17:25:43,195 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218073367.0
+2025-08-23 17:25:43,226 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7218073367.0
+2025-08-23 17:25:51,170 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218073367.0
+2025-08-23 17:25:51,174 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218073367.0
+2025-08-23 17:26:15,535 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570630570.0
+2025-08-23 17:26:15,539 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570630570.0
+2025-08-23 17:26:39,129 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570630570.0
+2025-08-23 17:26:39,132 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570630570.0
+2025-08-23 17:26:39,159 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7570630570.0
+2025-08-23 17:26:44,768 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570630570.0
+2025-08-23 17:26:44,772 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570630570.0
+2025-08-23 17:26:58,378 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570630570.0
+2025-08-23 17:26:58,382 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570630570.0
+2025-08-23 17:26:58,411 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7570630570.0
+2025-08-23 17:27:12,698 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570630570.0
+2025-08-23 17:27:12,703 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570630570.0
+2025-08-23 17:27:29,139 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063429.0
+2025-08-23 17:27:29,143 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063429.0
+2025-08-23 17:30:35,144 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063429.0
+2025-08-23 17:30:35,149 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063429.0
+2025-08-23 17:30:35,178 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7218063429.0
+2025-08-23 17:30:47,274 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 17:30:47,278 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 17:30:47,308 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116850.0
+2025-08-23 17:37:02,201 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 17:37:02,205 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 17:37:20,851 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 17:37:20,855 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-23 17:42:55,689 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7192190926.0
+2025-08-23 17:42:55,693 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7192190926.0
+2025-08-23 17:42:59,253 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7192190926.0
+2025-08-23 17:42:59,257 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7192190926.0
+2025-08-23 17:42:59,288 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7192190926.0
+2025-08-23 17:51:32,495 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063471.0
+2025-08-23 17:51:32,500 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063471.0
+2025-08-23 17:51:32,528 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7218063471.0
+2025-08-23 17:51:40,385 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612755.0
+2025-08-23 17:51:40,390 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612755.0
+2025-08-23 17:51:40,417 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7570612755.0
+2025-08-23 18:09:28,928 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612755.0
+2025-08-23 18:09:28,937 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612755.0
+2025-08-23 18:09:33,242 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612755.0
+2025-08-23 18:09:33,250 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612755.0
+2025-08-23 18:09:33,292 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7570612755.0
+2025-08-23 18:10:46,825 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612755.0
+2025-08-23 18:10:46,835 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612755.0
+2025-08-23 18:10:50,879 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612755.0
+2025-08-23 18:10:50,894 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612755.0
+2025-08-23 18:10:50,953 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7570612755.0
+2025-08-23 18:12:07,660 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612755.0
+2025-08-23 18:12:07,675 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612755.0
+2025-08-23 18:12:29,896 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612755.0
+2025-08-23 18:12:29,908 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612755.0
+2025-08-23 18:12:29,977 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7570612755.0
+2025-08-23 18:12:35,447 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218073366.0
+2025-08-23 18:12:35,456 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218073366.0
+2025-08-23 18:12:35,490 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7218073366.0
+2025-08-23 18:13:11,093 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063736.0
+2025-08-23 18:13:11,110 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063736.0
+2025-08-23 18:13:11,199 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7218063736.0
+2025-08-23 18:13:29,103 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7465330890.0
+2025-08-23 18:13:29,116 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7465330890.0
+2025-08-23 18:13:29,185 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7465330890.0
+2025-08-23 18:14:58,492 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7465330890.0
+2025-08-23 18:14:58,500 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7465330890.0
+2025-08-23 18:15:38,214 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7465330890.0
+2025-08-23 18:15:38,225 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7465330890.0
+2025-08-23 18:15:38,266 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 7465330890.0
