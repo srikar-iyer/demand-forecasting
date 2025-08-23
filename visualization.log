@@ -1,0 +1,984 @@
+2025-08-20 15:14:39,122 - item_data_visualizer - ERROR - Error in _load_data: [Errno 2] No such file or directory: '../data/FrozenPizzaSales.csv'
+2025-08-20 15:14:39,122 - item_data_visualizer - ERROR - Error loading data: [Errno 2] No such file or directory: '../data/FrozenPizzaSales.csv'
+2025-08-20 15:14:39,122 - __main__ - ERROR - Error initializing components: [Errno 2] No such file or directory: '../data/FrozenPizzaSales.csv'
+2025-08-20 15:14:39,122 - __main__ - ERROR - Error in main execution: [Errno 2] No such file or directory: '../data/FrozenPizzaSales.csv'
+2025-08-20 15:14:55,608 - item_data_visualizer - ERROR - Error in _load_data: [Errno 2] No such file or directory: '../FrozenPizzaSales.csv'
+2025-08-20 15:14:55,608 - item_data_visualizer - ERROR - Error loading data: [Errno 2] No such file or directory: '../FrozenPizzaSales.csv'
+2025-08-20 15:14:55,608 - __main__ - ERROR - Error initializing components: [Errno 2] No such file or directory: '../FrozenPizzaSales.csv'
+2025-08-20 15:14:55,608 - __main__ - ERROR - Error in main execution: [Errno 2] No such file or directory: '../FrozenPizzaSales.csv'
+2025-08-20 15:16:01,802 - item_data_visualizer - ERROR - Error in _load_data: [Errno 2] No such file or directory: '../FrozenPizzaSales.csv'
+2025-08-20 15:16:01,803 - item_data_visualizer - ERROR - Error loading data: [Errno 2] No such file or directory: '../FrozenPizzaSales.csv'
+2025-08-20 15:16:01,803 - __main__ - ERROR - Error initializing components: [Errno 2] No such file or directory: '../FrozenPizzaSales.csv'
+2025-08-20 15:16:01,803 - __main__ - ERROR - Error in main execution: [Errno 2] No such file or directory: '../FrozenPizzaSales.csv'
+2025-08-20 15:17:15,612 - item_data_visualizer - ERROR - Error in _load_data: [Errno 2] No such file or directory: 'data/raw/../FrozenPizzaSales.csv'
+2025-08-20 15:17:15,612 - item_data_visualizer - ERROR - Error loading data: [Errno 2] No such file or directory: 'data/raw/../FrozenPizzaSales.csv'
+2025-08-20 15:17:15,612 - __main__ - ERROR - Error initializing components: [Errno 2] No such file or directory: 'data/raw/../FrozenPizzaSales.csv'
+2025-08-20 15:17:15,612 - __main__ - ERROR - Error in main execution: [Errno 2] No such file or directory: 'data/raw/../FrozenPizzaSales.csv'
+2025-08-20 15:17:22,325 - item_data_visualizer - WARNING - RF forecasts file not found
+2025-08-20 15:17:22,325 - item_data_visualizer - WARNING - PyTorch forecasts file not found
+2025-08-20 15:17:22,325 - item_data_visualizer - WARNING - ARIMA forecasts file not found
+2025-08-20 15:17:22,325 - item_data_visualizer - INFO - Data loaded successfully
+2025-08-20 15:17:22,462 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-20 15:17:22,597 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-20 15:17:22,716 - model_comparator - WARNING - RF forecasts file not found
+2025-08-20 15:17:22,717 - model_comparator - WARNING - PyTorch forecasts file not found
+2025-08-20 15:17:22,717 - model_comparator - WARNING - ARIMA forecasts file not found
+2025-08-20 15:17:22,717 - model_comparator - INFO - Data loaded successfully
+2025-08-20 15:17:22,717 - __main__ - INFO - All components initialized successfully
+2025-08-20 15:17:22,736 - __main__ - INFO - Found 62 unique store-item combinations
+2025-08-20 15:17:22,736 - __main__ - INFO - Limited to first 5 items
+2025-08-20 15:17:22,737 - __main__ - INFO - Processing 1/5: Store 104.0, Item 3913116850.0 (BELLATORIA BBQ CHK PIZZA)
+2025-08-20 15:17:22,744 - __main__ - INFO - Processing BELLATORIA BBQ CHK PIZZA (Store 104.0, Item 3913116850.0)
+2025-08-20 15:17:24,097 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_3913116850.0.html and .png
+2025-08-20 15:17:24,104 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 3913116850.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:17:24,104 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116850.0
+2025-08-20 15:17:24,104 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116850.0
+2025-08-20 15:17:24,106 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 3913116850.0
+2025-08-20 15:17:24,106 - __main__ - INFO - Completed processing for BELLATORIA BBQ CHK PIZZA
+2025-08-20 15:17:24,106 - __main__ - INFO - Processing 2/5: Store 104.0, Item 3913116852.0 (BELLATORIA ULT PEPPERONI PIZZA)
+2025-08-20 15:17:24,114 - __main__ - INFO - Processing BELLATORIA ULT PEPPERONI PIZZA (Store 104.0, Item 3913116852.0)
+2025-08-20 15:17:24,260 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_3913116852.0.html and .png
+2025-08-20 15:17:24,263 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 3913116852.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:17:24,263 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116852.0
+2025-08-20 15:17:24,263 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116852.0
+2025-08-20 15:17:24,265 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 3913116852.0
+2025-08-20 15:17:24,265 - __main__ - INFO - Completed processing for BELLATORIA ULT PEPPERONI PIZZA
+2025-08-20 15:17:24,265 - __main__ - INFO - Processing 3/5: Store 104.0, Item 3913116853.0 (BELLATORIA ULT SUPREME PIZZA)
+2025-08-20 15:17:24,272 - __main__ - INFO - Processing BELLATORIA ULT SUPREME PIZZA (Store 104.0, Item 3913116853.0)
+2025-08-20 15:17:24,424 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_3913116853.0.html and .png
+2025-08-20 15:17:24,427 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 3913116853.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:17:24,427 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116853.0
+2025-08-20 15:17:24,427 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116853.0
+2025-08-20 15:17:24,429 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 3913116853.0
+2025-08-20 15:17:24,429 - __main__ - INFO - Completed processing for BELLATORIA ULT SUPREME PIZZA
+2025-08-20 15:17:24,429 - __main__ - INFO - Processing 4/5: Store 104.0, Item 3913116856.0 (BELLATORIA GAR CHKN ALFR PIZZA)
+2025-08-20 15:17:24,436 - __main__ - INFO - Processing BELLATORIA GAR CHKN ALFR PIZZA (Store 104.0, Item 3913116856.0)
+2025-08-20 15:17:24,605 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_3913116856.0.html and .png
+2025-08-20 15:17:24,608 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 3913116856.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:17:24,608 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116856.0
+2025-08-20 15:17:24,608 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116856.0
+2025-08-20 15:17:24,610 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 3913116856.0
+2025-08-20 15:17:24,610 - __main__ - INFO - Completed processing for BELLATORIA GAR CHKN ALFR PIZZA
+2025-08-20 15:17:24,610 - __main__ - INFO - Processing 5/5: Store 104.0, Item 3913116891.0 (BELLATORIA SAUS ITALIA PIZZA)
+2025-08-20 15:17:24,618 - __main__ - INFO - Processing BELLATORIA SAUS ITALIA PIZZA (Store 104.0, Item 3913116891.0)
+2025-08-20 15:17:24,761 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_3913116891.0.html and .png
+2025-08-20 15:17:24,764 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 3913116891.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:17:24,764 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116891.0
+2025-08-20 15:17:24,764 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116891.0
+2025-08-20 15:17:24,766 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 3913116891.0
+2025-08-20 15:17:24,766 - __main__ - INFO - Completed processing for BELLATORIA SAUS ITALIA PIZZA
+2025-08-20 15:17:24,766 - __main__ - INFO - Completed processing 5 items
+2025-08-20 15:17:24,804 - __main__ - INFO - Summary report generated at testing/output/summary_report.html
+2025-08-20 15:17:24,804 - __main__ - INFO - Visualization process completed successfully
+2025-08-20 15:18:59,209 - item_data_visualizer - WARNING - RF forecasts file not found
+2025-08-20 15:18:59,210 - item_data_visualizer - WARNING - PyTorch forecasts file not found
+2025-08-20 15:18:59,210 - item_data_visualizer - WARNING - ARIMA forecasts file not found
+2025-08-20 15:18:59,210 - item_data_visualizer - INFO - Data loaded successfully
+2025-08-20 15:18:59,346 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-20 15:18:59,473 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-20 15:18:59,594 - model_comparator - WARNING - RF forecasts file not found
+2025-08-20 15:18:59,594 - model_comparator - WARNING - PyTorch forecasts file not found
+2025-08-20 15:18:59,594 - model_comparator - WARNING - ARIMA forecasts file not found
+2025-08-20 15:18:59,594 - model_comparator - INFO - Data loaded successfully
+2025-08-20 15:18:59,594 - __main__ - INFO - All components initialized successfully
+2025-08-20 15:18:59,603 - __main__ - INFO - Found 62 unique store-item combinations
+2025-08-20 15:18:59,604 - __main__ - INFO - Limited to first 50 items
+2025-08-20 15:18:59,604 - __main__ - INFO - Processing 1/50: Store 104.0, Item 3913116850.0 (BELLATORIA BBQ CHK PIZZA)
+2025-08-20 15:18:59,611 - __main__ - INFO - Processing BELLATORIA BBQ CHK PIZZA (Store 104.0, Item 3913116850.0)
+2025-08-20 15:19:00,671 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_3913116850.0.html and .png
+2025-08-20 15:19:00,674 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 3913116850.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:00,674 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116850.0
+2025-08-20 15:19:00,674 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116850.0
+2025-08-20 15:19:00,676 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 3913116850.0
+2025-08-20 15:19:00,676 - __main__ - INFO - Completed processing for BELLATORIA BBQ CHK PIZZA
+2025-08-20 15:19:00,676 - __main__ - INFO - Processing 2/50: Store 104.0, Item 3913116852.0 (BELLATORIA ULT PEPPERONI PIZZA)
+2025-08-20 15:19:00,686 - __main__ - INFO - Processing BELLATORIA ULT PEPPERONI PIZZA (Store 104.0, Item 3913116852.0)
+2025-08-20 15:19:00,838 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_3913116852.0.html and .png
+2025-08-20 15:19:00,841 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 3913116852.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:00,841 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116852.0
+2025-08-20 15:19:00,842 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116852.0
+2025-08-20 15:19:00,843 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 3913116852.0
+2025-08-20 15:19:00,843 - __main__ - INFO - Completed processing for BELLATORIA ULT PEPPERONI PIZZA
+2025-08-20 15:19:00,843 - __main__ - INFO - Processing 3/50: Store 104.0, Item 3913116853.0 (BELLATORIA ULT SUPREME PIZZA)
+2025-08-20 15:19:00,852 - __main__ - INFO - Processing BELLATORIA ULT SUPREME PIZZA (Store 104.0, Item 3913116853.0)
+2025-08-20 15:19:00,998 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_3913116853.0.html and .png
+2025-08-20 15:19:01,001 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 3913116853.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:01,001 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116853.0
+2025-08-20 15:19:01,001 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116853.0
+2025-08-20 15:19:01,003 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 3913116853.0
+2025-08-20 15:19:01,003 - __main__ - INFO - Completed processing for BELLATORIA ULT SUPREME PIZZA
+2025-08-20 15:19:01,003 - __main__ - INFO - Processing 4/50: Store 104.0, Item 3913116856.0 (BELLATORIA GAR CHKN ALFR PIZZA)
+2025-08-20 15:19:01,012 - __main__ - INFO - Processing BELLATORIA GAR CHKN ALFR PIZZA (Store 104.0, Item 3913116856.0)
+2025-08-20 15:19:01,172 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_3913116856.0.html and .png
+2025-08-20 15:19:01,174 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 3913116856.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:01,175 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116856.0
+2025-08-20 15:19:01,175 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116856.0
+2025-08-20 15:19:01,176 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 3913116856.0
+2025-08-20 15:19:01,177 - __main__ - INFO - Completed processing for BELLATORIA GAR CHKN ALFR PIZZA
+2025-08-20 15:19:01,177 - __main__ - INFO - Processing 5/50: Store 104.0, Item 3913116891.0 (BELLATORIA SAUS ITALIA PIZZA)
+2025-08-20 15:19:01,186 - __main__ - INFO - Processing BELLATORIA SAUS ITALIA PIZZA (Store 104.0, Item 3913116891.0)
+2025-08-20 15:19:01,326 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_3913116891.0.html and .png
+2025-08-20 15:19:01,329 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 3913116891.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:01,329 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116891.0
+2025-08-20 15:19:01,329 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116891.0
+2025-08-20 15:19:01,330 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 3913116891.0
+2025-08-20 15:19:01,331 - __main__ - INFO - Completed processing for BELLATORIA SAUS ITALIA PIZZA
+2025-08-20 15:19:01,331 - __main__ - INFO - Processing 6/50: Store 104.0, Item 3913116957.0 (BELLATORIA HAWAIIAN BBQ PIZZA)
+2025-08-20 15:19:01,338 - __main__ - INFO - Processing BELLATORIA HAWAIIAN BBQ PIZZA (Store 104.0, Item 3913116957.0)
+2025-08-20 15:19:01,443 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_3913116957.0.html and .png
+2025-08-20 15:19:01,446 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 3913116957.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:01,446 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116957.0
+2025-08-20 15:19:01,446 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116957.0
+2025-08-20 15:19:01,447 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 3913116957.0
+2025-08-20 15:19:01,448 - __main__ - INFO - Completed processing for BELLATORIA HAWAIIAN BBQ PIZZA
+2025-08-20 15:19:01,448 - __main__ - INFO - Processing 7/50: Store 104.0, Item 4219700201.0 (BREW PUB PEPPERONI PIZZA)
+2025-08-20 15:19:01,456 - __main__ - INFO - Processing BREW PUB PEPPERONI PIZZA (Store 104.0, Item 4219700201.0)
+2025-08-20 15:19:01,562 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4219700201.0.html and .png
+2025-08-20 15:19:01,564 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4219700201.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:01,565 - model_comparator - WARNING - No forecast data found for store 104.0, item 4219700201.0
+2025-08-20 15:19:01,565 - model_comparator - WARNING - No forecast data found for store 104.0, item 4219700201.0
+2025-08-20 15:19:01,566 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4219700201.0
+2025-08-20 15:19:01,566 - __main__ - INFO - Completed processing for BREW PUB PEPPERONI PIZZA
+2025-08-20 15:19:01,566 - __main__ - INFO - Processing 8/50: Store 104.0, Item 4219700203.0 (BREW PUB SAUS PEP PIZZA)
+2025-08-20 15:19:01,575 - __main__ - INFO - Processing BREW PUB SAUS PEP PIZZA (Store 104.0, Item 4219700203.0)
+2025-08-20 15:19:01,674 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4219700203.0.html and .png
+2025-08-20 15:19:01,677 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4219700203.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:01,677 - model_comparator - WARNING - No forecast data found for store 104.0, item 4219700203.0
+2025-08-20 15:19:01,677 - model_comparator - WARNING - No forecast data found for store 104.0, item 4219700203.0
+2025-08-20 15:19:01,679 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4219700203.0
+2025-08-20 15:19:01,679 - __main__ - INFO - Completed processing for BREW PUB SAUS PEP PIZZA
+2025-08-20 15:19:01,679 - __main__ - INFO - Processing 9/50: Store 104.0, Item 4219700204.0 (BREW PUB CHEESE PIZZA)
+2025-08-20 15:19:01,687 - __main__ - INFO - Processing BREW PUB CHEESE PIZZA (Store 104.0, Item 4219700204.0)
+2025-08-20 15:19:01,782 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4219700204.0.html and .png
+2025-08-20 15:19:01,785 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4219700204.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:01,785 - model_comparator - WARNING - No forecast data found for store 104.0, item 4219700204.0
+2025-08-20 15:19:01,785 - model_comparator - WARNING - No forecast data found for store 104.0, item 4219700204.0
+2025-08-20 15:19:01,787 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4219700204.0
+2025-08-20 15:19:01,787 - __main__ - INFO - Completed processing for BREW PUB CHEESE PIZZA
+2025-08-20 15:19:01,787 - __main__ - INFO - Processing 10/50: Store 104.0, Item 4219700205.0 (BREW PUB 4 MEAT PIZZA)
+2025-08-20 15:19:01,797 - __main__ - INFO - Processing BREW PUB 4 MEAT PIZZA (Store 104.0, Item 4219700205.0)
+2025-08-20 15:19:01,913 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4219700205.0.html and .png
+2025-08-20 15:19:01,916 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4219700205.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:01,916 - model_comparator - WARNING - No forecast data found for store 104.0, item 4219700205.0
+2025-08-20 15:19:01,916 - model_comparator - WARNING - No forecast data found for store 104.0, item 4219700205.0
+2025-08-20 15:19:01,918 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4219700205.0
+2025-08-20 15:19:01,918 - __main__ - INFO - Completed processing for BREW PUB 4 MEAT PIZZA
+2025-08-20 15:19:01,918 - __main__ - INFO - Processing 11/50: Store 104.0, Item 4219700206.0 (BREW PUB BACON CHSBRGR PIZZA)
+2025-08-20 15:19:01,925 - __main__ - INFO - Processing BREW PUB BACON CHSBRGR PIZZA (Store 104.0, Item 4219700206.0)
+2025-08-20 15:19:02,040 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4219700206.0.html and .png
+2025-08-20 15:19:02,043 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4219700206.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:02,044 - model_comparator - WARNING - No forecast data found for store 104.0, item 4219700206.0
+2025-08-20 15:19:02,044 - model_comparator - WARNING - No forecast data found for store 104.0, item 4219700206.0
+2025-08-20 15:19:02,046 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4219700206.0
+2025-08-20 15:19:02,046 - __main__ - INFO - Completed processing for BREW PUB BACON CHSBRGR PIZZA
+2025-08-20 15:19:02,046 - __main__ - INFO - Processing 12/50: Store 104.0, Item 4219700207.0 (BREW PUB SUPREME PIZZA)
+2025-08-20 15:19:02,055 - __main__ - INFO - Processing BREW PUB SUPREME PIZZA (Store 104.0, Item 4219700207.0)
+2025-08-20 15:19:02,157 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4219700207.0.html and .png
+2025-08-20 15:19:02,160 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4219700207.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:02,160 - model_comparator - WARNING - No forecast data found for store 104.0, item 4219700207.0
+2025-08-20 15:19:02,160 - model_comparator - WARNING - No forecast data found for store 104.0, item 4219700207.0
+2025-08-20 15:19:02,162 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4219700207.0
+2025-08-20 15:19:02,162 - __main__ - INFO - Completed processing for BREW PUB SUPREME PIZZA
+2025-08-20 15:19:02,162 - __main__ - INFO - Processing 13/50: Store 104.0, Item 4219700334.0 (BREW PUB TACO GRANDE)
+2025-08-20 15:19:02,169 - __main__ - INFO - Processing BREW PUB TACO GRANDE (Store 104.0, Item 4219700334.0)
+2025-08-20 15:19:02,243 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4219700334.0.html and .png
+2025-08-20 15:19:02,245 - seasonality_analyzer - WARNING - Insufficient data for seasonality detection for store 104.0, item 4219700334.0
+2025-08-20 15:19:02,245 - model_comparator - WARNING - No forecast data found for store 104.0, item 4219700334.0
+2025-08-20 15:19:02,246 - model_comparator - WARNING - No forecast data found for store 104.0, item 4219700334.0
+2025-08-20 15:19:02,247 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4219700334.0
+2025-08-20 15:19:02,247 - __main__ - INFO - Completed processing for BREW PUB TACO GRANDE
+2025-08-20 15:19:02,247 - __main__ - INFO - Processing 14/50: Store 104.0, Item 4280010700.0 (TOTINO SUPREME PIZZA)
+2025-08-20 15:19:02,255 - __main__ - INFO - Processing TOTINO SUPREME PIZZA (Store 104.0, Item 4280010700.0)
+2025-08-20 15:19:02,440 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4280010700.0.html and .png
+2025-08-20 15:19:02,443 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4280010700.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:02,444 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280010700.0
+2025-08-20 15:19:02,444 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280010700.0
+2025-08-20 15:19:02,445 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4280010700.0
+2025-08-20 15:19:02,446 - __main__ - INFO - Completed processing for TOTINO SUPREME PIZZA
+2025-08-20 15:19:02,446 - __main__ - INFO - Processing 15/50: Store 104.0, Item 4280010800.0 (TOTINO 3 MEAT PIZZA)
+2025-08-20 15:19:02,453 - __main__ - INFO - Processing TOTINO 3 MEAT PIZZA (Store 104.0, Item 4280010800.0)
+2025-08-20 15:19:02,665 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4280010800.0.html and .png
+2025-08-20 15:19:02,668 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4280010800.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:02,668 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280010800.0
+2025-08-20 15:19:02,669 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280010800.0
+2025-08-20 15:19:02,670 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4280010800.0
+2025-08-20 15:19:02,670 - __main__ - INFO - Completed processing for TOTINO 3 MEAT PIZZA
+2025-08-20 15:19:02,670 - __main__ - INFO - Processing 16/50: Store 104.0, Item 4280011100.0 (TOTINO SAUSAGE PIZZA)
+2025-08-20 15:19:02,678 - __main__ - INFO - Processing TOTINO SAUSAGE PIZZA (Store 104.0, Item 4280011100.0)
+2025-08-20 15:19:02,853 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4280011100.0.html and .png
+2025-08-20 15:19:02,856 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4280011100.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:02,856 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280011100.0
+2025-08-20 15:19:02,856 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280011100.0
+2025-08-20 15:19:02,858 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4280011100.0
+2025-08-20 15:19:02,858 - __main__ - INFO - Completed processing for TOTINO SAUSAGE PIZZA
+2025-08-20 15:19:02,858 - __main__ - INFO - Processing 17/50: Store 104.0, Item 4280011200.0 (TOTINO HAMBRGR PIZZA)
+2025-08-20 15:19:02,867 - __main__ - INFO - Processing TOTINO HAMBRGR PIZZA (Store 104.0, Item 4280011200.0)
+2025-08-20 15:19:03,060 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4280011200.0.html and .png
+2025-08-20 15:19:03,063 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4280011200.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:03,063 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280011200.0
+2025-08-20 15:19:03,063 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280011200.0
+2025-08-20 15:19:03,065 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4280011200.0
+2025-08-20 15:19:03,065 - __main__ - INFO - Completed processing for TOTINO HAMBRGR PIZZA
+2025-08-20 15:19:03,066 - __main__ - INFO - Processing 18/50: Store 104.0, Item 4280011300.0 (TOTINO CHEESE PIZZA)
+2025-08-20 15:19:03,074 - __main__ - INFO - Processing TOTINO CHEESE PIZZA (Store 104.0, Item 4280011300.0)
+2025-08-20 15:19:03,244 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4280011300.0.html and .png
+2025-08-20 15:19:03,247 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4280011300.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:03,247 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280011300.0
+2025-08-20 15:19:03,247 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280011300.0
+2025-08-20 15:19:03,249 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4280011300.0
+2025-08-20 15:19:03,249 - __main__ - INFO - Completed processing for TOTINO CHEESE PIZZA
+2025-08-20 15:19:03,249 - __main__ - INFO - Processing 19/50: Store 104.0, Item 4280011400.0 (TOTINO PEPPERONI PIZZA)
+2025-08-20 15:19:03,257 - __main__ - INFO - Processing TOTINO PEPPERONI PIZZA (Store 104.0, Item 4280011400.0)
+2025-08-20 15:19:03,483 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4280011400.0.html and .png
+2025-08-20 15:19:03,486 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4280011400.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:03,486 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280011400.0
+2025-08-20 15:19:03,486 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280011400.0
+2025-08-20 15:19:03,488 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4280011400.0
+2025-08-20 15:19:03,488 - __main__ - INFO - Completed processing for TOTINO PEPPERONI PIZZA
+2025-08-20 15:19:03,488 - __main__ - INFO - Processing 20/50: Store 104.0, Item 4280011520.0 (TOTINO 3 CHEESE PIZZA)
+2025-08-20 15:19:03,496 - __main__ - INFO - Processing TOTINO 3 CHEESE PIZZA (Store 104.0, Item 4280011520.0)
+2025-08-20 15:19:03,740 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4280011520.0.html and .png
+2025-08-20 15:19:03,743 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4280011520.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:03,743 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280011520.0
+2025-08-20 15:19:03,743 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280011520.0
+2025-08-20 15:19:03,745 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4280011520.0
+2025-08-20 15:19:03,745 - __main__ - INFO - Completed processing for TOTINO 3 CHEESE PIZZA
+2025-08-20 15:19:03,745 - __main__ - INFO - Processing 21/50: Store 104.0, Item 4280011600.0 (TOTINO COMBINATION PIZZA)
+2025-08-20 15:19:03,754 - __main__ - INFO - Processing TOTINO COMBINATION PIZZA (Store 104.0, Item 4280011600.0)
+2025-08-20 15:19:04,055 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4280011600.0.html and .png
+2025-08-20 15:19:04,058 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4280011600.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:04,058 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280011600.0
+2025-08-20 15:19:04,059 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280011600.0
+2025-08-20 15:19:04,060 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4280011600.0
+2025-08-20 15:19:04,060 - __main__ - INFO - Completed processing for TOTINO COMBINATION PIZZA
+2025-08-20 15:19:04,061 - __main__ - INFO - Processing 22/50: Store 104.0, Item 4786100005.0 (IMOS PEPPERONI PIZZA)
+2025-08-20 15:19:04,071 - __main__ - INFO - Processing IMOS PEPPERONI PIZZA (Store 104.0, Item 4786100005.0)
+2025-08-20 15:19:04,179 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4786100005.0.html and .png
+2025-08-20 15:19:04,182 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4786100005.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:04,182 - model_comparator - WARNING - No forecast data found for store 104.0, item 4786100005.0
+2025-08-20 15:19:04,182 - model_comparator - WARNING - No forecast data found for store 104.0, item 4786100005.0
+2025-08-20 15:19:04,184 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4786100005.0
+2025-08-20 15:19:04,184 - __main__ - INFO - Completed processing for IMOS PEPPERONI PIZZA
+2025-08-20 15:19:04,184 - __main__ - INFO - Processing 23/50: Store 104.0, Item 7192114978.0 (DIGIORNO HAND TOSSED SUPREME)
+2025-08-20 15:19:04,193 - __main__ - INFO - Processing DIGIORNO HAND TOSSED SUPREME (Store 104.0, Item 7192114978.0)
+2025-08-20 15:19:04,274 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7192114978.0.html and .png
+2025-08-20 15:19:04,276 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7192114978.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:04,276 - model_comparator - WARNING - No forecast data found for store 104.0, item 7192114978.0
+2025-08-20 15:19:04,277 - model_comparator - WARNING - No forecast data found for store 104.0, item 7192114978.0
+2025-08-20 15:19:04,278 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7192114978.0
+2025-08-20 15:19:04,278 - __main__ - INFO - Completed processing for DIGIORNO HAND TOSSED SUPREME
+2025-08-20 15:19:04,278 - __main__ - INFO - Processing 24/50: Store 104.0, Item 7192119954.0 (TOMBSTONE SUPREME PIZZA)
+2025-08-20 15:19:04,286 - __main__ - INFO - Processing TOMBSTONE SUPREME PIZZA (Store 104.0, Item 7192119954.0)
+2025-08-20 15:19:04,394 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7192119954.0.html and .png
+2025-08-20 15:19:04,397 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7192119954.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:04,397 - model_comparator - WARNING - No forecast data found for store 104.0, item 7192119954.0
+2025-08-20 15:19:04,397 - model_comparator - WARNING - No forecast data found for store 104.0, item 7192119954.0
+2025-08-20 15:19:04,399 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7192119954.0
+2025-08-20 15:19:04,399 - __main__ - INFO - Completed processing for TOMBSTONE SUPREME PIZZA
+2025-08-20 15:19:04,399 - __main__ - INFO - Processing 25/50: Store 104.0, Item 7192156420.0 (TOMBSTONE 4 MEAT PIZZA)
+2025-08-20 15:19:04,406 - __main__ - INFO - Processing TOMBSTONE 4 MEAT PIZZA (Store 104.0, Item 7192156420.0)
+2025-08-20 15:19:04,528 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7192156420.0.html and .png
+2025-08-20 15:19:04,531 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7192156420.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:04,531 - model_comparator - WARNING - No forecast data found for store 104.0, item 7192156420.0
+2025-08-20 15:19:04,531 - model_comparator - WARNING - No forecast data found for store 104.0, item 7192156420.0
+2025-08-20 15:19:04,533 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7192156420.0
+2025-08-20 15:19:04,533 - __main__ - INFO - Completed processing for TOMBSTONE 4 MEAT PIZZA
+2025-08-20 15:19:04,533 - __main__ - INFO - Processing 26/50: Store 104.0, Item 7192182379.0 (DIGIORNO RC PEPPERONI PIZZA)
+2025-08-20 15:19:04,542 - __main__ - INFO - Processing DIGIORNO RC PEPPERONI PIZZA (Store 104.0, Item 7192182379.0)
+2025-08-20 15:19:04,621 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7192182379.0.html and .png
+2025-08-20 15:19:04,624 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7192182379.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:04,624 - model_comparator - WARNING - No forecast data found for store 104.0, item 7192182379.0
+2025-08-20 15:19:04,624 - model_comparator - WARNING - No forecast data found for store 104.0, item 7192182379.0
+2025-08-20 15:19:04,625 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7192182379.0
+2025-08-20 15:19:04,626 - __main__ - INFO - Completed processing for DIGIORNO RC PEPPERONI PIZZA
+2025-08-20 15:19:04,626 - __main__ - INFO - Processing 27/50: Store 104.0, Item 7192190926.0 (DIGIORNO ULTRA THIN CARNIVR PIZA)
+2025-08-20 15:19:04,633 - __main__ - INFO - Processing DIGIORNO ULTRA THIN CARNIVR PIZA (Store 104.0, Item 7192190926.0)
+2025-08-20 15:19:04,714 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7192190926.0.html and .png
+2025-08-20 15:19:04,717 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7192190926.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:04,717 - model_comparator - WARNING - No forecast data found for store 104.0, item 7192190926.0
+2025-08-20 15:19:04,717 - model_comparator - WARNING - No forecast data found for store 104.0, item 7192190926.0
+2025-08-20 15:19:04,719 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7192190926.0
+2025-08-20 15:19:04,719 - __main__ - INFO - Completed processing for DIGIORNO ULTRA THIN CARNIVR PIZA
+2025-08-20 15:19:04,719 - __main__ - INFO - Processing 28/50: Store 104.0, Item 7192197185.0 (TOMBSTONE PEPPERONI PIZZA)
+2025-08-20 15:19:04,727 - __main__ - INFO - Processing TOMBSTONE PEPPERONI PIZZA (Store 104.0, Item 7192197185.0)
+2025-08-20 15:19:04,855 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7192197185.0.html and .png
+2025-08-20 15:19:04,858 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7192197185.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:04,858 - model_comparator - WARNING - No forecast data found for store 104.0, item 7192197185.0
+2025-08-20 15:19:04,858 - model_comparator - WARNING - No forecast data found for store 104.0, item 7192197185.0
+2025-08-20 15:19:04,860 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7192197185.0
+2025-08-20 15:19:04,860 - __main__ - INFO - Completed processing for TOMBSTONE PEPPERONI PIZZA
+2025-08-20 15:19:04,860 - __main__ - INFO - Processing 29/50: Store 104.0, Item 7218056624.0 (RED BARON 4 MEAT PIZZA)
+2025-08-20 15:19:04,868 - __main__ - INFO - Processing RED BARON 4 MEAT PIZZA (Store 104.0, Item 7218056624.0)
+2025-08-20 15:19:05,030 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218056624.0.html and .png
+2025-08-20 15:19:05,033 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218056624.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:05,033 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218056624.0
+2025-08-20 15:19:05,033 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218056624.0
+2025-08-20 15:19:05,035 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218056624.0
+2025-08-20 15:19:05,035 - __main__ - INFO - Completed processing for RED BARON 4 MEAT PIZZA
+2025-08-20 15:19:05,035 - __main__ - INFO - Processing 30/50: Store 104.0, Item 7218056632.0 (RED BARON DEEP DISH MEAT TRIO)
+2025-08-20 15:19:05,043 - __main__ - INFO - Processing RED BARON DEEP DISH MEAT TRIO (Store 104.0, Item 7218056632.0)
+2025-08-20 15:19:05,144 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218056632.0.html and .png
+2025-08-20 15:19:05,146 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218056632.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:05,147 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218056632.0
+2025-08-20 15:19:05,147 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218056632.0
+2025-08-20 15:19:05,148 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218056632.0
+2025-08-20 15:19:05,148 - __main__ - INFO - Completed processing for RED BARON DEEP DISH MEAT TRIO
+2025-08-20 15:19:05,148 - __main__ - INFO - Processing 31/50: Store 104.0, Item 7218056638.0 (RED BARON DEEP DISH CHEESE)
+2025-08-20 15:19:05,156 - __main__ - INFO - Processing RED BARON DEEP DISH CHEESE (Store 104.0, Item 7218056638.0)
+2025-08-20 15:19:05,285 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218056638.0.html and .png
+2025-08-20 15:19:05,296 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218056638.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:05,296 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218056638.0
+2025-08-20 15:19:05,296 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218056638.0
+2025-08-20 15:19:05,298 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218056638.0
+2025-08-20 15:19:05,298 - __main__ - INFO - Completed processing for RED BARON DEEP DISH CHEESE
+2025-08-20 15:19:05,298 - __main__ - INFO - Processing 32/50: Store 104.0, Item 7218063187.0 (RED BARON D/D/ BACON SCRAMBLE)
+2025-08-20 15:19:05,306 - __main__ - INFO - Processing RED BARON D/D/ BACON SCRAMBLE (Store 104.0, Item 7218063187.0)
+2025-08-20 15:19:05,413 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063187.0.html and .png
+2025-08-20 15:19:05,416 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063187.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:05,416 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063187.0
+2025-08-20 15:19:05,416 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063187.0
+2025-08-20 15:19:05,418 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063187.0
+2025-08-20 15:19:05,418 - __main__ - INFO - Completed processing for RED BARON D/D/ BACON SCRAMBLE
+2025-08-20 15:19:05,418 - __main__ - INFO - Processing 33/50: Store 104.0, Item 7218063193.0 (RED BARON D/D/ SAUSAGE SCRAMBLE)
+2025-08-20 15:19:05,427 - __main__ - INFO - Processing RED BARON D/D/ SAUSAGE SCRAMBLE (Store 104.0, Item 7218063193.0)
+2025-08-20 15:19:05,531 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063193.0.html and .png
+2025-08-20 15:19:05,534 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063193.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:05,534 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063193.0
+2025-08-20 15:19:05,534 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063193.0
+2025-08-20 15:19:05,535 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063193.0
+2025-08-20 15:19:05,535 - __main__ - INFO - Completed processing for RED BARON D/D/ SAUSAGE SCRAMBLE
+2025-08-20 15:19:05,536 - __main__ - INFO - Processing 34/50: Store 104.0, Item 7218063243.0 (RED BARON FH BD 3 MEAT)
+2025-08-20 15:19:05,543 - __main__ - INFO - Processing RED BARON FH BD 3 MEAT (Store 104.0, Item 7218063243.0)
+2025-08-20 15:19:05,710 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063243.0.html and .png
+2025-08-20 15:19:05,713 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063243.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:05,713 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063243.0
+2025-08-20 15:19:05,713 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063243.0
+2025-08-20 15:19:05,715 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063243.0
+2025-08-20 15:19:05,715 - __main__ - INFO - Completed processing for RED BARON FH BD 3 MEAT
+2025-08-20 15:19:05,715 - __main__ - INFO - Processing 35/50: Store 104.0, Item 7218063244.0 (RED BARON FH PEPPERONI)
+2025-08-20 15:19:05,724 - __main__ - INFO - Processing RED BARON FH PEPPERONI (Store 104.0, Item 7218063244.0)
+2025-08-20 15:19:05,888 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063244.0.html and .png
+2025-08-20 15:19:05,891 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063244.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:05,891 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063244.0
+2025-08-20 15:19:05,891 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063244.0
+2025-08-20 15:19:05,892 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063244.0
+2025-08-20 15:19:05,893 - __main__ - INFO - Completed processing for RED BARON FH PEPPERONI
+2025-08-20 15:19:05,893 - __main__ - INFO - Processing 36/50: Store 104.0, Item 7218063245.0 (RED BARON FH 5 CHEESE & GARLIC)
+2025-08-20 15:19:05,902 - __main__ - INFO - Processing RED BARON FH 5 CHEESE & GARLIC (Store 104.0, Item 7218063245.0)
+2025-08-20 15:19:06,047 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063245.0.html and .png
+2025-08-20 15:19:06,050 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063245.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:06,050 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063245.0
+2025-08-20 15:19:06,050 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063245.0
+2025-08-20 15:19:06,052 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063245.0
+2025-08-20 15:19:06,052 - __main__ - INFO - Completed processing for RED BARON FH 5 CHEESE & GARLIC
+2025-08-20 15:19:06,052 - __main__ - INFO - Processing 37/50: Store 104.0, Item 7218063247.0 (RED BARON FH SUPREME)
+2025-08-20 15:19:06,060 - __main__ - INFO - Processing RED BARON FH SUPREME (Store 104.0, Item 7218063247.0)
+2025-08-20 15:19:06,310 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063247.0.html and .png
+2025-08-20 15:19:06,313 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063247.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:06,313 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063247.0
+2025-08-20 15:19:06,313 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063247.0
+2025-08-20 15:19:06,315 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063247.0
+2025-08-20 15:19:06,315 - __main__ - INFO - Completed processing for RED BARON FH SUPREME
+2025-08-20 15:19:06,315 - __main__ - INFO - Processing 38/50: Store 104.0, Item 7218063429.0 (RED BARON 4 CHEESE PIZZA)
+2025-08-20 15:19:06,323 - __main__ - INFO - Processing RED BARON 4 CHEESE PIZZA (Store 104.0, Item 7218063429.0)
+2025-08-20 15:19:06,517 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063429.0.html and .png
+2025-08-20 15:19:06,520 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063429.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:06,520 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063429.0
+2025-08-20 15:19:06,521 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063429.0
+2025-08-20 15:19:06,522 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063429.0
+2025-08-20 15:19:06,522 - __main__ - INFO - Completed processing for RED BARON 4 CHEESE PIZZA
+2025-08-20 15:19:06,522 - __main__ - INFO - Processing 39/50: Store 104.0, Item 7218063469.0 (RED BARON DELUXE PIZZA)
+2025-08-20 15:19:06,530 - __main__ - INFO - Processing RED BARON DELUXE PIZZA (Store 104.0, Item 7218063469.0)
+2025-08-20 15:19:06,670 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063469.0.html and .png
+2025-08-20 15:19:06,672 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063469.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:06,673 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063469.0
+2025-08-20 15:19:06,673 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063469.0
+2025-08-20 15:19:06,674 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063469.0
+2025-08-20 15:19:06,674 - __main__ - INFO - Completed processing for RED BARON DELUXE PIZZA
+2025-08-20 15:19:06,674 - __main__ - INFO - Processing 40/50: Store 104.0, Item 7218063471.0 (RED BARON SUPREME PIZZA)
+2025-08-20 15:19:06,682 - __main__ - INFO - Processing RED BARON SUPREME PIZZA (Store 104.0, Item 7218063471.0)
+2025-08-20 15:19:06,833 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063471.0.html and .png
+2025-08-20 15:19:06,835 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063471.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:06,836 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063471.0
+2025-08-20 15:19:06,836 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063471.0
+2025-08-20 15:19:06,837 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063471.0
+2025-08-20 15:19:06,837 - __main__ - INFO - Completed processing for RED BARON SUPREME PIZZA
+2025-08-20 15:19:06,837 - __main__ - INFO - Processing 41/50: Store 104.0, Item 7218063473.0 (RED BARON PEPPERONI PIZZA)
+2025-08-20 15:19:06,846 - __main__ - INFO - Processing RED BARON PEPPERONI PIZZA (Store 104.0, Item 7218063473.0)
+2025-08-20 15:19:07,047 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063473.0.html and .png
+2025-08-20 15:19:07,049 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063473.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:07,050 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063473.0
+2025-08-20 15:19:07,050 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063473.0
+2025-08-20 15:19:07,052 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063473.0
+2025-08-20 15:19:07,052 - __main__ - INFO - Completed processing for RED BARON PEPPERONI PIZZA
+2025-08-20 15:19:07,052 - __main__ - INFO - Processing 42/50: Store 104.0, Item 7218063717.0 (TONYS PS PEPPERONI)
+2025-08-20 15:19:07,061 - __main__ - INFO - Processing TONYS PS PEPPERONI (Store 104.0, Item 7218063717.0)
+2025-08-20 15:19:07,224 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063717.0.html and .png
+2025-08-20 15:19:07,227 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063717.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:07,227 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063717.0
+2025-08-20 15:19:07,227 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063717.0
+2025-08-20 15:19:07,229 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063717.0
+2025-08-20 15:19:07,229 - __main__ - INFO - Completed processing for TONYS PS PEPPERONI
+2025-08-20 15:19:07,229 - __main__ - INFO - Processing 43/50: Store 104.0, Item 7218063718.0 (TONYS PS CHEESE)
+2025-08-20 15:19:07,241 - __main__ - INFO - Processing TONYS PS CHEESE (Store 104.0, Item 7218063718.0)
+2025-08-20 15:19:07,386 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063718.0.html and .png
+2025-08-20 15:19:07,389 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063718.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:07,389 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063718.0
+2025-08-20 15:19:07,389 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063718.0
+2025-08-20 15:19:07,391 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063718.0
+2025-08-20 15:19:07,391 - __main__ - INFO - Completed processing for TONYS PS CHEESE
+2025-08-20 15:19:07,391 - __main__ - INFO - Processing 44/50: Store 104.0, Item 7218063735.0 (TONYS PS MEAT TRIO)
+2025-08-20 15:19:07,403 - __main__ - INFO - Processing TONYS PS MEAT TRIO (Store 104.0, Item 7218063735.0)
+2025-08-20 15:19:07,541 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063735.0.html and .png
+2025-08-20 15:19:07,544 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063735.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:07,544 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063735.0
+2025-08-20 15:19:07,544 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063735.0
+2025-08-20 15:19:07,546 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063735.0
+2025-08-20 15:19:07,546 - __main__ - INFO - Completed processing for TONYS PS MEAT TRIO
+2025-08-20 15:19:07,546 - __main__ - INFO - Processing 45/50: Store 104.0, Item 7218063736.0 (TONYS PS SUPREME)
+2025-08-20 15:19:07,554 - __main__ - INFO - Processing TONYS PS SUPREME (Store 104.0, Item 7218063736.0)
+2025-08-20 15:19:07,669 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063736.0.html and .png
+2025-08-20 15:19:07,672 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063736.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:07,672 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063736.0
+2025-08-20 15:19:07,672 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063736.0
+2025-08-20 15:19:07,674 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063736.0
+2025-08-20 15:19:07,674 - __main__ - INFO - Completed processing for TONYS PS SUPREME
+2025-08-20 15:19:07,674 - __main__ - INFO - Processing 46/50: Store 104.0, Item 7218063810.0 (RED BARON BO CHEESE TRIO)
+2025-08-20 15:19:07,681 - __main__ - INFO - Processing RED BARON BO CHEESE TRIO (Store 104.0, Item 7218063810.0)
+2025-08-20 15:19:07,818 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063810.0.html and .png
+2025-08-20 15:19:07,821 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063810.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:07,821 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063810.0
+2025-08-20 15:19:07,821 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063810.0
+2025-08-20 15:19:07,823 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063810.0
+2025-08-20 15:19:07,823 - __main__ - INFO - Completed processing for RED BARON BO CHEESE TRIO
+2025-08-20 15:19:07,823 - __main__ - INFO - Processing 47/50: Store 104.0, Item 7218063811.0 (RED BARON BO PEPPERONI)
+2025-08-20 15:19:07,832 - __main__ - INFO - Processing RED BARON BO PEPPERONI (Store 104.0, Item 7218063811.0)
+2025-08-20 15:19:08,008 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063811.0.html and .png
+2025-08-20 15:19:08,011 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063811.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:08,012 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063811.0
+2025-08-20 15:19:08,012 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063811.0
+2025-08-20 15:19:08,013 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063811.0
+2025-08-20 15:19:08,014 - __main__ - INFO - Completed processing for RED BARON BO PEPPERONI
+2025-08-20 15:19:08,014 - __main__ - INFO - Processing 48/50: Store 104.0, Item 7218073366.0 (RED BARON D/D PEPPERONI PIZZA)
+2025-08-20 15:19:08,022 - __main__ - INFO - Processing RED BARON D/D PEPPERONI PIZZA (Store 104.0, Item 7218073366.0)
+2025-08-20 15:19:08,192 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218073366.0.html and .png
+2025-08-20 15:19:08,194 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218073366.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:08,195 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218073366.0
+2025-08-20 15:19:08,195 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218073366.0
+2025-08-20 15:19:08,196 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218073366.0
+2025-08-20 15:19:08,196 - __main__ - INFO - Completed processing for RED BARON D/D PEPPERONI PIZZA
+2025-08-20 15:19:08,197 - __main__ - INFO - Processing 49/50: Store 104.0, Item 7218073367.0 (RED BARON D/D/ SUPREME PIZZA)
+2025-08-20 15:19:08,205 - __main__ - INFO - Processing RED BARON D/D/ SUPREME PIZZA (Store 104.0, Item 7218073367.0)
+2025-08-20 15:19:08,330 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218073367.0.html and .png
+2025-08-20 15:19:08,333 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218073367.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:08,333 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218073367.0
+2025-08-20 15:19:08,333 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218073367.0
+2025-08-20 15:19:08,334 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218073367.0
+2025-08-20 15:19:08,334 - __main__ - INFO - Completed processing for RED BARON D/D/ SUPREME PIZZA
+2025-08-20 15:19:08,334 - __main__ - INFO - Processing 50/50: Store 104.0, Item 7465330890.0 (JACKS CHEESE PIZZA)
+2025-08-20 15:19:08,342 - __main__ - INFO - Processing JACKS CHEESE PIZZA (Store 104.0, Item 7465330890.0)
+2025-08-20 15:19:08,518 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7465330890.0.html and .png
+2025-08-20 15:19:08,521 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7465330890.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:08,521 - model_comparator - WARNING - No forecast data found for store 104.0, item 7465330890.0
+2025-08-20 15:19:08,521 - model_comparator - WARNING - No forecast data found for store 104.0, item 7465330890.0
+2025-08-20 15:19:08,523 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7465330890.0
+2025-08-20 15:19:08,523 - __main__ - INFO - Completed processing for JACKS CHEESE PIZZA
+2025-08-20 15:19:08,523 - __main__ - INFO - Completed processing 50 items
+2025-08-20 15:19:08,872 - __main__ - INFO - Summary report generated at testing/output/summary_report.html
+2025-08-20 15:19:08,872 - __main__ - INFO - Visualization process completed successfully
+2025-08-20 15:19:17,501 - item_data_visualizer - WARNING - RF forecasts file not found
+2025-08-20 15:19:17,501 - item_data_visualizer - WARNING - PyTorch forecasts file not found
+2025-08-20 15:19:17,501 - item_data_visualizer - WARNING - ARIMA forecasts file not found
+2025-08-20 15:19:17,501 - item_data_visualizer - INFO - Data loaded successfully
+2025-08-20 15:19:17,635 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-20 15:19:17,765 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-20 15:19:17,897 - model_comparator - WARNING - RF forecasts file not found
+2025-08-20 15:19:17,897 - model_comparator - WARNING - PyTorch forecasts file not found
+2025-08-20 15:19:17,897 - model_comparator - WARNING - ARIMA forecasts file not found
+2025-08-20 15:19:17,898 - model_comparator - INFO - Data loaded successfully
+2025-08-20 15:19:17,898 - __main__ - INFO - All components initialized successfully
+2025-08-20 15:19:17,905 - __main__ - INFO - Found 62 unique store-item combinations
+2025-08-20 15:19:17,905 - __main__ - INFO - Limited to first 60 items
+2025-08-20 15:19:17,905 - __main__ - INFO - Processing 1/60: Store 104.0, Item 3913116850.0 (BELLATORIA BBQ CHK PIZZA)
+2025-08-20 15:19:17,913 - __main__ - INFO - Processing BELLATORIA BBQ CHK PIZZA (Store 104.0, Item 3913116850.0)
+2025-08-20 15:19:18,883 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_3913116850.0.html and .png
+2025-08-20 15:19:18,885 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 3913116850.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:18,886 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116850.0
+2025-08-20 15:19:18,886 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116850.0
+2025-08-20 15:19:18,887 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 3913116850.0
+2025-08-20 15:19:18,887 - __main__ - INFO - Completed processing for BELLATORIA BBQ CHK PIZZA
+2025-08-20 15:19:18,887 - __main__ - INFO - Processing 2/60: Store 104.0, Item 3913116852.0 (BELLATORIA ULT PEPPERONI PIZZA)
+2025-08-20 15:19:18,895 - __main__ - INFO - Processing BELLATORIA ULT PEPPERONI PIZZA (Store 104.0, Item 3913116852.0)
+2025-08-20 15:19:19,044 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_3913116852.0.html and .png
+2025-08-20 15:19:19,047 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 3913116852.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:19,047 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116852.0
+2025-08-20 15:19:19,047 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116852.0
+2025-08-20 15:19:19,049 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 3913116852.0
+2025-08-20 15:19:19,049 - __main__ - INFO - Completed processing for BELLATORIA ULT PEPPERONI PIZZA
+2025-08-20 15:19:19,049 - __main__ - INFO - Processing 3/60: Store 104.0, Item 3913116853.0 (BELLATORIA ULT SUPREME PIZZA)
+2025-08-20 15:19:19,056 - __main__ - INFO - Processing BELLATORIA ULT SUPREME PIZZA (Store 104.0, Item 3913116853.0)
+2025-08-20 15:19:19,216 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_3913116853.0.html and .png
+2025-08-20 15:19:19,219 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 3913116853.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:19,219 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116853.0
+2025-08-20 15:19:19,219 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116853.0
+2025-08-20 15:19:19,221 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 3913116853.0
+2025-08-20 15:19:19,221 - __main__ - INFO - Completed processing for BELLATORIA ULT SUPREME PIZZA
+2025-08-20 15:19:19,221 - __main__ - INFO - Processing 4/60: Store 104.0, Item 3913116856.0 (BELLATORIA GAR CHKN ALFR PIZZA)
+2025-08-20 15:19:19,230 - __main__ - INFO - Processing BELLATORIA GAR CHKN ALFR PIZZA (Store 104.0, Item 3913116856.0)
+2025-08-20 15:19:19,399 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_3913116856.0.html and .png
+2025-08-20 15:19:19,402 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 3913116856.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:19,402 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116856.0
+2025-08-20 15:19:19,402 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116856.0
+2025-08-20 15:19:19,404 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 3913116856.0
+2025-08-20 15:19:19,404 - __main__ - INFO - Completed processing for BELLATORIA GAR CHKN ALFR PIZZA
+2025-08-20 15:19:19,404 - __main__ - INFO - Processing 5/60: Store 104.0, Item 3913116891.0 (BELLATORIA SAUS ITALIA PIZZA)
+2025-08-20 15:19:19,411 - __main__ - INFO - Processing BELLATORIA SAUS ITALIA PIZZA (Store 104.0, Item 3913116891.0)
+2025-08-20 15:19:19,550 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_3913116891.0.html and .png
+2025-08-20 15:19:19,553 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 3913116891.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:19,553 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116891.0
+2025-08-20 15:19:19,553 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116891.0
+2025-08-20 15:19:19,554 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 3913116891.0
+2025-08-20 15:19:19,554 - __main__ - INFO - Completed processing for BELLATORIA SAUS ITALIA PIZZA
+2025-08-20 15:19:19,554 - __main__ - INFO - Processing 6/60: Store 104.0, Item 3913116957.0 (BELLATORIA HAWAIIAN BBQ PIZZA)
+2025-08-20 15:19:19,562 - __main__ - INFO - Processing BELLATORIA HAWAIIAN BBQ PIZZA (Store 104.0, Item 3913116957.0)
+2025-08-20 15:19:19,668 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_3913116957.0.html and .png
+2025-08-20 15:19:19,671 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 3913116957.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:19,671 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116957.0
+2025-08-20 15:19:19,671 - model_comparator - WARNING - No forecast data found for store 104.0, item 3913116957.0
+2025-08-20 15:19:19,672 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 3913116957.0
+2025-08-20 15:19:19,672 - __main__ - INFO - Completed processing for BELLATORIA HAWAIIAN BBQ PIZZA
+2025-08-20 15:19:19,672 - __main__ - INFO - Processing 7/60: Store 104.0, Item 4219700201.0 (BREW PUB PEPPERONI PIZZA)
+2025-08-20 15:19:19,680 - __main__ - INFO - Processing BREW PUB PEPPERONI PIZZA (Store 104.0, Item 4219700201.0)
+2025-08-20 15:19:19,784 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4219700201.0.html and .png
+2025-08-20 15:19:19,787 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4219700201.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:19,787 - model_comparator - WARNING - No forecast data found for store 104.0, item 4219700201.0
+2025-08-20 15:19:19,787 - model_comparator - WARNING - No forecast data found for store 104.0, item 4219700201.0
+2025-08-20 15:19:19,788 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4219700201.0
+2025-08-20 15:19:19,788 - __main__ - INFO - Completed processing for BREW PUB PEPPERONI PIZZA
+2025-08-20 15:19:19,789 - __main__ - INFO - Processing 8/60: Store 104.0, Item 4219700203.0 (BREW PUB SAUS PEP PIZZA)
+2025-08-20 15:19:19,797 - __main__ - INFO - Processing BREW PUB SAUS PEP PIZZA (Store 104.0, Item 4219700203.0)
+2025-08-20 15:19:19,898 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4219700203.0.html and .png
+2025-08-20 15:19:19,900 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4219700203.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:19,901 - model_comparator - WARNING - No forecast data found for store 104.0, item 4219700203.0
+2025-08-20 15:19:19,901 - model_comparator - WARNING - No forecast data found for store 104.0, item 4219700203.0
+2025-08-20 15:19:19,902 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4219700203.0
+2025-08-20 15:19:19,902 - __main__ - INFO - Completed processing for BREW PUB SAUS PEP PIZZA
+2025-08-20 15:19:19,902 - __main__ - INFO - Processing 9/60: Store 104.0, Item 4219700204.0 (BREW PUB CHEESE PIZZA)
+2025-08-20 15:19:19,911 - __main__ - INFO - Processing BREW PUB CHEESE PIZZA (Store 104.0, Item 4219700204.0)
+2025-08-20 15:19:20,002 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4219700204.0.html and .png
+2025-08-20 15:19:20,005 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4219700204.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:20,005 - model_comparator - WARNING - No forecast data found for store 104.0, item 4219700204.0
+2025-08-20 15:19:20,005 - model_comparator - WARNING - No forecast data found for store 104.0, item 4219700204.0
+2025-08-20 15:19:20,007 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4219700204.0
+2025-08-20 15:19:20,007 - __main__ - INFO - Completed processing for BREW PUB CHEESE PIZZA
+2025-08-20 15:19:20,007 - __main__ - INFO - Processing 10/60: Store 104.0, Item 4219700205.0 (BREW PUB 4 MEAT PIZZA)
+2025-08-20 15:19:20,016 - __main__ - INFO - Processing BREW PUB 4 MEAT PIZZA (Store 104.0, Item 4219700205.0)
+2025-08-20 15:19:20,126 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4219700205.0.html and .png
+2025-08-20 15:19:20,129 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4219700205.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:20,129 - model_comparator - WARNING - No forecast data found for store 104.0, item 4219700205.0
+2025-08-20 15:19:20,129 - model_comparator - WARNING - No forecast data found for store 104.0, item 4219700205.0
+2025-08-20 15:19:20,130 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4219700205.0
+2025-08-20 15:19:20,131 - __main__ - INFO - Completed processing for BREW PUB 4 MEAT PIZZA
+2025-08-20 15:19:20,131 - __main__ - INFO - Processing 11/60: Store 104.0, Item 4219700206.0 (BREW PUB BACON CHSBRGR PIZZA)
+2025-08-20 15:19:20,142 - __main__ - INFO - Processing BREW PUB BACON CHSBRGR PIZZA (Store 104.0, Item 4219700206.0)
+2025-08-20 15:19:20,243 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4219700206.0.html and .png
+2025-08-20 15:19:20,246 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4219700206.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:20,246 - model_comparator - WARNING - No forecast data found for store 104.0, item 4219700206.0
+2025-08-20 15:19:20,246 - model_comparator - WARNING - No forecast data found for store 104.0, item 4219700206.0
+2025-08-20 15:19:20,248 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4219700206.0
+2025-08-20 15:19:20,248 - __main__ - INFO - Completed processing for BREW PUB BACON CHSBRGR PIZZA
+2025-08-20 15:19:20,248 - __main__ - INFO - Processing 12/60: Store 104.0, Item 4219700207.0 (BREW PUB SUPREME PIZZA)
+2025-08-20 15:19:20,255 - __main__ - INFO - Processing BREW PUB SUPREME PIZZA (Store 104.0, Item 4219700207.0)
+2025-08-20 15:19:20,357 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4219700207.0.html and .png
+2025-08-20 15:19:20,360 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4219700207.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:20,360 - model_comparator - WARNING - No forecast data found for store 104.0, item 4219700207.0
+2025-08-20 15:19:20,360 - model_comparator - WARNING - No forecast data found for store 104.0, item 4219700207.0
+2025-08-20 15:19:20,361 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4219700207.0
+2025-08-20 15:19:20,361 - __main__ - INFO - Completed processing for BREW PUB SUPREME PIZZA
+2025-08-20 15:19:20,362 - __main__ - INFO - Processing 13/60: Store 104.0, Item 4219700334.0 (BREW PUB TACO GRANDE)
+2025-08-20 15:19:20,369 - __main__ - INFO - Processing BREW PUB TACO GRANDE (Store 104.0, Item 4219700334.0)
+2025-08-20 15:19:20,443 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4219700334.0.html and .png
+2025-08-20 15:19:20,445 - seasonality_analyzer - WARNING - Insufficient data for seasonality detection for store 104.0, item 4219700334.0
+2025-08-20 15:19:20,446 - model_comparator - WARNING - No forecast data found for store 104.0, item 4219700334.0
+2025-08-20 15:19:20,446 - model_comparator - WARNING - No forecast data found for store 104.0, item 4219700334.0
+2025-08-20 15:19:20,447 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4219700334.0
+2025-08-20 15:19:20,447 - __main__ - INFO - Completed processing for BREW PUB TACO GRANDE
+2025-08-20 15:19:20,447 - __main__ - INFO - Processing 14/60: Store 104.0, Item 4280010700.0 (TOTINO SUPREME PIZZA)
+2025-08-20 15:19:20,455 - __main__ - INFO - Processing TOTINO SUPREME PIZZA (Store 104.0, Item 4280010700.0)
+2025-08-20 15:19:20,647 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4280010700.0.html and .png
+2025-08-20 15:19:20,650 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4280010700.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:20,650 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280010700.0
+2025-08-20 15:19:20,650 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280010700.0
+2025-08-20 15:19:20,652 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4280010700.0
+2025-08-20 15:19:20,652 - __main__ - INFO - Completed processing for TOTINO SUPREME PIZZA
+2025-08-20 15:19:20,652 - __main__ - INFO - Processing 15/60: Store 104.0, Item 4280010800.0 (TOTINO 3 MEAT PIZZA)
+2025-08-20 15:19:20,660 - __main__ - INFO - Processing TOTINO 3 MEAT PIZZA (Store 104.0, Item 4280010800.0)
+2025-08-20 15:19:20,865 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4280010800.0.html and .png
+2025-08-20 15:19:20,868 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4280010800.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:20,868 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280010800.0
+2025-08-20 15:19:20,868 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280010800.0
+2025-08-20 15:19:20,870 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4280010800.0
+2025-08-20 15:19:20,870 - __main__ - INFO - Completed processing for TOTINO 3 MEAT PIZZA
+2025-08-20 15:19:20,870 - __main__ - INFO - Processing 16/60: Store 104.0, Item 4280011100.0 (TOTINO SAUSAGE PIZZA)
+2025-08-20 15:19:20,878 - __main__ - INFO - Processing TOTINO SAUSAGE PIZZA (Store 104.0, Item 4280011100.0)
+2025-08-20 15:19:21,058 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4280011100.0.html and .png
+2025-08-20 15:19:21,060 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4280011100.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:21,060 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280011100.0
+2025-08-20 15:19:21,061 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280011100.0
+2025-08-20 15:19:21,062 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4280011100.0
+2025-08-20 15:19:21,062 - __main__ - INFO - Completed processing for TOTINO SAUSAGE PIZZA
+2025-08-20 15:19:21,062 - __main__ - INFO - Processing 17/60: Store 104.0, Item 4280011200.0 (TOTINO HAMBRGR PIZZA)
+2025-08-20 15:19:21,070 - __main__ - INFO - Processing TOTINO HAMBRGR PIZZA (Store 104.0, Item 4280011200.0)
+2025-08-20 15:19:21,259 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4280011200.0.html and .png
+2025-08-20 15:19:21,262 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4280011200.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:21,262 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280011200.0
+2025-08-20 15:19:21,262 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280011200.0
+2025-08-20 15:19:21,264 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4280011200.0
+2025-08-20 15:19:21,264 - __main__ - INFO - Completed processing for TOTINO HAMBRGR PIZZA
+2025-08-20 15:19:21,264 - __main__ - INFO - Processing 18/60: Store 104.0, Item 4280011300.0 (TOTINO CHEESE PIZZA)
+2025-08-20 15:19:21,271 - __main__ - INFO - Processing TOTINO CHEESE PIZZA (Store 104.0, Item 4280011300.0)
+2025-08-20 15:19:21,458 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4280011300.0.html and .png
+2025-08-20 15:19:21,461 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4280011300.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:21,461 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280011300.0
+2025-08-20 15:19:21,461 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280011300.0
+2025-08-20 15:19:21,463 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4280011300.0
+2025-08-20 15:19:21,463 - __main__ - INFO - Completed processing for TOTINO CHEESE PIZZA
+2025-08-20 15:19:21,463 - __main__ - INFO - Processing 19/60: Store 104.0, Item 4280011400.0 (TOTINO PEPPERONI PIZZA)
+2025-08-20 15:19:21,471 - __main__ - INFO - Processing TOTINO PEPPERONI PIZZA (Store 104.0, Item 4280011400.0)
+2025-08-20 15:19:21,707 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4280011400.0.html and .png
+2025-08-20 15:19:21,710 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4280011400.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:21,711 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280011400.0
+2025-08-20 15:19:21,711 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280011400.0
+2025-08-20 15:19:21,712 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4280011400.0
+2025-08-20 15:19:21,712 - __main__ - INFO - Completed processing for TOTINO PEPPERONI PIZZA
+2025-08-20 15:19:21,712 - __main__ - INFO - Processing 20/60: Store 104.0, Item 4280011520.0 (TOTINO 3 CHEESE PIZZA)
+2025-08-20 15:19:21,724 - __main__ - INFO - Processing TOTINO 3 CHEESE PIZZA (Store 104.0, Item 4280011520.0)
+2025-08-20 15:19:21,949 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4280011520.0.html and .png
+2025-08-20 15:19:21,953 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4280011520.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:21,953 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280011520.0
+2025-08-20 15:19:21,953 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280011520.0
+2025-08-20 15:19:21,955 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4280011520.0
+2025-08-20 15:19:21,955 - __main__ - INFO - Completed processing for TOTINO 3 CHEESE PIZZA
+2025-08-20 15:19:21,955 - __main__ - INFO - Processing 21/60: Store 104.0, Item 4280011600.0 (TOTINO COMBINATION PIZZA)
+2025-08-20 15:19:21,963 - __main__ - INFO - Processing TOTINO COMBINATION PIZZA (Store 104.0, Item 4280011600.0)
+2025-08-20 15:19:22,272 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4280011600.0.html and .png
+2025-08-20 15:19:22,276 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4280011600.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:22,276 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280011600.0
+2025-08-20 15:19:22,276 - model_comparator - WARNING - No forecast data found for store 104.0, item 4280011600.0
+2025-08-20 15:19:22,277 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4280011600.0
+2025-08-20 15:19:22,278 - __main__ - INFO - Completed processing for TOTINO COMBINATION PIZZA
+2025-08-20 15:19:22,278 - __main__ - INFO - Processing 22/60: Store 104.0, Item 4786100005.0 (IMOS PEPPERONI PIZZA)
+2025-08-20 15:19:22,287 - __main__ - INFO - Processing IMOS PEPPERONI PIZZA (Store 104.0, Item 4786100005.0)
+2025-08-20 15:19:22,388 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_4786100005.0.html and .png
+2025-08-20 15:19:22,390 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 4786100005.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:22,391 - model_comparator - WARNING - No forecast data found for store 104.0, item 4786100005.0
+2025-08-20 15:19:22,391 - model_comparator - WARNING - No forecast data found for store 104.0, item 4786100005.0
+2025-08-20 15:19:22,392 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 4786100005.0
+2025-08-20 15:19:22,392 - __main__ - INFO - Completed processing for IMOS PEPPERONI PIZZA
+2025-08-20 15:19:22,392 - __main__ - INFO - Processing 23/60: Store 104.0, Item 7192114978.0 (DIGIORNO HAND TOSSED SUPREME)
+2025-08-20 15:19:22,401 - __main__ - INFO - Processing DIGIORNO HAND TOSSED SUPREME (Store 104.0, Item 7192114978.0)
+2025-08-20 15:19:22,487 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7192114978.0.html and .png
+2025-08-20 15:19:22,489 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7192114978.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:22,490 - model_comparator - WARNING - No forecast data found for store 104.0, item 7192114978.0
+2025-08-20 15:19:22,490 - model_comparator - WARNING - No forecast data found for store 104.0, item 7192114978.0
+2025-08-20 15:19:22,491 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7192114978.0
+2025-08-20 15:19:22,491 - __main__ - INFO - Completed processing for DIGIORNO HAND TOSSED SUPREME
+2025-08-20 15:19:22,492 - __main__ - INFO - Processing 24/60: Store 104.0, Item 7192119954.0 (TOMBSTONE SUPREME PIZZA)
+2025-08-20 15:19:22,499 - __main__ - INFO - Processing TOMBSTONE SUPREME PIZZA (Store 104.0, Item 7192119954.0)
+2025-08-20 15:19:22,615 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7192119954.0.html and .png
+2025-08-20 15:19:22,618 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7192119954.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:22,618 - model_comparator - WARNING - No forecast data found for store 104.0, item 7192119954.0
+2025-08-20 15:19:22,618 - model_comparator - WARNING - No forecast data found for store 104.0, item 7192119954.0
+2025-08-20 15:19:22,619 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7192119954.0
+2025-08-20 15:19:22,620 - __main__ - INFO - Completed processing for TOMBSTONE SUPREME PIZZA
+2025-08-20 15:19:22,620 - __main__ - INFO - Processing 25/60: Store 104.0, Item 7192156420.0 (TOMBSTONE 4 MEAT PIZZA)
+2025-08-20 15:19:22,629 - __main__ - INFO - Processing TOMBSTONE 4 MEAT PIZZA (Store 104.0, Item 7192156420.0)
+2025-08-20 15:19:22,750 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7192156420.0.html and .png
+2025-08-20 15:19:22,753 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7192156420.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:22,753 - model_comparator - WARNING - No forecast data found for store 104.0, item 7192156420.0
+2025-08-20 15:19:22,753 - model_comparator - WARNING - No forecast data found for store 104.0, item 7192156420.0
+2025-08-20 15:19:22,755 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7192156420.0
+2025-08-20 15:19:22,755 - __main__ - INFO - Completed processing for TOMBSTONE 4 MEAT PIZZA
+2025-08-20 15:19:22,755 - __main__ - INFO - Processing 26/60: Store 104.0, Item 7192182379.0 (DIGIORNO RC PEPPERONI PIZZA)
+2025-08-20 15:19:22,764 - __main__ - INFO - Processing DIGIORNO RC PEPPERONI PIZZA (Store 104.0, Item 7192182379.0)
+2025-08-20 15:19:22,842 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7192182379.0.html and .png
+2025-08-20 15:19:22,845 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7192182379.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:22,845 - model_comparator - WARNING - No forecast data found for store 104.0, item 7192182379.0
+2025-08-20 15:19:22,845 - model_comparator - WARNING - No forecast data found for store 104.0, item 7192182379.0
+2025-08-20 15:19:22,847 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7192182379.0
+2025-08-20 15:19:22,847 - __main__ - INFO - Completed processing for DIGIORNO RC PEPPERONI PIZZA
+2025-08-20 15:19:22,847 - __main__ - INFO - Processing 27/60: Store 104.0, Item 7192190926.0 (DIGIORNO ULTRA THIN CARNIVR PIZA)
+2025-08-20 15:19:22,855 - __main__ - INFO - Processing DIGIORNO ULTRA THIN CARNIVR PIZA (Store 104.0, Item 7192190926.0)
+2025-08-20 15:19:22,937 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7192190926.0.html and .png
+2025-08-20 15:19:22,939 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7192190926.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:22,940 - model_comparator - WARNING - No forecast data found for store 104.0, item 7192190926.0
+2025-08-20 15:19:22,940 - model_comparator - WARNING - No forecast data found for store 104.0, item 7192190926.0
+2025-08-20 15:19:22,941 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7192190926.0
+2025-08-20 15:19:22,941 - __main__ - INFO - Completed processing for DIGIORNO ULTRA THIN CARNIVR PIZA
+2025-08-20 15:19:22,941 - __main__ - INFO - Processing 28/60: Store 104.0, Item 7192197185.0 (TOMBSTONE PEPPERONI PIZZA)
+2025-08-20 15:19:22,950 - __main__ - INFO - Processing TOMBSTONE PEPPERONI PIZZA (Store 104.0, Item 7192197185.0)
+2025-08-20 15:19:23,080 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7192197185.0.html and .png
+2025-08-20 15:19:23,082 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7192197185.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:23,082 - model_comparator - WARNING - No forecast data found for store 104.0, item 7192197185.0
+2025-08-20 15:19:23,083 - model_comparator - WARNING - No forecast data found for store 104.0, item 7192197185.0
+2025-08-20 15:19:23,084 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7192197185.0
+2025-08-20 15:19:23,084 - __main__ - INFO - Completed processing for TOMBSTONE PEPPERONI PIZZA
+2025-08-20 15:19:23,084 - __main__ - INFO - Processing 29/60: Store 104.0, Item 7218056624.0 (RED BARON 4 MEAT PIZZA)
+2025-08-20 15:19:23,092 - __main__ - INFO - Processing RED BARON 4 MEAT PIZZA (Store 104.0, Item 7218056624.0)
+2025-08-20 15:19:23,263 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218056624.0.html and .png
+2025-08-20 15:19:23,266 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218056624.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:23,266 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218056624.0
+2025-08-20 15:19:23,266 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218056624.0
+2025-08-20 15:19:23,268 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218056624.0
+2025-08-20 15:19:23,268 - __main__ - INFO - Completed processing for RED BARON 4 MEAT PIZZA
+2025-08-20 15:19:23,268 - __main__ - INFO - Processing 30/60: Store 104.0, Item 7218056632.0 (RED BARON DEEP DISH MEAT TRIO)
+2025-08-20 15:19:23,281 - __main__ - INFO - Processing RED BARON DEEP DISH MEAT TRIO (Store 104.0, Item 7218056632.0)
+2025-08-20 15:19:23,383 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218056632.0.html and .png
+2025-08-20 15:19:23,386 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218056632.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:23,386 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218056632.0
+2025-08-20 15:19:23,386 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218056632.0
+2025-08-20 15:19:23,388 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218056632.0
+2025-08-20 15:19:23,388 - __main__ - INFO - Completed processing for RED BARON DEEP DISH MEAT TRIO
+2025-08-20 15:19:23,388 - __main__ - INFO - Processing 31/60: Store 104.0, Item 7218056638.0 (RED BARON DEEP DISH CHEESE)
+2025-08-20 15:19:23,396 - __main__ - INFO - Processing RED BARON DEEP DISH CHEESE (Store 104.0, Item 7218056638.0)
+2025-08-20 15:19:23,536 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218056638.0.html and .png
+2025-08-20 15:19:23,539 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218056638.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:23,540 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218056638.0
+2025-08-20 15:19:23,540 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218056638.0
+2025-08-20 15:19:23,541 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218056638.0
+2025-08-20 15:19:23,542 - __main__ - INFO - Completed processing for RED BARON DEEP DISH CHEESE
+2025-08-20 15:19:23,542 - __main__ - INFO - Processing 32/60: Store 104.0, Item 7218063187.0 (RED BARON D/D/ BACON SCRAMBLE)
+2025-08-20 15:19:23,551 - __main__ - INFO - Processing RED BARON D/D/ BACON SCRAMBLE (Store 104.0, Item 7218063187.0)
+2025-08-20 15:19:23,662 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063187.0.html and .png
+2025-08-20 15:19:23,665 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063187.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:23,665 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063187.0
+2025-08-20 15:19:23,665 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063187.0
+2025-08-20 15:19:23,667 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063187.0
+2025-08-20 15:19:23,667 - __main__ - INFO - Completed processing for RED BARON D/D/ BACON SCRAMBLE
+2025-08-20 15:19:23,667 - __main__ - INFO - Processing 33/60: Store 104.0, Item 7218063193.0 (RED BARON D/D/ SAUSAGE SCRAMBLE)
+2025-08-20 15:19:23,674 - __main__ - INFO - Processing RED BARON D/D/ SAUSAGE SCRAMBLE (Store 104.0, Item 7218063193.0)
+2025-08-20 15:19:23,775 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063193.0.html and .png
+2025-08-20 15:19:23,778 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063193.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:23,778 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063193.0
+2025-08-20 15:19:23,779 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063193.0
+2025-08-20 15:19:23,780 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063193.0
+2025-08-20 15:19:23,780 - __main__ - INFO - Completed processing for RED BARON D/D/ SAUSAGE SCRAMBLE
+2025-08-20 15:19:23,780 - __main__ - INFO - Processing 34/60: Store 104.0, Item 7218063243.0 (RED BARON FH BD 3 MEAT)
+2025-08-20 15:19:23,788 - __main__ - INFO - Processing RED BARON FH BD 3 MEAT (Store 104.0, Item 7218063243.0)
+2025-08-20 15:19:23,924 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063243.0.html and .png
+2025-08-20 15:19:23,927 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063243.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:23,928 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063243.0
+2025-08-20 15:19:23,928 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063243.0
+2025-08-20 15:19:23,929 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063243.0
+2025-08-20 15:19:23,929 - __main__ - INFO - Completed processing for RED BARON FH BD 3 MEAT
+2025-08-20 15:19:23,929 - __main__ - INFO - Processing 35/60: Store 104.0, Item 7218063244.0 (RED BARON FH PEPPERONI)
+2025-08-20 15:19:23,939 - __main__ - INFO - Processing RED BARON FH PEPPERONI (Store 104.0, Item 7218063244.0)
+2025-08-20 15:19:24,092 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063244.0.html and .png
+2025-08-20 15:19:24,095 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063244.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:24,095 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063244.0
+2025-08-20 15:19:24,095 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063244.0
+2025-08-20 15:19:24,097 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063244.0
+2025-08-20 15:19:24,097 - __main__ - INFO - Completed processing for RED BARON FH PEPPERONI
+2025-08-20 15:19:24,097 - __main__ - INFO - Processing 36/60: Store 104.0, Item 7218063245.0 (RED BARON FH 5 CHEESE & GARLIC)
+2025-08-20 15:19:24,106 - __main__ - INFO - Processing RED BARON FH 5 CHEESE & GARLIC (Store 104.0, Item 7218063245.0)
+2025-08-20 15:19:24,250 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063245.0.html and .png
+2025-08-20 15:19:24,253 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063245.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:24,253 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063245.0
+2025-08-20 15:19:24,253 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063245.0
+2025-08-20 15:19:24,255 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063245.0
+2025-08-20 15:19:24,255 - __main__ - INFO - Completed processing for RED BARON FH 5 CHEESE & GARLIC
+2025-08-20 15:19:24,255 - __main__ - INFO - Processing 37/60: Store 104.0, Item 7218063247.0 (RED BARON FH SUPREME)
+2025-08-20 15:19:24,268 - __main__ - INFO - Processing RED BARON FH SUPREME (Store 104.0, Item 7218063247.0)
+2025-08-20 15:19:24,398 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063247.0.html and .png
+2025-08-20 15:19:24,401 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063247.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:24,401 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063247.0
+2025-08-20 15:19:24,401 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063247.0
+2025-08-20 15:19:24,402 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063247.0
+2025-08-20 15:19:24,403 - __main__ - INFO - Completed processing for RED BARON FH SUPREME
+2025-08-20 15:19:24,403 - __main__ - INFO - Processing 38/60: Store 104.0, Item 7218063429.0 (RED BARON 4 CHEESE PIZZA)
+2025-08-20 15:19:24,412 - __main__ - INFO - Processing RED BARON 4 CHEESE PIZZA (Store 104.0, Item 7218063429.0)
+2025-08-20 15:19:24,599 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063429.0.html and .png
+2025-08-20 15:19:24,603 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063429.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:24,603 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063429.0
+2025-08-20 15:19:24,603 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063429.0
+2025-08-20 15:19:24,605 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063429.0
+2025-08-20 15:19:24,605 - __main__ - INFO - Completed processing for RED BARON 4 CHEESE PIZZA
+2025-08-20 15:19:24,605 - __main__ - INFO - Processing 39/60: Store 104.0, Item 7218063469.0 (RED BARON DELUXE PIZZA)
+2025-08-20 15:19:24,615 - __main__ - INFO - Processing RED BARON DELUXE PIZZA (Store 104.0, Item 7218063469.0)
+2025-08-20 15:19:24,772 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063469.0.html and .png
+2025-08-20 15:19:24,775 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063469.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:24,776 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063469.0
+2025-08-20 15:19:24,776 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063469.0
+2025-08-20 15:19:24,777 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063469.0
+2025-08-20 15:19:24,777 - __main__ - INFO - Completed processing for RED BARON DELUXE PIZZA
+2025-08-20 15:19:24,778 - __main__ - INFO - Processing 40/60: Store 104.0, Item 7218063471.0 (RED BARON SUPREME PIZZA)
+2025-08-20 15:19:24,787 - __main__ - INFO - Processing RED BARON SUPREME PIZZA (Store 104.0, Item 7218063471.0)
+2025-08-20 15:19:24,948 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063471.0.html and .png
+2025-08-20 15:19:24,951 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063471.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:24,951 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063471.0
+2025-08-20 15:19:24,951 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063471.0
+2025-08-20 15:19:24,953 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063471.0
+2025-08-20 15:19:24,953 - __main__ - INFO - Completed processing for RED BARON SUPREME PIZZA
+2025-08-20 15:19:24,953 - __main__ - INFO - Processing 41/60: Store 104.0, Item 7218063473.0 (RED BARON PEPPERONI PIZZA)
+2025-08-20 15:19:24,960 - __main__ - INFO - Processing RED BARON PEPPERONI PIZZA (Store 104.0, Item 7218063473.0)
+2025-08-20 15:19:25,158 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063473.0.html and .png
+2025-08-20 15:19:25,161 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063473.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:25,161 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063473.0
+2025-08-20 15:19:25,161 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063473.0
+2025-08-20 15:19:25,163 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063473.0
+2025-08-20 15:19:25,163 - __main__ - INFO - Completed processing for RED BARON PEPPERONI PIZZA
+2025-08-20 15:19:25,163 - __main__ - INFO - Processing 42/60: Store 104.0, Item 7218063717.0 (TONYS PS PEPPERONI)
+2025-08-20 15:19:25,173 - __main__ - INFO - Processing TONYS PS PEPPERONI (Store 104.0, Item 7218063717.0)
+2025-08-20 15:19:25,385 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063717.0.html and .png
+2025-08-20 15:19:25,388 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063717.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:25,389 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063717.0
+2025-08-20 15:19:25,389 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063717.0
+2025-08-20 15:19:25,390 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063717.0
+2025-08-20 15:19:25,390 - __main__ - INFO - Completed processing for TONYS PS PEPPERONI
+2025-08-20 15:19:25,390 - __main__ - INFO - Processing 43/60: Store 104.0, Item 7218063718.0 (TONYS PS CHEESE)
+2025-08-20 15:19:25,398 - __main__ - INFO - Processing TONYS PS CHEESE (Store 104.0, Item 7218063718.0)
+2025-08-20 15:19:25,644 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063718.0.html and .png
+2025-08-20 15:19:25,647 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063718.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:25,647 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063718.0
+2025-08-20 15:19:25,647 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063718.0
+2025-08-20 15:19:25,649 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063718.0
+2025-08-20 15:19:25,649 - __main__ - INFO - Completed processing for TONYS PS CHEESE
+2025-08-20 15:19:25,649 - __main__ - INFO - Processing 44/60: Store 104.0, Item 7218063735.0 (TONYS PS MEAT TRIO)
+2025-08-20 15:19:25,658 - __main__ - INFO - Processing TONYS PS MEAT TRIO (Store 104.0, Item 7218063735.0)
+2025-08-20 15:19:25,798 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063735.0.html and .png
+2025-08-20 15:19:25,801 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063735.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:25,802 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063735.0
+2025-08-20 15:19:25,802 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063735.0
+2025-08-20 15:19:25,803 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063735.0
+2025-08-20 15:19:25,803 - __main__ - INFO - Completed processing for TONYS PS MEAT TRIO
+2025-08-20 15:19:25,803 - __main__ - INFO - Processing 45/60: Store 104.0, Item 7218063736.0 (TONYS PS SUPREME)
+2025-08-20 15:19:25,811 - __main__ - INFO - Processing TONYS PS SUPREME (Store 104.0, Item 7218063736.0)
+2025-08-20 15:19:25,927 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063736.0.html and .png
+2025-08-20 15:19:25,930 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063736.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:25,930 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063736.0
+2025-08-20 15:19:25,930 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063736.0
+2025-08-20 15:19:25,932 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063736.0
+2025-08-20 15:19:25,932 - __main__ - INFO - Completed processing for TONYS PS SUPREME
+2025-08-20 15:19:25,932 - __main__ - INFO - Processing 46/60: Store 104.0, Item 7218063810.0 (RED BARON BO CHEESE TRIO)
+2025-08-20 15:19:25,940 - __main__ - INFO - Processing RED BARON BO CHEESE TRIO (Store 104.0, Item 7218063810.0)
+2025-08-20 15:19:26,081 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063810.0.html and .png
+2025-08-20 15:19:26,084 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063810.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:26,084 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063810.0
+2025-08-20 15:19:26,084 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063810.0
+2025-08-20 15:19:26,085 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063810.0
+2025-08-20 15:19:26,086 - __main__ - INFO - Completed processing for RED BARON BO CHEESE TRIO
+2025-08-20 15:19:26,086 - __main__ - INFO - Processing 47/60: Store 104.0, Item 7218063811.0 (RED BARON BO PEPPERONI)
+2025-08-20 15:19:26,093 - __main__ - INFO - Processing RED BARON BO PEPPERONI (Store 104.0, Item 7218063811.0)
+2025-08-20 15:19:26,266 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218063811.0.html and .png
+2025-08-20 15:19:26,269 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218063811.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:26,269 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063811.0
+2025-08-20 15:19:26,269 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218063811.0
+2025-08-20 15:19:26,271 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218063811.0
+2025-08-20 15:19:26,271 - __main__ - INFO - Completed processing for RED BARON BO PEPPERONI
+2025-08-20 15:19:26,271 - __main__ - INFO - Processing 48/60: Store 104.0, Item 7218073366.0 (RED BARON D/D PEPPERONI PIZZA)
+2025-08-20 15:19:26,280 - __main__ - INFO - Processing RED BARON D/D PEPPERONI PIZZA (Store 104.0, Item 7218073366.0)
+2025-08-20 15:19:26,433 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218073366.0.html and .png
+2025-08-20 15:19:26,436 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218073366.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:26,436 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218073366.0
+2025-08-20 15:19:26,436 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218073366.0
+2025-08-20 15:19:26,438 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218073366.0
+2025-08-20 15:19:26,438 - __main__ - INFO - Completed processing for RED BARON D/D PEPPERONI PIZZA
+2025-08-20 15:19:26,438 - __main__ - INFO - Processing 49/60: Store 104.0, Item 7218073367.0 (RED BARON D/D/ SUPREME PIZZA)
+2025-08-20 15:19:26,447 - __main__ - INFO - Processing RED BARON D/D/ SUPREME PIZZA (Store 104.0, Item 7218073367.0)
+2025-08-20 15:19:26,591 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7218073367.0.html and .png
+2025-08-20 15:19:26,594 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7218073367.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:26,594 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218073367.0
+2025-08-20 15:19:26,594 - model_comparator - WARNING - No forecast data found for store 104.0, item 7218073367.0
+2025-08-20 15:19:26,596 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7218073367.0
+2025-08-20 15:19:26,596 - __main__ - INFO - Completed processing for RED BARON D/D/ SUPREME PIZZA
+2025-08-20 15:19:26,596 - __main__ - INFO - Processing 50/60: Store 104.0, Item 7465330890.0 (JACKS CHEESE PIZZA)
+2025-08-20 15:19:26,613 - __main__ - INFO - Processing JACKS CHEESE PIZZA (Store 104.0, Item 7465330890.0)
+2025-08-20 15:19:26,775 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7465330890.0.html and .png
+2025-08-20 15:19:26,778 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7465330890.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:26,778 - model_comparator - WARNING - No forecast data found for store 104.0, item 7465330890.0
+2025-08-20 15:19:26,778 - model_comparator - WARNING - No forecast data found for store 104.0, item 7465330890.0
+2025-08-20 15:19:26,780 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7465330890.0
+2025-08-20 15:19:26,780 - __main__ - INFO - Completed processing for JACKS CHEESE PIZZA
+2025-08-20 15:19:26,780 - __main__ - INFO - Processing 51/60: Store 104.0, Item 7465379187.0 (JACKS PEPPERONI PIZZA)
+2025-08-20 15:19:26,788 - __main__ - INFO - Processing JACKS PEPPERONI PIZZA (Store 104.0, Item 7465379187.0)
+2025-08-20 15:19:26,996 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7465379187.0.html and .png
+2025-08-20 15:19:26,999 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7465379187.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:27,000 - model_comparator - WARNING - No forecast data found for store 104.0, item 7465379187.0
+2025-08-20 15:19:27,000 - model_comparator - WARNING - No forecast data found for store 104.0, item 7465379187.0
+2025-08-20 15:19:27,001 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7465379187.0
+2025-08-20 15:19:27,002 - __main__ - INFO - Completed processing for JACKS PEPPERONI PIZZA
+2025-08-20 15:19:27,002 - __main__ - INFO - Processing 52/60: Store 104.0, Item 7570612755.0 (PALERMOS THIN CRUST CHEESE)
+2025-08-20 15:19:27,010 - __main__ - INFO - Processing PALERMOS THIN CRUST CHEESE (Store 104.0, Item 7570612755.0)
+2025-08-20 15:19:27,144 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7570612755.0.html and .png
+2025-08-20 15:19:27,146 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7570612755.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:27,147 - model_comparator - WARNING - No forecast data found for store 104.0, item 7570612755.0
+2025-08-20 15:19:27,147 - model_comparator - WARNING - No forecast data found for store 104.0, item 7570612755.0
+2025-08-20 15:19:27,148 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7570612755.0
+2025-08-20 15:19:27,149 - __main__ - INFO - Completed processing for PALERMOS THIN CRUST CHEESE
+2025-08-20 15:19:27,149 - __main__ - INFO - Processing 53/60: Store 104.0, Item 7570612756.0 (PALERMOS THIN CRUST PEPPERONI)
+2025-08-20 15:19:27,157 - __main__ - INFO - Processing PALERMOS THIN CRUST PEPPERONI (Store 104.0, Item 7570612756.0)
+2025-08-20 15:19:27,316 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7570612756.0.html and .png
+2025-08-20 15:19:27,319 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7570612756.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:27,320 - model_comparator - WARNING - No forecast data found for store 104.0, item 7570612756.0
+2025-08-20 15:19:27,320 - model_comparator - WARNING - No forecast data found for store 104.0, item 7570612756.0
+2025-08-20 15:19:27,321 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7570612756.0
+2025-08-20 15:19:27,322 - __main__ - INFO - Completed processing for PALERMOS THIN CRUST PEPPERONI
+2025-08-20 15:19:27,322 - __main__ - INFO - Processing 54/60: Store 104.0, Item 7570612758.0 (PALERMOS THIN CRUST COMBO)
+2025-08-20 15:19:27,330 - __main__ - INFO - Processing PALERMOS THIN CRUST COMBO (Store 104.0, Item 7570612758.0)
+2025-08-20 15:19:27,489 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7570612758.0.html and .png
+2025-08-20 15:19:27,492 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7570612758.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:27,492 - model_comparator - WARNING - No forecast data found for store 104.0, item 7570612758.0
+2025-08-20 15:19:27,493 - model_comparator - WARNING - No forecast data found for store 104.0, item 7570612758.0
+2025-08-20 15:19:27,494 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7570612758.0
+2025-08-20 15:19:27,494 - __main__ - INFO - Completed processing for PALERMOS THIN CRUST COMBO
+2025-08-20 15:19:27,494 - __main__ - INFO - Processing 55/60: Store 104.0, Item 7570615101.0 (SCM SICILIAN HOLY PEPPERONI)
+2025-08-20 15:19:27,502 - __main__ - INFO - Processing SCM SICILIAN HOLY PEPPERONI (Store 104.0, Item 7570615101.0)
+2025-08-20 15:19:27,624 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7570615101.0.html and .png
+2025-08-20 15:19:27,627 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7570615101.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:27,627 - model_comparator - WARNING - No forecast data found for store 104.0, item 7570615101.0
+2025-08-20 15:19:27,627 - model_comparator - WARNING - No forecast data found for store 104.0, item 7570615101.0
+2025-08-20 15:19:27,629 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7570615101.0
+2025-08-20 15:19:27,629 - __main__ - INFO - Completed processing for SCM SICILIAN HOLY PEPPERONI
+2025-08-20 15:19:27,629 - __main__ - INFO - Processing 56/60: Store 104.0, Item 7570615103.0 (SCM SICILIAN SUPREMUS MAXIUMS)
+2025-08-20 15:19:27,636 - __main__ - INFO - Processing SCM SICILIAN SUPREMUS MAXIUMS (Store 104.0, Item 7570615103.0)
+2025-08-20 15:19:27,765 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7570615103.0.html and .png
+2025-08-20 15:19:27,768 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7570615103.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:27,768 - model_comparator - WARNING - No forecast data found for store 104.0, item 7570615103.0
+2025-08-20 15:19:27,768 - model_comparator - WARNING - No forecast data found for store 104.0, item 7570615103.0
+2025-08-20 15:19:27,770 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7570615103.0
+2025-08-20 15:19:27,770 - __main__ - INFO - Completed processing for SCM SICILIAN SUPREMUS MAXIUMS
+2025-08-20 15:19:27,770 - __main__ - INFO - Processing 57/60: Store 104.0, Item 7570615108.0 (SCM SICILIAN MOTHER OF MEAT)
+2025-08-20 15:19:27,781 - __main__ - INFO - Processing SCM SICILIAN MOTHER OF MEAT (Store 104.0, Item 7570615108.0)
+2025-08-20 15:19:27,937 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7570615108.0.html and .png
+2025-08-20 15:19:27,940 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7570615108.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:27,940 - model_comparator - WARNING - No forecast data found for store 104.0, item 7570615108.0
+2025-08-20 15:19:27,940 - model_comparator - WARNING - No forecast data found for store 104.0, item 7570615108.0
+2025-08-20 15:19:27,942 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7570615108.0
+2025-08-20 15:19:27,942 - __main__ - INFO - Completed processing for SCM SICILIAN MOTHER OF MEAT
+2025-08-20 15:19:27,942 - __main__ - INFO - Processing 58/60: Store 104.0, Item 7570630318.0 (SCM SICILIAN THIN CRST PEPPERONI)
+2025-08-20 15:19:27,950 - __main__ - INFO - Processing SCM SICILIAN THIN CRST PEPPERONI (Store 104.0, Item 7570630318.0)
+2025-08-20 15:19:28,052 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7570630318.0.html and .png
+2025-08-20 15:19:28,055 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7570630318.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:28,055 - model_comparator - WARNING - No forecast data found for store 104.0, item 7570630318.0
+2025-08-20 15:19:28,055 - model_comparator - WARNING - No forecast data found for store 104.0, item 7570630318.0
+2025-08-20 15:19:28,057 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7570630318.0
+2025-08-20 15:19:28,057 - __main__ - INFO - Completed processing for SCM SICILIAN THIN CRST PEPPERONI
+2025-08-20 15:19:28,057 - __main__ - INFO - Processing 59/60: Store 104.0, Item 7570630320.0 (SCM SICILIAN THIN CRST SUPREME)
+2025-08-20 15:19:28,065 - __main__ - INFO - Processing SCM SICILIAN THIN CRST SUPREME (Store 104.0, Item 7570630320.0)
+2025-08-20 15:19:28,155 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7570630320.0.html and .png
+2025-08-20 15:19:28,158 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7570630320.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:28,158 - model_comparator - WARNING - No forecast data found for store 104.0, item 7570630320.0
+2025-08-20 15:19:28,158 - model_comparator - WARNING - No forecast data found for store 104.0, item 7570630320.0
+2025-08-20 15:19:28,160 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7570630320.0
+2025-08-20 15:19:28,160 - __main__ - INFO - Completed processing for SCM SICILIAN THIN CRST SUPREME
+2025-08-20 15:19:28,160 - __main__ - INFO - Processing 60/60: Store 104.0, Item 7570630570.0 (SCM SICILIAN TC SAUS/PEP)
+2025-08-20 15:19:28,167 - __main__ - INFO - Processing SCM SICILIAN TC SAUS/PEP (Store 104.0, Item 7570630570.0)
+2025-08-20 15:19:28,263 - item_data_visualizer - INFO - Figure saved to testing/output/sales_purchases_104.0_7570630570.0.html and .png
+2025-08-20 15:19:28,266 - seasonality_analyzer - INFO - Seasonality detection for store 104.0, item 7570630570.0: {'has_seasonality': False, 'best_period': None, 'strength': 0, 'tested_periods': {}}
+2025-08-20 15:19:28,266 - model_comparator - WARNING - No forecast data found for store 104.0, item 7570630570.0
+2025-08-20 15:19:28,266 - model_comparator - WARNING - No forecast data found for store 104.0, item 7570630570.0
+2025-08-20 15:19:28,268 - model_comparator - WARNING - No historical sales in lookback period for store 104.0, item 7570630570.0
+2025-08-20 15:19:28,268 - __main__ - INFO - Completed processing for SCM SICILIAN TC SAUS/PEP
+2025-08-20 15:19:28,268 - __main__ - INFO - Completed processing 60 items
+2025-08-20 15:19:28,680 - __main__ - INFO - Summary report generated at testing/output/summary_report.html
+2025-08-20 15:19:28,680 - __main__ - INFO - Visualization process completed successfully

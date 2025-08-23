@@ -1,0 +1,30 @@
+name: forecast
+channels:
+  - defaults
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.10
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - pytorch
+  - torchvision
+  - plotly
+  - dash
+  - dash-bootstrap-components>=2.0.0
+  - scipy
+  - gradio
+  - joblib
+  - statsmodels
+  - pip
+  - pip:
+    - openmeteo-requests
+    - requests-cache
+    - retry-requests
+    - mlxtend
+    - networkx
+    - holidays
+    - pmdarima

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictive Ordering Visualization</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .image-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .image-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .image-card img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+        .image-caption {
+            padding: 10px;
+            background-color: #f8f9fa;
+            font-size: 0.9rem;
+        }
+        .filters {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .loading {
+            text-align: center;
+            margin: 50px 0;
+        }
+        .btn-export {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid my-4">
+        <h1 class="mb-4">Predictive Ordering Visualization Dashboard</h1>
+        
+        <div class="filters">
+            <div class="row g-3">
+                <div class="col-md-3">
+                    <label for="store-select" class="form-label">Store</label>
+                    <select class="form-select" id="store-select">
+                        <option value="all">All Stores</option>
+                        <!-- Will be populated dynamically -->
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="item-select" class="form-label">Item</label>
+                    <select class="form-select" id="item-select">
+                        <option value="all">All Items</option>
+                        <!-- Will be populated dynamically -->
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label for="start-date" class="form-label">Start Date</label>
+                    <input type="date" class="form-control" id="start-date">
+                </div>
+                <div class="col-md-2">
+                    <label for="end-date" class="form-label">End Date</label>
+                    <input type="date" class="form-control" id="end-date">
+                </div>
+                <div class="col-md-2">
+                    <label for="category-select" class="form-label">Category</label>
+                    <select class="form-select" id="category-select">
+                        <option value="all">All Categories</option>
+                        <!-- Will be populated dynamically -->
+                    </select>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" id="apply-filters">Apply Filters</button>
+                    <button class="btn btn-secondary ms-2" id="reset-filters">Reset Filters</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <p>Loading visualizations...</p>
+        </div>
+
+        <div class="image-gallery" id="image-gallery">
+            <!-- Images will be populated here -->
+        </div>
+        
+        <div class="text-center mt-4">
+            <button class="btn btn-success btn-export" id="export-all">Export All Images</button>
+        </div>
+    </div>
+
+    <!-- Image Modal for enlarged view -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">Image Preview</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="" id="modalImage" class="img-fluid">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="download-image">Download Image</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Global variables
+        let allImages = [];
+        const imageGallery = document.getElementById('image-gallery');
+        const loadingElement = document.getElementById('loading');
+        const storeSelect = document.getElementById('store-select');
+        const itemSelect = document.getElementById('item-select');
+        const startDateInput = document.getElementById('start-date');
+        const endDateInput = document.getElementById('end-date');
+        const categorySelect = document.getElementById('category-select');
+        const applyFiltersBtn = document.getElementById('apply-filters');
+        const resetFiltersBtn = document.getElementById('reset-filters');
+        const exportAllBtn = document.getElementById('export-all');
+        
+        // Initialize data and dropdowns
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load stores
+            fetch('/api/stores')
+                .then(response => response.json())
+                .then(data => {
+                    data.forEach(store => {
+                        const option = document.createElement('option');
+                        option.value = store.store_id;
+                        option.textContent = store.store_name;
+                        storeSelect.appendChild(option);
+                    });
+                });
+            
+            // Load items (initially all)
+            loadItems();
+            
+            // Load date range
+            fetch('/api/date-range')
+                .then(response => response.json())
+                .then(data => {
+                    startDateInput.value = data.min_date;
+                    endDateInput.value = data.max_date;
+                });
+                
+            // Load categories
+            fetch('/api/categories')
+                .then(response => response.json())
+                .then(data => {
+                    data.forEach(category => {
+                        const option = document.createElement('option');
+                        option.value = category;
+                        option.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+                        categorySelect.appendChild(option);
+                    });
+                });
+            
+            // Load images with default filters
+            loadImages();
+        });
+        
+        // Event listeners
+        storeSelect.addEventListener('change', () => {
+            loadItems(storeSelect.value);
+        });
+        
+        applyFiltersBtn.addEventListener('click', loadImages);
+        resetFiltersBtn.addEventListener('click', resetFilters);
+        exportAllBtn.addEventListener('click', exportAllImages);
+        
+        // Function to load items based on selected store
+        function loadItems(storeId = 'all') {
+            fetch(`/api/items?store_id=${storeId}`)
+                .then(response => response.json())
+                .then(data => {
+                    // Clear current options except the first one
+                    itemSelect.innerHTML = '<option value="all">All Items</option>';
+                    
+                    // Add new options
+                    data.forEach(item => {
+                        const option = document.createElement('option');
+                        option.value = item.item_id;
+                        option.textContent = item.item_name;
+                        itemSelect.appendChild(option);
+                    });
+                });
+        }
+        
+        // Function to load images based on filters
+        function loadImages() {
+            // Show loading indicator
+            loadingElement.style.display = 'block';
+            imageGallery.innerHTML = '';
+            
+            // Build query parameters
+            const params = new URLSearchParams({
+                store_id: storeSelect.value,
+                item_id: itemSelect.value,
+                start_date: startDateInput.value,
+                end_date: endDateInput.value,
+                category: categorySelect.value
+            });
+            
+            // Fetch images based on filters
+            fetch(`/api/images?${params.toString()}`)
+                .then(response => response.json())
+                .then(data => {
+                    allImages = data;
+                    displayImages(data);
+                    loadingElement.style.display = 'none';
+                })
+                .catch(error => {
+                    console.error('Error loading images:', error);
+                    loadingElement.style.display = 'none';
+                });
+        }
+        
+        // Function to display images in the gallery
+        function displayImages(images) {
+            if (images.length === 0) {
+                imageGallery.innerHTML = '<div class="col-12 text-center"><p>No images found matching your filters.</p></div>';
+                return;
+            }
+            
+            images.forEach(image => {
+                const card = document.createElement('div');
+                card.className = 'image-card';
+                
+                const img = document.createElement('img');
+                img.src = image.url;
+                img.alt = image.filename;
+                img.loading = 'lazy';
+                img.addEventListener('click', () => showImageModal(image.url, image.filename));
+                
+                const caption = document.createElement('div');
+                caption.className = 'image-caption';
+                caption.textContent = formatFilename(image.filename);
+                
+                card.appendChild(img);
+                card.appendChild(caption);
+                imageGallery.appendChild(card);
+            });
+        }
+        
+        // Format filename for display
+        function formatFilename(filename) {
+            // Remove file extension and replace underscores with spaces
+            return filename.replace('.png', '').replace(/_/g, ' ');
+        }
+        
+        // Reset all filters
+        function resetFilters() {
+            storeSelect.value = 'all';
+            itemSelect.value = 'all';
+            categorySelect.value = 'all';
+            
+            // Reset date range to initial values
+            fetch('/api/date-range')
+                .then(response => response.json())
+                .then(data => {
+                    startDateInput.value = data.min_date;
+                    endDateInput.value = data.max_date;
+                });
+                
+            // Reload items and images
+            loadItems();
+            loadImages();
+        }
+        
+        // Show image in modal
+        function showImageModal(url, filename) {
+            const modalImage = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('imageModalLabel');
+            const downloadBtn = document.getElementById('download-image');
+            
+            modalImage.src = url;
+            modalTitle.textContent = formatFilename(filename);
+            
+            // Set up download button
+            downloadBtn.onclick = () => {
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = filename;
+                a.click();
+            };
+            
+            // Show modal
+            const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+            imageModal.show();
+        }
+        
+        // Export all filtered images
+        function exportAllImages() {
+            if (allImages.length === 0) {
+                alert('No images to export. Please adjust your filters.');
+                return;
+            }
+            
+            // Create a zip file in a real implementation
+            // For now, just open the first 3 images in new tabs as a demonstration
+            const limit = Math.min(3, allImages.length);
+            for (let i = 0; i < limit; i++) {
+                window.open(allImages[i].url, '_blank');
+            }
+            
+            if (allImages.length > 3) {
+                alert(`Opened ${limit} of ${allImages.length} images. In a full implementation, all images would be zipped for download.`);
+            }
+        }
+    </script>
+</body>
+</html>
