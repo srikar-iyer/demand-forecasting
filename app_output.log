@@ -78,3 +78,30 @@ Dash is running on http://localhost:5000/
 2025-08-24 08:54:24,812 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116856.0
 2025-08-24 08:54:31,619 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
 2025-08-24 08:54:31,624 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-24 09:59:22,043 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-24 09:59:22,083 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-24 09:59:22,277 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116891.0
+2025-08-24 09:59:22,353 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-24 09:59:22,370 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-24 09:59:22,472 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116891.0
+2025-08-24 09:59:29,587 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-24 09:59:29,598 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-24 11:06:29,432 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-24 11:06:29,441 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-24 11:06:29,494 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116891.0
+2025-08-24 11:06:46,311 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-24 11:06:46,316 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-24 11:06:46,354 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116856.0
+2025-08-24 11:06:46,844 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-24 11:06:46,848 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-24 11:06:46,873 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116856.0
+2025-08-24 11:07:27,170 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-24 11:07:27,178 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-24 11:07:31,929 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-24 11:07:31,935 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-24 11:07:31,968 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116856.0
+2025-08-24 18:32:14,259 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-24 18:32:14,391 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-24 18:32:14,517 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-24 18:32:14,517 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-24 18:32:14,526 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.

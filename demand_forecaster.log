@@ -1134,3 +1134,158 @@
 2025-08-24 08:55:05,060 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570630570.0
 2025-08-24 08:55:05,062 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570630848.0
 2025-08-24 08:55:05,062 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 08:55:05] "GET /api/items HTTP/1.1" 200 -
+2025-08-24 09:59:22,043 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-24 09:59:22,083 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-24 09:59:22,277 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116891.0
+2025-08-24 09:59:22,353 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-24 09:59:22,370 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-24 09:59:22,472 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116891.0
+2025-08-24 09:59:29,587 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-24 09:59:29,598 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-24 10:02:28,036 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 10:02:28] "GET /api/health HTTP/1.1" 200 -
+2025-08-24 10:02:28,761 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 10:02:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-24 10:02:34,207 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-24 10:02:34,215 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-24 10:02:34,224 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116853.0
+2025-08-24 10:02:34,233 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-24 10:02:34,242 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-24 10:02:34,250 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116957.0
+2025-08-24 10:02:34,258 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4219700201.0
+2025-08-24 10:02:34,268 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4219700203.0
+2025-08-24 10:02:34,276 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4219700204.0
+2025-08-24 10:02:34,284 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4219700205.0
+2025-08-24 10:02:34,293 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4219700206.0
+2025-08-24 10:02:34,303 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4219700207.0
+2025-08-24 10:02:34,310 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4219700334.0
+2025-08-24 10:02:34,318 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4280010700.0
+2025-08-24 10:02:34,327 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4280010800.0
+2025-08-24 10:02:34,335 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4280011100.0
+2025-08-24 10:02:34,349 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4280011200.0
+2025-08-24 10:02:34,360 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4280011300.0
+2025-08-24 10:02:34,372 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4280011400.0
+2025-08-24 10:02:34,385 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4280011520.0
+2025-08-24 10:02:34,396 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4280011600.0
+2025-08-24 10:02:34,407 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4786100005.0
+2025-08-24 10:02:34,415 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7192114978.0
+2025-08-24 10:02:34,422 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7192119954.0
+2025-08-24 10:02:34,431 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7192156420.0
+2025-08-24 10:02:34,438 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7192182379.0
+2025-08-24 10:02:34,445 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7192190926.0
+2025-08-24 10:02:34,453 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7192197185.0
+2025-08-24 10:02:34,463 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218056624.0
+2025-08-24 10:02:34,471 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218056632.0
+2025-08-24 10:02:34,479 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218056638.0
+2025-08-24 10:02:34,489 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063187.0
+2025-08-24 10:02:34,498 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063193.0
+2025-08-24 10:02:34,506 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063243.0
+2025-08-24 10:02:34,518 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063244.0
+2025-08-24 10:02:34,526 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063245.0
+2025-08-24 10:02:34,534 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063247.0
+2025-08-24 10:02:34,542 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063429.0
+2025-08-24 10:02:34,550 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063469.0
+2025-08-24 10:02:34,559 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063471.0
+2025-08-24 10:02:34,567 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063473.0
+2025-08-24 10:02:34,577 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063717.0
+2025-08-24 10:02:34,587 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063718.0
+2025-08-24 10:02:34,597 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063735.0
+2025-08-24 10:02:34,606 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063736.0
+2025-08-24 10:02:34,617 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063810.0
+2025-08-24 10:02:34,627 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063811.0
+2025-08-24 10:02:34,635 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218073366.0
+2025-08-24 10:02:34,645 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218073367.0
+2025-08-24 10:02:34,654 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7465330890.0
+2025-08-24 10:02:34,664 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7465379187.0
+2025-08-24 10:02:34,673 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612755.0
+2025-08-24 10:02:34,684 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612756.0
+2025-08-24 10:02:34,693 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612758.0
+2025-08-24 10:02:34,704 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570615101.0
+2025-08-24 10:02:34,716 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570615103.0
+2025-08-24 10:02:34,725 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570615108.0
+2025-08-24 10:02:34,734 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570630318.0
+2025-08-24 10:02:34,742 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570630320.0
+2025-08-24 10:02:34,750 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570630570.0
+2025-08-24 10:02:34,756 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570630848.0
+2025-08-24 10:02:34,757 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 10:02:34] "GET /api/items HTTP/1.1" 200 -
+2025-08-24 11:06:29,432 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-24 11:06:29,441 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-24 11:06:29,494 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116891.0
+2025-08-24 11:06:46,311 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-24 11:06:46,316 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-24 11:06:46,354 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116856.0
+2025-08-24 11:06:46,844 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-24 11:06:46,848 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-24 11:06:46,873 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116856.0
+2025-08-24 11:07:27,170 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-24 11:07:27,178 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-24 11:07:31,929 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-24 11:07:31,935 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-24 11:07:31,968 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116856.0
+2025-08-24 12:31:09,271 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:31:09] "[33mGET / HTTP/1.1[0m" 404 -
+2025-08-24 12:31:41,459 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:31:41] "[33mGET / HTTP/1.1[0m" 404 -
+2025-08-24 12:31:49,691 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-24 12:31:49,698 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116852.0
+2025-08-24 12:31:49,702 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116853.0
+2025-08-24 12:31:49,707 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-24 12:31:49,712 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116891.0
+2025-08-24 12:31:49,717 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116957.0
+2025-08-24 12:31:49,722 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4219700201.0
+2025-08-24 12:31:49,726 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4219700203.0
+2025-08-24 12:31:49,731 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4219700204.0
+2025-08-24 12:31:49,736 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4219700205.0
+2025-08-24 12:31:49,741 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4219700206.0
+2025-08-24 12:31:49,746 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4219700207.0
+2025-08-24 12:31:49,749 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4219700334.0
+2025-08-24 12:31:49,754 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4280010700.0
+2025-08-24 12:31:49,760 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4280010800.0
+2025-08-24 12:31:49,765 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4280011100.0
+2025-08-24 12:31:49,772 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4280011200.0
+2025-08-24 12:31:49,780 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4280011300.0
+2025-08-24 12:31:49,786 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4280011400.0
+2025-08-24 12:31:49,794 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4280011520.0
+2025-08-24 12:31:49,800 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4280011600.0
+2025-08-24 12:31:49,804 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 4786100005.0
+2025-08-24 12:31:49,808 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7192114978.0
+2025-08-24 12:31:49,814 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7192119954.0
+2025-08-24 12:31:49,819 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7192156420.0
+2025-08-24 12:31:49,823 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7192182379.0
+2025-08-24 12:31:49,827 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7192190926.0
+2025-08-24 12:31:49,832 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7192197185.0
+2025-08-24 12:31:49,838 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218056624.0
+2025-08-24 12:31:49,842 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218056632.0
+2025-08-24 12:31:49,847 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218056638.0
+2025-08-24 12:31:49,853 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063187.0
+2025-08-24 12:31:49,858 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063193.0
+2025-08-24 12:31:49,863 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063243.0
+2025-08-24 12:31:49,870 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063244.0
+2025-08-24 12:31:49,875 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063245.0
+2025-08-24 12:31:49,880 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063247.0
+2025-08-24 12:31:49,886 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063429.0
+2025-08-24 12:31:49,890 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063469.0
+2025-08-24 12:31:49,897 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063471.0
+2025-08-24 12:31:49,903 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063473.0
+2025-08-24 12:31:49,908 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063717.0
+2025-08-24 12:31:49,914 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063718.0
+2025-08-24 12:31:49,919 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063735.0
+2025-08-24 12:31:49,923 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063736.0
+2025-08-24 12:31:49,931 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063810.0
+2025-08-24 12:31:49,939 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218063811.0
+2025-08-24 12:31:49,946 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218073366.0
+2025-08-24 12:31:49,952 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7218073367.0
+2025-08-24 12:31:49,960 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7465330890.0
+2025-08-24 12:31:49,969 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7465379187.0
+2025-08-24 12:31:49,976 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612755.0
+2025-08-24 12:31:49,982 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612756.0
+2025-08-24 12:31:49,989 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570612758.0
+2025-08-24 12:31:49,996 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570615101.0
+2025-08-24 12:31:50,003 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570615103.0
+2025-08-24 12:31:50,009 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570615108.0
+2025-08-24 12:31:50,015 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570630318.0
+2025-08-24 12:31:50,022 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570630320.0
+2025-08-24 12:31:50,028 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570630570.0
+2025-08-24 12:31:50,033 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 7570630848.0
+2025-08-24 12:31:50,034 - werkzeug - INFO - 127.0.0.1 - - [24/Aug/2025 12:31:50] "GET /api/items HTTP/1.1" 200 -
+2025-08-24 18:32:14,259 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-24 18:32:14,391 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-24 18:32:14,517 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-24 18:32:14,517 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-24 18:32:14,526 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
