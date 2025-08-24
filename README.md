@@ -46,11 +46,27 @@ The toolkit uses the following data files from your project:
 
 ## Quick Start - Demand Forecasting
 
+### Run the REST API for Forecasted Units
+
+```bash
+# Launch the REST API for forecasted units
+python forecast_api.py
+```
+
+The API runs on port 5001 with the following endpoints:
+- `/api/health`: Health check endpoint
+- `/api/items`: Returns all store-item combinations (excluding NaN values)
+- `/api/forecast/{store_id}/{item_id}`: Gets 1-week and 2-week forecasts for specific item
+- `/api/bulk-forecast`: Process multiple items at once (POST endpoint)
+- `/api/export-forecast-data`: Exports all forecasts to JSON file in output folder
+
 ### Run the Demand Forecasting Dashboard
 
 ```bash
 # Launch the interactive demand forecasting app
 python forecast_app.py
+
+(port 5000)
 ```
 
 Access the dashboard at http://localhost:5000/ with these features:
@@ -396,6 +412,7 @@ orchestrator.generate_summary_report(
 - `forecast_visualizer.log`: Time series visualization generation
 - `forecast_explainer.log`: Explanation generation and analysis
 - `forecast_app.log`: Interactive dashboard operations
+- `forecast_api.log`: REST API for forecasted units operations
 - `model_testing.log`: Performance testing and backtesting results
 
 ### Legacy Component Logs
@@ -441,3 +458,45 @@ The system detects seasonality using autocorrelation at different lags (7, 14, a
 5. Integrates seasonality with local trajectory weighting
 
 This item-specific approach ensures seasonality is only applied where statistically significant and appropriate for each individual item's sales pattern.
+
+## API
+
+Run the API server with the following command:
+```bash
+python forecast_api.py
+```
+
+The API runs on port 5002 with the following endpoints:
+
+- **`/api/health`**: Health check endpoint to verify the API is running
+- **`/api/items`**: Returns all store-item combinations with their descriptions and predictions (excluding NaN values)
+- **`/api/forecast/{store_id}/{item_id}`**: Gets 1-week and 2-week forecasts for a specific item with confidence levels
+- **`/api/bulk-forecast`**: Process multiple items at once (POST endpoint that accepts a list of store-item pairs)
+- **`/api/export-forecast-data`**: Exports all forecasts to a JSON file in the output folder
+
+## Docker
+
+Run the application using Docker with the following command:
+
+```bash
+docker-compose up
+```
+
+This will start two containers:
+
+1. **Web Application**: 
+   - Accessible at http://localhost:5000/
+   or http://127.0.0.1:5000
+   - Provides the interactive demand forecasting dashboard
+
+2. **API Service**:
+   - Accessible at http://localhost:5002/
+   or http://127.0.0.1:5002
+   - Provides the following endpoints:
+     - **`/api/health`**: Health check endpoint to verify the API is running
+     - **`/api/items`**: Returns all store-item combinations with their descriptions and predictions
+     - **`/api/forecast/{store_id}/{item_id}`**: Gets 1-week and 2-week forecasts for a specific item
+     - **`/api/bulk-forecast`**: Process multiple items at once (POST endpoint)
+     - **`/api/export-forecast-data`**: Exports all forecasts to a JSON file
+
+The Docker setup includes volume mounts for the data and output directories, allowing persistent storage of input data and generated forecasts.

@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  webapp:
+    build:
+      context: .
+      dockerfile: Dockerfile.webapp
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./data:/app/data
+      - ./output:/app/output
+    depends_on:
+      - api
+    networks:
+      - forecast-network
+    environment:
+      - FLASK_ENV=production
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    ports:
+      - "5002:5002"
+    volumes:
+      - ./data:/app/data
+      - ./output:/app/output
+    networks:
+      - forecast-network
+    environment:
+      - FLASK_ENV=production
+
+networks:
+  forecast-network:
+    driver: bridge

@@ -82,7 +82,7 @@ class ForecastVisualizer:
                 cols=1,
                 shared_xaxes=True,
                 subplot_titles=[f"{weeks}-Week Demand Forecast" for weeks in forecast_weeks],
-                vertical_spacing=0.1
+                vertical_spacing=0.2
             )
             
             colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728']  # Different colors for each forecast
@@ -148,17 +148,8 @@ class ForecastVisualizer:
                         week_start = forecast_dates[week_idx * 7]
                         week_end = forecast_dates[min((week_idx + 1) * 7 - 1, len(forecast_dates) - 1)]
                         
-                        fig.add_annotation(
-                            x=week_start + (week_end - week_start) / 2,
-                            y=max(daily_forecasts) * 1.2,
-                            text=f"Week {week_idx + 1}: {total:.1f} units",
-                            showarrow=True,
-                            arrowhead=2,
-                            arrowsize=1,
-                            arrowwidth=2,
-                            arrowcolor=color,
-                            row=row_idx, col=1
-                        )
+                        # Add weekly totals as legend items instead of annotations
+                        # Skip adding annotations here as we'll add them to the legend
                     
                     # Add confidence interval if available
                     confidence = forecast_info.get("confidence", 0.5)
@@ -219,18 +210,52 @@ class ForecastVisualizer:
                             row=row_idx, col=1
                         )
             
+            # Add weekly totals as legend items
+            for idx, weeks in enumerate(forecast_weeks):
+                if f"{weeks}_week" in forecast_result["forecasts"]:
+                    forecast_info = forecast_result["forecasts"][f"{weeks}_week"]
+                    weekly_totals = forecast_info["weekly_totals"]
+                    
+                    for week_idx, total in enumerate(weekly_totals):
+                        # Add invisible trace just to show in legend
+                        # For week 2, show the combined total instead of individual weeks
+                        legend_text = f"Week {week_idx + 1}: {total:.1f} units"
+                        if weeks == 2:
+                            total_sum = sum(weekly_totals)
+                            legend_text = f"Week 2 (Combined): {total_sum:.1f} units"
+                            # Only show one entry for week 2 combined
+                            if week_idx > 0:
+                                continue
+                                
+                        fig.add_trace(
+                            go.Scatter(
+                                x=[None],
+                                y=[None],
+                                mode='markers',
+                                marker=dict(color='#7030A0' if weeks == 1 else '#00B050'),
+                                name=legend_text,
+                                showlegend=True
+                            ),
+                            row=idx+1, col=1
+                        )
+            
             # Update layout
             fig.update_layout(
                 title=f"{item_desc} - Demand Forecast (Store {store_id})",
-                height=300 * len(forecast_weeks) + 200,
+                title_y=0.98,
+                height=300 * len(forecast_weeks) + 250,
                 hovermode="x unified",
                 legend=dict(
                     orientation="h",
                     yanchor="bottom",
-                    y=1.02,
+                    y=1.05,
                     xanchor="right",
-                    x=1
+                    x=1,
+                    bgcolor='rgba(255,255,255,0.9)',
+                    bordercolor='rgba(0,0,0,0.2)',
+                    borderwidth=1
                 ),
+                margin=dict(t=80, b=50, l=50, r=50),
                 template="plotly_white"
             )
             
@@ -273,9 +298,9 @@ class ForecastVisualizer:
             # Averages
             averages = forecast_result.get('averages', {})
             if 'last_week' in averages:
-                summary_lines.append(f"Last Week Avg: {averages['last_week']:.1f}")
+                summary_lines.append(f"Last Week Avg: {averages['last_week']:.1f} (per day)")
             if 'last_2_weeks' in averages:
-                summary_lines.append(f"Last 2 Weeks Avg: {averages['last_2_weeks']:.1f}")
+                summary_lines.append(f"Last 2 Weeks Avg: {averages['last_2_weeks']:.1f} (per day)")
             
             # Forecasts
             for period, forecast_info in forecast_result.get('forecasts', {}).items():
@@ -283,7 +308,7 @@ class ForecastVisualizer:
                 practical = forecast_info.get('total_practical', 0)
                 confidence = forecast_info.get('confidence', 0)
                 
-                summary_lines.append(f"{period.replace('_', ' ').title()}: {predicted:.1f} predicted, {practical} practical")
+                summary_lines.append(f"{period.replace('_', ' ').title()}: {predicted:.1f} predicted, {practical} practical (total for period)")
                 summary_lines.append(f"Confidence: {confidence:.0%}")
             
             return "<br>".join(summary_lines)
@@ -347,7 +372,7 @@ class ForecastVisualizer:
                 explanation = forecast_info.get('explanations', [''])[0]
                 
                 table_data.append({
-                    'Period': period_name,
+                    'Period': period_name + ' (total)',
                     'Predicted Forecast': float(predicted) if isinstance(predicted, (int, float)) else predicted,
                     'Practical Forecast': int(practical) if isinstance(practical, (int, float)) else practical,
                     'Confidence': float(confidence) if isinstance(confidence, (int, float)) else confidence,
@@ -359,7 +384,7 @@ class ForecastVisualizer:
             context_data = []
             for avg_name, avg_value in averages.items():
                 context_data.append({
-                    'Period': avg_name.replace('_', ' ').title(),
+                    'Period': avg_name.replace('_', ' ').title() + ' (per day)',
                     'Predicted Forecast': float(avg_value) if isinstance(avg_value, (int, float)) else avg_value,
                     'Practical Forecast': 'Historical',
                     'Confidence': 'Actual',

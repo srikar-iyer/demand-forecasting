@@ -1,0 +1,80 @@
+2025-08-23 22:44:01,200 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 22:44:01,424 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 22:44:01,603 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 22:44:01,603 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 22:44:01,612 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+Dash is running on http://localhost:5000/
+
+2025-08-23 22:44:01,632 - dash.dash - INFO - Dash is running on http://localhost:5000/
+
+ * Serving Flask app 'forecast_app'
+ * Debug mode: on
+2025-08-23 22:44:02,952 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 22:44:03,142 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 22:44:03,296 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 22:44:03,296 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 22:44:03,304 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 22:55:39,929 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 22:55:40,070 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 22:55:40,215 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 22:55:40,215 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 22:55:40,223 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 23:12:45,154 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 23:12:45,160 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 23:12:45,264 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116850.0
+2025-08-23 23:12:47,144 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 23:12:47,150 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 23:12:48,397 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 23:12:48,401 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 23:12:48,437 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116850.0
+2025-08-23 23:13:28,987 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 23:13:29,000 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 23:13:29,069 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116850.0
+2025-08-23 23:13:47,923 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 23:13:47,928 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 23:13:50,610 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 23:13:50,617 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116850.0
+2025-08-23 23:13:50,658 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116850.0
+2025-08-23 23:18:13,378 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 23:18:13,533 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 23:18:13,670 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 23:18:13,670 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 23:18:13,677 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 23:33:27,348 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 23:33:27,614 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 23:33:27,859 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 23:33:27,860 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 23:33:27,872 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 23:49:56,152 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 23:49:56,423 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 23:49:56,654 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 23:49:56,655 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 23:49:56,667 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 23:50:14,676 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 23:50:14,963 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 23:50:15,206 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 23:50:15,206 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 23:50:15,221 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 23:50:31,307 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 23:50:31,542 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 23:50:31,798 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 23:50:31,798 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 23:50:31,813 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 23:51:06,902 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 23:51:07,196 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 23:51:07,433 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 23:51:07,433 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 23:51:07,448 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-23 23:51:12,111 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 23:51:12,340 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-23 23:51:14,583 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-23 23:51:14,583 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-23 23:51:14,598 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-24 08:49:58,161 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116853.0
+2025-08-24 08:49:58,168 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116853.0
+2025-08-24 08:49:58,375 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116853.0
+2025-08-24 08:54:24,778 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-24 08:54:24,782 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-24 08:54:24,812 - seasonality_analyzer - WARNING - No sales data found for store 104.0, item 3913116856.0
+2025-08-24 08:54:31,619 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
+2025-08-24 08:54:31,624 - demand_forecaster - INFO - Forecast generated successfully for store 104.0, item 3913116856.0
