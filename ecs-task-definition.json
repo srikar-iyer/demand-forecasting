@@ -1,0 +1,125 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:235899655423:task-definition/DemandForecasting:7",
+    "containerDefinitions": [
+        {
+            "name": "demand-forecasting",
+            "image": "agileaiservices/demand-forecasting-ui",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "name": "demand-forecasting-5000-tcp",
+                    "containerPort": 5000,
+                    "hostPort": 5000,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [
+                {
+                    "name": "API_BASE_URL",
+                    "value": "http://localhost:5002/api"
+                },
+                {
+                    "name": "HOST",
+                    "value": "0.0.0.0"
+                },
+                {
+                    "name": "NODE_ENV",
+                    "value": "production"
+                },
+                {
+                    "name": "PORT",
+                    "value": "5000"
+                },
+                {
+                    "name": "DEMAND_FORECASTING_API_URL",
+                    "value": "http://localhost:5002"
+                }
+            ],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/ecs/",
+                    "awslogs-create-group": "true",
+                    "awslogs-region": "us-east-1",
+                    "awslogs-stream-prefix": "ecs"
+                }
+            },
+            "systemControls": []
+        },
+        {
+            "name": "demand-forecasting-api",
+            "image": "agileaiservices/demand-forecasting-api",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "name": "demand-forecasting-api-5002-tcp",
+                    "containerPort": 5002,
+                    "hostPort": 5002,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": false,
+            "environment": [
+                {
+                    "name": "HOST",
+                    "value": "0.0.0.0"
+                },
+                {
+                    "name": "API_PORT",
+                    "value": "5002"
+                }
+            ],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "systemControls": []
+        }
+    ],
+    "family": "DemandForecasting",
+    "executionRoleArn": "arn:aws:iam::235899655423:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "revision": 7,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+        },
+        {
+            "name": "ecs.capability.execution-role-awslogs"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "1024",
+    "memory": "3072",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "registeredAt": "2025-08-24T17:28:53.458Z",
+    "registeredBy": "arn:aws:sts::235899655423:assumed-role/cloudboost_account_operator/859600@cognizant.com",
+    "enableFaultInjection": false,
+    "tags": []
+}
