@@ -105,3 +105,48 @@ Dash is running on http://localhost:5000/
 2025-08-24 18:32:14,517 - seasonality_analyzer - INFO - Data loaded successfully
 2025-08-24 18:32:14,517 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
 2025-08-24 18:32:14,526 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-31 19:41:55,733 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-31 19:41:56,149 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-31 19:41:56,532 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-31 19:41:56,532 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-31 19:41:56,548 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-31 21:09:20,366 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-31 21:09:20,502 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-31 21:09:20,638 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-31 21:09:20,638 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-31 21:09:20,646 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-31 21:09:30,707 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-31 21:09:30,835 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-31 21:09:30,960 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-31 21:09:30,960 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-31 21:09:30,968 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-31 21:09:41,042 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-31 21:09:41,171 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-31 21:09:41,301 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-31 21:09:41,301 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-31 21:09:41,308 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-31 21:11:11,802 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-31 21:11:11,939 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-31 21:11:12,089 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-31 21:11:12,089 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-31 21:11:12,097 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-31 21:11:32,541 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-31 21:11:32,733 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-31 21:11:32,921 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-31 21:11:32,921 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-31 21:11:32,931 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-31 21:11:39,697 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-31 21:11:39,835 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-31 21:11:39,980 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-31 21:11:39,980 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-31 21:11:39,988 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-31 21:11:45,322 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-31 21:11:45,462 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-31 21:11:45,607 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-31 21:11:45,607 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-31 21:11:45,614 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.
+2025-08-31 21:11:49,713 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-31 21:11:49,851 - demand_forecaster - INFO - Demand forecaster initialized successfully
+2025-08-31 21:11:49,990 - seasonality_analyzer - INFO - Data loaded successfully
+2025-08-31 21:11:49,990 - forecast_visualizer - INFO - Forecast visualizer initialized successfully
+2025-08-31 21:11:49,998 - __main__ - INFO - Forecast app initialized. Found 62 items across 2 stores.

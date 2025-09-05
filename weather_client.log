@@ -1,0 +1,103 @@
+2025-08-31 19:09:22,762 - weather_client - INFO - Weather client initialized
+2025-08-31 19:43:02,852 - weather_client - INFO - Weather client initialized
+2025-08-31 19:43:02,854 - weather_client - INFO - Weather client initialized
+2025-08-31 19:43:02,854 - weather_visualizer - INFO - Weather visualizer initialized
+2025-08-31 19:43:02,854 - __main__ - INFO - Generating weather overview for New York
+2025-08-31 19:43:02,855 - weather_client - INFO - Fetching historical weather data for coordinates (40.7128, -74.006) from 2025-08-01 to 2025-08-31
+2025-08-31 19:43:03,433 - weather_client - ERROR - Error fetching historical weather: All arrays must be of the same length
+2025-08-31 19:43:03,433 - weather_visualizer - ERROR - Error fetching weather data: All arrays must be of the same length
+2025-08-31 19:43:03,435 - weather_visualizer - WARNING - Empty weather data, cannot create overview
+2025-08-31 19:43:03,563 - __main__ - INFO - Generating weather impact summary for New York
+2025-08-31 19:43:03,564 - weather_client - INFO - Fetching historical weather data for coordinates (40.7128, -74.006) from 2025-07-02 to 2025-08-31
+2025-08-31 19:43:03,716 - weather_client - ERROR - Error fetching historical weather: All arrays must be of the same length
+2025-08-31 19:43:03,716 - weather_visualizer - ERROR - Error fetching weather data: All arrays must be of the same length
+2025-08-31 19:43:03,717 - weather_visualizer - WARNING - Empty weather data, cannot create impact summary
+2025-08-31 19:43:03,753 - __main__ - INFO - Generating weather-adjusted forecast
+2025-08-31 19:43:03,754 - weather_client - INFO - Fetching historical weather data for coordinates (40.7128, -74.006) from 2025-08-30 to 2025-08-31
+2025-08-31 19:43:03,907 - weather_client - ERROR - Error fetching historical weather: All arrays must be of the same length
+2025-08-31 19:43:03,907 - weather_visualizer - ERROR - Error fetching weather data: All arrays must be of the same length
+2025-08-31 19:43:03,908 - weather_visualizer - WARNING - Empty weather forecast data
+2025-08-31 19:43:04,339 - __main__ - INFO - Loaded sample demand data with 2741 records
+2025-08-31 19:43:04,340 - __main__ - INFO - Generating weather-demand correlation analysis
+2025-08-31 19:43:04,340 - weather_client - INFO - Fetching historical weather data for coordinates (40.7128, -74.006) from 2025-08-01 to 2025-08-31
+2025-08-31 19:43:04,346 - weather_client - ERROR - Error fetching historical weather: All arrays must be of the same length
+2025-08-31 19:43:04,346 - weather_visualizer - ERROR - Error fetching weather data: All arrays must be of the same length
+2025-08-31 19:43:04,347 - weather_visualizer - WARNING - Empty weather data, cannot create correlation
+2025-08-31 19:43:04,400 - __main__ - INFO - Sample analysis complete. Output files saved to the output directory.
+2025-08-31 21:09:49,827 - weather_client - INFO - Weather client initialized
+2025-08-31 21:09:49,828 - weather_client - INFO - Weather client initialized
+2025-08-31 21:09:49,828 - weather_visualizer - INFO - Weather visualizer initialized
+2025-08-31 21:09:49,828 - __main__ - INFO - Generating weather overview for New York
+2025-08-31 21:09:49,828 - weather_visualizer - WARNING - System date appears to be in the future: 2025-08-31. Using fallback date range.
+2025-08-31 21:09:49,829 - weather_client - INFO - Fetching historical weather data for coordinates (40.7128, -74.006) from 2023-08-01 to 2023-08-31
+2025-08-31 21:09:50,369 - weather_client - ERROR - Error fetching historical weather: All arrays must be of the same length
+2025-08-31 21:09:50,369 - weather_visualizer - ERROR - Error fetching weather data: All arrays must be of the same length
+2025-08-31 21:09:50,370 - weather_visualizer - WARNING - Empty weather data, cannot create overview
+2025-08-31 21:09:50,412 - __main__ - INFO - Generating weather impact summary for New York
+2025-08-31 21:09:50,412 - weather_visualizer - WARNING - System date appears to be in the future: 2025-08-31. Using fallback date range.
+2025-08-31 21:09:50,412 - weather_client - INFO - Fetching historical weather data for coordinates (40.7128, -74.006) from 2023-08-01 to 2023-08-31
+2025-08-31 21:09:50,415 - weather_client - ERROR - Error fetching historical weather: All arrays must be of the same length
+2025-08-31 21:09:50,415 - weather_visualizer - ERROR - Error fetching weather data: All arrays must be of the same length
+2025-08-31 21:09:50,415 - weather_visualizer - WARNING - Empty weather data, cannot create impact summary
+2025-08-31 21:09:50,435 - __main__ - INFO - Generating weather-adjusted forecast
+2025-08-31 21:09:50,435 - weather_visualizer - WARNING - System date appears to be in the future: 2025-08-31. Using fallback date range.
+2025-08-31 21:09:50,435 - weather_client - INFO - Fetching historical weather data for coordinates (40.7128, -74.006) from 2023-08-30 to 2023-08-31
+2025-08-31 21:09:50,560 - weather_client - ERROR - Error fetching historical weather: All arrays must be of the same length
+2025-08-31 21:09:50,560 - weather_visualizer - ERROR - Error fetching weather data: All arrays must be of the same length
+2025-08-31 21:09:50,561 - weather_visualizer - WARNING - Empty weather forecast data
+2025-08-31 21:09:50,707 - __main__ - INFO - Loaded sample demand data with 2741 records
+2025-08-31 21:09:50,708 - __main__ - INFO - Generating weather-demand correlation analysis
+2025-08-31 21:09:50,708 - weather_visualizer - WARNING - System date appears to be in the future: 2025-08-31. Using fallback date range.
+2025-08-31 21:09:50,708 - weather_client - INFO - Fetching historical weather data for coordinates (40.7128, -74.006) from 2023-08-01 to 2023-08-31
+2025-08-31 21:09:50,709 - weather_client - ERROR - Error fetching historical weather: All arrays must be of the same length
+2025-08-31 21:09:50,709 - weather_visualizer - ERROR - Error fetching weather data: All arrays must be of the same length
+2025-08-31 21:09:50,709 - weather_visualizer - WARNING - Empty weather data, cannot create correlation
+2025-08-31 21:09:50,744 - __main__ - INFO - Sample analysis complete. Output files saved to the output directory.
+2025-08-31 21:11:57,981 - weather_client - INFO - Weather client initialized
+2025-08-31 21:11:57,982 - weather_client - INFO - Weather client initialized
+2025-08-31 21:11:57,982 - weather_visualizer - INFO - Weather visualizer initialized
+2025-08-31 21:11:57,982 - __main__ - INFO - Generating weather overview for New York
+2025-08-31 21:11:57,982 - weather_visualizer - WARNING - System date appears to be in the future: 2025-08-31. Using fallback date range.
+2025-08-31 21:11:57,983 - weather_client - INFO - Fetching historical weather data for coordinates (40.7128, -74.006) from 2023-08-01 to 2023-08-31
+2025-08-31 21:11:57,990 - weather_client - WARNING - Array length mismatch detected. Truncating to shortest length: 1
+2025-08-31 21:11:57,994 - weather_client - INFO - Successfully retrieved weather data: 1 days
+2025-08-31 21:11:57,994 - weather_client - INFO - Fetching weather forecast for coordinates (40.7128, -74.006) for next 7 days
+2025-08-31 21:11:58,518 - weather_client - WARNING - Array length mismatch detected in forecast. Truncating to shortest length: 1
+2025-08-31 21:11:58,519 - weather_client - INFO - Successfully retrieved forecast data: 1 days
+2025-08-31 21:11:58,521 - weather_client - INFO - Calculated weather impact factors for 1 days
+2025-08-31 21:11:58,522 - weather_client - INFO - Calculated weather impact factors for 1 days
+2025-08-31 21:11:58,768 - weather_visualizer - INFO - Created weather overview visualization for New York
+2025-08-31 21:11:58,794 - __main__ - INFO - Generating weather impact summary for New York
+2025-08-31 21:11:58,794 - weather_visualizer - WARNING - System date appears to be in the future: 2025-08-31. Using fallback date range.
+2025-08-31 21:11:58,795 - weather_client - INFO - Fetching historical weather data for coordinates (40.7128, -74.006) from 2023-08-01 to 2023-08-31
+2025-08-31 21:11:58,796 - weather_client - WARNING - Array length mismatch detected. Truncating to shortest length: 1
+2025-08-31 21:11:58,798 - weather_client - INFO - Successfully retrieved weather data: 1 days
+2025-08-31 21:11:58,798 - weather_client - INFO - Fetching weather forecast for coordinates (40.7128, -74.006) for next 14 days
+2025-08-31 21:11:58,942 - weather_client - WARNING - Array length mismatch detected in forecast. Truncating to shortest length: 1
+2025-08-31 21:11:58,944 - weather_client - INFO - Successfully retrieved forecast data: 1 days
+2025-08-31 21:11:58,945 - weather_client - INFO - Calculated weather impact factors for 1 days
+2025-08-31 21:11:58,947 - weather_client - INFO - Calculated weather impact factors for 1 days
+2025-08-31 21:11:58,991 - weather_visualizer - INFO - Created weather impact summary visualization for New York
+2025-08-31 21:11:59,010 - __main__ - INFO - Generating weather-adjusted forecast
+2025-08-31 21:11:59,010 - weather_visualizer - WARNING - System date appears to be in the future: 2025-08-31. Using fallback date range.
+2025-08-31 21:11:59,010 - weather_client - INFO - Fetching historical weather data for coordinates (40.7128, -74.006) from 2023-08-30 to 2023-08-31
+2025-08-31 21:11:59,011 - weather_client - WARNING - Array length mismatch detected. Truncating to shortest length: 1
+2025-08-31 21:11:59,013 - weather_client - INFO - Successfully retrieved weather data: 1 days
+2025-08-31 21:11:59,013 - weather_client - INFO - Fetching weather forecast for coordinates (40.7128, -74.006) for next 14 days
+2025-08-31 21:11:59,014 - weather_client - WARNING - Array length mismatch detected in forecast. Truncating to shortest length: 1
+2025-08-31 21:11:59,015 - weather_client - INFO - Successfully retrieved forecast data: 1 days
+2025-08-31 21:11:59,017 - weather_client - INFO - Calculated weather impact factors for 1 days
+2025-08-31 21:11:59,018 - weather_client - INFO - Calculated weather impact factors for 1 days
+2025-08-31 21:11:59,040 - weather_visualizer - INFO - Created weather-adjusted forecast visualization for store 104, item 3913116850
+2025-08-31 21:11:59,195 - __main__ - INFO - Loaded sample demand data with 2741 records
+2025-08-31 21:11:59,196 - __main__ - INFO - Generating weather-demand correlation analysis
+2025-08-31 21:11:59,196 - weather_visualizer - WARNING - System date appears to be in the future: 2025-08-31. Using fallback date range.
+2025-08-31 21:11:59,197 - weather_client - INFO - Fetching historical weather data for coordinates (40.7128, -74.006) from 2023-08-01 to 2023-08-31
+2025-08-31 21:11:59,198 - weather_client - WARNING - Array length mismatch detected. Truncating to shortest length: 1
+2025-08-31 21:11:59,199 - weather_client - INFO - Successfully retrieved weather data: 1 days
+2025-08-31 21:11:59,199 - weather_client - INFO - Fetching weather forecast for coordinates (40.7128, -74.006) for next 1 days
+2025-08-31 21:11:59,332 - weather_client - INFO - Successfully retrieved forecast data: 1 days
+2025-08-31 21:11:59,334 - weather_client - INFO - Calculated weather impact factors for 1 days
+2025-08-31 21:11:59,335 - weather_client - INFO - Calculated weather impact factors for 1 days
+2025-08-31 21:11:59,339 - weather_visualizer - WARNING - No matching demand data found after filtering
+2025-08-31 21:11:59,366 - __main__ - INFO - Sample analysis complete. Output files saved to the output directory.
